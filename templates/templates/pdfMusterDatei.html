@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+@import url('https://fonts.googleapis.com/css?family=PT+Sans|PT+Serif');
+html {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: rgb(204,204,204);
+  font-family: 'PT Sans', sans-serif;
+  font-size: 13px;
+}
+p {
+  margin: 0;
+  padding: 1px 0 1px 10px ;
+}
+page {
+  background: white;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+}
+page[size="A4"] {
+  width: 21cm;
+  height: 29.7cm;
+}
+/*header*/
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  height: 200px;
+  width:  80%;
+  margin: 0 10%;
+  padding: 0 0 3% 0;
+}
+.headline__logo {
+  position: relative;
+  width: 250px;
+  height: 30px;
+  margin: 0 0 0 57%;
+  top: 40%;
+}
+.headline {
+  order: 1;
+  font-size: 45px;
+  font-family: 'PT Serif', serif;
+  margin: 0;
+  font-weight: normal;
+}
+.headline__logo-elna {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  margin: 0 10% 2px 90%;
+  top: 40.5%;
+}
+.headline__text {
+  order: 2;
+  margin: 0 0 2px 0;
+}
+.header__container{
+  width: 100%;
+  height: auto;
+  background-color: #dbebf0;
+  margin-bottom: 1px;
+  padding: 2px 10px 4px 10px;
+}
+.one {
+  order: 3;
+}
+.two {
+  order: 4;
+}
+.subline__text {
+  float: left;
+  font-weight: bold;
+}
+.right {
+  float: right;
+}
+/*body*/
+.body {
+  position: relative;
+  height: 75%;
+  width:  90%;
+  margin: 20px 5% 0 5%;
+  background: linear-gradient(to bottom right,rgba(255,255,255, 0.7),	rgb(71, 133, 117, .3)), url("../assets/pdfBackground.png");
+}
+/*datal-lists*/
+.container__data-list {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 25px 0 25px;
+}
+.data__list {
+  background: #dbebf0;
+  height: auto;
+  width: 30%;
+  padding: 3px;
+  margin-bottom: 0;
+}
+dd {
+  margin-left: 10px;
+  padding: 1px;
+}
+dt {
+  padding: 2px 0 2px 10px;
+  background: white;
+  font-weight: bold;
+  color:	#088A85;
+}
+/*Angaben zum Biokraftstoff*/
+.headline__info {
+  padding: 0 0 0 25px;
+  margin: 10px 0;
+}
+.container__biofuel {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 25px;
+}
+.container__biofuel-text {
+  width: 30%;
+  height: auto;
+  padding: 3px;
+  background: #dbebf0;
+}
+.biofuel__text {
+  padding: 2px 0 2px 10px;
+  background-color: #dbebf0;
+  margin: 0;
+}
+.bold {
+  font-weight: bold;
+  color: #088A85;
+}
+/* Angaben zum Ausgangsstoff*/
+.container__output-material {
+  width: 93%;
+  background-color:  #dbebf0;
+  display: flex;
+  margin: 0 25px;
+  padding: 5px 0 10px 0;
+  height: auto;
+}
+.data__list-column {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 0;
+  height: auto;
+}
+.second {
+  margin: 0 0 0 200px;
+}
+.output__column-result {
+  margin: 3px -40px 0 -40px;
+  padding: 0px;
+}
+/*Angaben zu den Treibhausgas-Emissionen*/
+.checkmark {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  margin: 1px 0 0 -17px;
+}
+.data__list-info {
+  background: none;
+}
+.checkbox-yes {
+  padding-left: 60px;
+}
+.checkbox-no {
+  padding-left: 50px;
+}
+.text {
+  margin-left: -25px;
+}
+.flex {
+  padding: 8px;
+}
+input[type=checkbox]:not(:checked) + label{
+  color: #01918c;
+  opacity: 0.5;
+}
+/*muster overlay*/
+.muster__overlay {
+  position: absolute;
+  top: -20%;
+  left: 25%;
+}
+</style>
+</head>
+<body>
+<page size="A4">
+<!--header-->
+  <section class="header">
+      <img class="headline__logo" src="..\assets\pdf-logo.jpg">
+      <h1 class="headline">Nachhaltigkeitsnachweis</h1>
+      <img class="headline__logo-elna" src="..\assets\elna_logo.png">
+      <p class="headline__text">für Biokraftstoffe gem. Kraftstoffverordnung §13 (6)</p>
+      <div class="header__container one">
+          <span class="subline__text left">Nummer: l-ys4wu-17795</span>
+          <span class="subline__text right">Ausstellungsdatum: 11.März.2014</span>
+      </div>
+      <div class="header__container two">
+          <span class="subline__text left">Ursprüngliche Nummer: DE-B-BLE-BM-10-999-12345678-NTNw-10158146</span>
+      </div>
+  </section>
+<!--body-->
+  <section class="body">
+      <div class="container__data-list">
+        <dl class="data__list first-list">
+            <dt>Biokraftstoffverkäufer</dt>
+              <dd>Eni Austria GmbH</dd>
+              <dd>Handelskai 94 - 96</dd>
+              <dd>1200</dd>
+            <dt>Registrierungs-Nummer</dt>
+              <dd>AT-I-000109</dd>
+        </dl>
+        <dl class="data__list second-list">
+            <dt>Biokraftstoffempfänger</dt>
+              <dd>Weitergegeben am 11.Mär.2014</dd>
+              <dd>Shell Austria G.m.b.H.</dd>
+              <dd>Donau-City Straße 1, Tech Gate</dd>
+              <dd>17.Etage</dd>
+              <dd>1220 Wien</dd>
+            <dt>Registrierungs-Nummer</dt>
+              <dd>AT-I-000126</dd>
+            <dt>reale Warenweitergabe in</dt>
+              <dd>2013 Q4</dd>
+        </dl>
+        <dl class="data__list thrid-list">
+            <dt>Zertifizierungssystem bzw.<br>Kontrollstelle</dt>
+              <dd>ISCC EU</dd>
+        </dl>
+      </div>
+<!--Angaben zum Biokraftstoff-->
+      <h3 class="headline__info">Angaben zum Biokraftstoff</h3>
+      <div class="container__biofuel">
+          <div class="container__biofuel-text">
+              <p class="biofuel__text"><span class="bold">Biokraftstoffart</span> Bioethanol</p>
+          </div>
+          <div class="container__biofuel-text">
+              <p class="biofuel__text"><span class="bold">Menge</span> 43,957 m³</p>
+              <p class="biofuel__text"><span class="bold">Energiemenge</span> 923,1 GJ</p>
+          </div>
+          <div class="container__biofuel-text">
+              <p class="biofuel__text"><span class="bold">MJ/l</span> 21</p>
+          </div>
+      </div>
+<!--Angaben zum Ausgangsstoff-->
+      <h3 class="headline__info">Angaben zum Ausgangsstoff</h3>
+        <div class="container__output-material">
+            <dl class="data__list-column first">
+              <span class="bold">
+                <dt class="data__list-info">Roh- und Ausgangsstoff 1</dt>
+                  <dd>Bezeichnung:</dd>
+                  <dd>Menge:</dd>
+                  <dd>Anteile in %:</dd>
+                  <dd>Ursprungsland:</dd>
+                  <dd>Waste:</dd>
+                  <dd>Advanced:</dd>
+              </span>
+              <div class="output__column-result">
+                <p>&nbsp;</p>
+                <p>Gerste</p>
+                <p>--</p>
+                <p>38</p>
+                <p>DE</p>
+                <p>Nein</p>
+                <p>Nein</p>
+              </div>
+            </dl>
+            <dl class="data__list-column second">
+              <span class="bold">
+                <dt class="data__list-info">Roh- und Ausgangsstoff 2</dt>
+                  <dd>Bezeichnung:</dd>
+                  <dd>Menge:</dd>
+                  <dd>Anteile in %:</dd>
+                  <dd>Ursprungsland:</dd>
+                  <dd>Waste:</dd>
+                  <dd>Advanced:</dd>
+              </span>
+              <div class="output__column-result">
+                <p>&nbsp;</p>
+                <p>Mais/maize</p>
+                <p>--</p>
+                <p>27</p>
+                <p>DE</p>
+                <p>Nein</p>
+                <p>Nein</p>
+              </div>
+            </dl>
+       </div>
+<!--Angaben zu den Treibhausgas-Emissionen-->
+       <h3 class="headline__info">Angaben zu den Treibhausgas-Emissionen</h3>
+         <div class="container__output-material">
+               <div class="container checkbox--Emision-info">
+                 <span class="bold">
+                   <p>Verwendung von Standardwerten</p>
+                   <p>Landnutzungsänderungen</p>
+                   <p>Gutschrift degradierte Böden</p>
+                   <p>Kohlenstoffakkumulierung</p>
+                   <p>Produktionsanlage wurde nach dem<br>5.10.2015 in Betrieb genommen</p>
+                   <p>Treibhausgas-Emissionen</p>
+                   <p>Saving</p>
+                 </span>
+               </div>
+               <div class="container checkbox-yes">
+                 <input class="checkmark" type="checkbox"><label>Ja<br></label>
+                 <input class="checkmark" type="checkbox"><label>Ja<br></label>
+                 <input class="checkmark" type="checkbox"><label>Ja<br></label>
+                 <input class="checkmark" type="checkbox"><label>Ja<br></label>
+                 <p class="text flex">Keine Angabe</p>
+                 <p class="text">40,9 gCO₂eq/MJ</p>
+                 <p class="text">51,2 %</p>
+               </div>
+               <div class="container checkbox-no">
+                 <input class="checkmark" type="checkbox" checked><label>Nein<br></label>
+                 <input class="checkmark" type="checkbox" checked><label>Nein<br></label>
+                 <input class="checkmark" type="checkbox" checked><label>Nein<br></label>
+                 <input class="checkmark" type="checkbox" checked><label>Nein<br></label>
+               </div>
+        </div>
+<!--Einhaltung der Nachhaltigkeitskriterien-->
+        <h3 class="headline__info">Einhaltung der Nachhaltigkeitskriterien</h3>
+        <div class="container__output-material">
+              <div class="output__column">
+                <p>Die Kriterien des Massenbilanzsystems gem. §10 wurden eingehalten.</p>
+                <p>Die Nachhaltigkeitsanforderungen des Rohstoffes wurden eingehalten.</p>
+                <p>Die Treibhausgas-Emissionseinsparungen gem § 12 wurden eingehalten.</p>
+              </div>
+        </div>
+<!--muster overlay-->
+        <img class="muster__overlay" src="https://elna.umweltbundesamt.at/typo3conf/ext/theme/Resources/Public/img/muster_overlay.png">
+  </section>
+</page>
+
+
+</body>
+</html>

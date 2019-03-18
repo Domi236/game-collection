@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+ html {
+    height:100%;
+    width:100%;
+    font-size: 10px;
+  }
+
+.endProduct {
+  font-size: 2rem;
+  font-family: sans-serif;
+  padding: 2rem 0 2rem 2rem;
+}
+.toggle {
+  margin: 0 0 0 2rem;
+  position: relative;
+  display: inline-block;
+  width: 6rem;
+  height: 3.4rem;
+}
+.toggle input {
+  display: none;
+}
+.roundbutton {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  background-color: #495A72;
+  display: block;
+  transition: all 0.3;
+  border-radius: 3.4rem;
+  cursor: pointer;
+}
+.roundbutton:before {
+  position: absolute;
+  content: "";
+  height: 2.4rem;
+  width: 2.5rem;
+  border-radius: 100%;
+  display: block;
+  left: 0.5rem;
+  bottom: 0.5rem;
+  background-color: white;
+  transition: all 0.3s;
+}
+input:checked + .roundbutton {
+  background-color: #ff6e48;
+}
+input:checked + .roundbutton:before {
+  transform: translate(2.6rem, 0)
+}
+.red{
+  background-color: red;
+  border-radius: 20%;
+}
+.blue{
+  background-color: blue;
+  border-radius: 20%;
+}
+</style>
+</head>
+<body>
+  <div id="background">
+    <div id="endProduct" class="endProduct">Der Switch ist <span id="status">inaktiv</span>.<div>
+      <label class="toggle">
+        <input id="toggleSwitch" type="checkbox">
+        <span class="roundbutton"></span>
+      </label>
+  </div>
+
+<script>
+    var input = document.getElementById('toggleSwitch');
+    var outputText = document.getElementById('status');
+
+    input.addEventListener('change', function(){  //sagt aus das ein Event hinzugefügt werden soll
+      if(this.checked)  {
+          outputText.innerHTML = "aktiv";
+          document.getElementsByClassName('set').classList.add("red");
+          document.getElementsByClassName('set').classList.remove("blue");
+          // document.getElementById("background").style.backgroundColor = "red";
+          // document.getElementById("background").style.borderRadius = "20%";
+      } else {
+          outputText.innerHTML = "inaktiv";
+          document.getElementsByClassName('set').classList.add("blue");
+          document.getElementsByClassName('set').classList.remove("red");
+
+          // document.getElementById("background").style.backgroundColor = "blue";
+          // document.getElementById("background").style.borderRadius = "20%";
+      }
+    });
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

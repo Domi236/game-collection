@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+  $glow1:#00ffff;
+  $glow2:#ff0072;
+  $second:#1b2431;
+ html {
+    height:100%;
+    width:100%;
+    background-color: $second;
+  }
+  body {
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    height: 100%;
+    width:100%;
+    overflow: hidden;
+  }
+  .glow__container {
+    width: 20vw;
+    background-color: $second;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+    font-family: roboto;
+    position:relative;
+  }
+  .glow__container::before, .glow__container::after{
+    position: absolute;
+    content: "";
+    top: -5%;
+    left: -5%;
+    height: 110%;
+    width: 110%;
+    background-color: $glow2;
+    z-index: -2;
+
+    border-radius: 50%;
+    opacity: 0.5;
+    filter: blur(60px)
+  }
+  .glow__container::after{
+    background-color: $glow1;
+    z-index:-1;
+    animation: backGlow1 15s ease infinite;
+  }
+  .glow__container::before{
+    background-color: $glow2;
+    z-index:-2;
+    animation: backGlow1 15s ease infinite;
+  }
+  @keyframes backGlow1{
+      0%
+        transform: translate(10%, 10%) scale(1);
+        opacity: 0.5
+      25%
+        transform: translate(-10%, 10%) scale(0.8);
+        opacity: 0.2
+      50%
+        transform: translate(-10%, -10%) scale(1.2);
+        opacity: 0.8
+      75%
+        transform: translate(10%, -10%) scale(1.1);
+        opacity: 0.2
+      100%
+        transform: translate(10%, 10%) scale(1);
+        opacity: 0.5
+      }
+  @keyframes backGlow1{
+      0%
+        transform: translate(10%, 10%) scale(1);
+        opacity: 0.5
+      25%
+        transform: translate(-10%, 10%) scale(0.8);
+        opacity: 0.2
+      50%
+        transform: translate(-10%, -10%) scale(1.2);
+        opacity: 0.8
+      75%
+        transform: translate(10%, -10%) scale(1.1);
+        opacity: 0.2
+      100%
+        transform: translate(10%, 10%) scale(1);
+        opacity: 0.5
+      }
+
+</style>
+</head>
+<body>
+<div class="glow__container">
+  ET420
+</div>
+
+</body>
+</html>

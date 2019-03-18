@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+html {
+   height:100%;
+   width:100%;
+   font-size: 10px;
+}
+body {
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+}
+
+img {
+   width: 20%;
+   height: 20%;
+}
+.set {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   /* display: none; */
+}
+.set div {
+   position: absolute;
+   display: block;
+   z-index: 12;
+   animation-delay: 0s;
+}
+.set div:nth-child(1) {
+   opacity: 0;
+   left: 20%;
+   animation: animate 15s linear infinite;
+   animation-delay: 3s;
+}
+.set div:nth-child(2) {
+   opacity: 0;
+   left: 50%;
+   animation: animate 20s linear infinite;
+   animation-delay: 5s;
+ }
+.set div:nth-child(3) {
+   opacity: 0;
+   left: 20%;
+   animation: animate 25s linear infinite;
+   animation-delay: 5s;
+}
+.set div:nth-child(4) {
+   opacity: 0;
+   left: 0%;
+   animation: animate 15s linear infinite;
+   animation-delay: 5s;
+}
+.set div:nth-child(5) {
+   opacity: 0;
+   left: 85%;
+   animation: animate 18s linear infinite;
+   animation-delay: 0s;
+}
+.set div:nth-child(6) {
+   opacity: 0;
+   left: 40%;
+   animation: animate 12s linear infinite;
+   animation-delay: 10s;
+}
+.set div:nth-child(7) {
+   opacity: 0;
+   left: 15%;
+   animation: animate 14s linear infinite;
+   animation-delay: 10s;
+}
+.set div:nth-child(8) {
+   opacity: 0;
+   left: 60%;
+   animation: animate 15s linear infinite;
+   animation-delay: 10s;
+}
+@keyframes animate {
+  0% {
+    opacity: 0;
+    top: -10%;
+    transform: translateX(20px) rotate(0deg);
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+    transform: translateX(-20px) rotate(45deg);
+    top: -10%;
+  }
+  20% {
+    opacity: 1;
+    transform: translateX(-20px) rotate(45deg);
+  }
+  40% {
+    opacity: 1;
+    transform: translateX(-20px) rotate(90deg);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(20px) rotate(135deg);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(-20px) rotate(180deg);
+  }
+  100% {
+    opacity: 1;
+    top: 110%;
+    transform: translateX(-20px) rotate(225deg);
+  }
+}
+.set2 {
+    transform: scale(2) rotateY(180deg);
+    filter: blur(2px);
+    z-index: 12;
+}
+.set3 {
+    transform: scale(.8) rotateX(180deg);
+    filter: blur(4px);
+    z-index: 12;
+}
+.set4 {
+    transform: scale(.8) rotateY(180deg);
+    z-index: 12;
+}
+.set5 {
+    transform: scale(2) rotateX(180deg);
+    z-index: 12;
+}
+/*blur effect*/
+.layer2 {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: url(love2.png);
+   background-attachment: fixed;
+   background-position: center;
+   background-size: cover;
+   transition: 2s;
+}
+.layer1 {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   width: 600px;
+   height: 450px;
+   background: url(love2.png);
+   background-position: center;
+   transition: 2s;
+   z-index: 13;
+   border-radius: 4px;
+   box-shadow: 0px 0px 2px 2px #BBBBBB;
+ }
+ .layer1:hover ~ .layer2 {
+   filter: blur(10px);
+ }
+ .layer1:hover {
+   box-shadow: 0 25px 60px rgba(0,0,0,.8);
+ }
+ /*smoke effect*/
+ .top {
+   position: absolute;
+   top: 15%;
+   left: 50%;
+   transform: translate(-50%);
+   z-index: 13;
+ }
+ .bottom {
+   position: absolute;
+   top: 76%;
+   left: 50%;
+   transform: translate(-50%);
+   z-index: 13;
+ }
+ ul {
+   margin: 0;
+   padding: 0;
+   display: flex;
+ }
+ ul li {
+   list-style: none;
+   color: #fff;
+   font-size: 6em;
+   font-weight: bold;
+   letter-spacing: 10px;
+   filter: blur(1px);
+ }
+ ul:hover li {
+   animation: animateSmoke 2s linear forwards;
+ }
+ @keyframes animateSmoke {
+   0% {
+     transform: rotate(0deg) translateY(0px);
+     opacity: 1;
+   }
+   100% {
+     transform: rotate(45deg) translateY(-200px);
+     opacity: 0;
+     filter: blur(20px);
+   }
+ }
+ ul li:nth-child(1) {
+   animation-delay: 0s;
+ }
+ ul li:nth-child(2) {
+   animation-delay: .4s;
+ }
+ ul li:nth-child(3) {
+   animation-delay: .8s;
+ }
+ ul li:nth-child(4) {
+   animation-delay: 1.2s;
+ }
+ ul li:nth-child(5) {
+   animation-delay: 1.6s;
+ }
+ /*flying Heart*/
+ .throwing__hearts {
+   position: absolute;
+   left: 0;
+   top: 0;
+   opacity: 0;
+   animation: animateHearts 8s infinite;
+   animation-delay: 4s;
+ }
+ .throwing__clock {
+   width: 60px;
+   height: 60px;
+   border-radius: 50%;
+   margin: 10px 0 0 220px;
+ }
+ .heartTime {
+   width: 60px;
+   height: 60px;
+   font-size: 30px;
+   font-weight: bold;
+   color: white;
+   margin: 15px 0 0 223px;
+ }
+ .throwing__img-love {
+   width: 60px;
+   height: 60px;
+   border-radius: 50%;
+   margin: 5px 0 0 160px;
+ }
+ @keyframes animateHearts {
+   0% {
+     left: 0;
+     top: 50px;
+     opacity: 0;
+   }
+   20% {
+     opacity: 1;
+   }
+   95% {
+     transform:  translate(1600px);
+     top: 0;
+     right: 0;
+     filter: blur(2px);
+   100% {
+     transform:  translate(1800px);
+     top: 110%;
+     right: 110%;
+     filter: blur(20px);
+ }
+}
+
+</style>
+</head>
+<body>
+  <div class="set">
+    <div><img src="..\assets\orangeLeaves.png"></div>
+    <div><img src="..\assets\redHeart.png"></div>
+    <div><img src="..\assets\redYellowLeaves.png"></div>
+    <div><img src="..\assets\redLeaves.png"></div>
+    <div><img src="..\assets\orangeLeaves.png"></div>
+    <div><img src="..\assets\redHeart.png"></div>
+    <div><img src="..\assets\redYellowLeaves.png"></div>
+    <div><img src="..\assets\redLeaves.png"></div>
+  </div>
+  <div class="set set2">
+    <div><img src="..\assets\orangeLeaves.png"></div>
+    <div><img src="..\assets\redHeart.png"></div>
+    <div><img src="..\assets\redYellowLeaves.png"></div>
+    <div><img src="..\assets\redLeaves.png"></div>
+    <div><img src="..\assets\orangeLeaves.png"></div>
+    <div><img src="..\assets\redHeart.png"></div>
+    <div><img src="..\assets\redYellowLeaves.png"></div>
+    <div><img src="..\assets\redLeaves.png"></div>
+  </div>
+  <div class="set set3">
+    <div><img src="..\assets\orangeLeaves.png"></div>
+    <div><img src="..\assets\redHeart.png"></div>
+    <div><img src="..\assets\redYellowLeaves.png"></div>
+    <div><img src="..\assets\redLeaves.png"></div>
+    <div><img src="..\assets\orangeLeaves.png"></div>
+    <div><img src="..\assets\redHeart.png"></div>
+    <div><img src="..\assets\redYellowLeaves.png"></div>
+    <div><img src="..\assets\redLeaves.png"></div>
+  </div>
+  <div class="set set4">
+    <div><img src="..\assets\orangeLeaves.png"></div>
+    <div><img src="..\assets\redHeart.png"></div>
+    <div><img src="..\assets\redYellowLeaves.png"></div>
+    <div><img src="..\assets\redLeaves.png"></div>
+    <div><img src="..\assets\orangeLeaves.png"></div>
+    <div><img src="..\assets\redHeart.png"></div>
+    <div><img src="..\assets\redYellowLeaves.png"></div>
+    <div><img src="..\assets\redLeaves.png"></div>
+  </div>
+  <div class="set set5">
+    <div><img src="..\assets\orangeLeaves.png"></div>
+    <div><img src="..\assets\redHeart.png"></div>
+    <div><img src="..\assets\redYellowLeaves.png"></div>
+    <div><img src="..\assets\redLeaves.png"></div>
+    <div><img src="..\assets\orangeLeaves.png"></div>
+    <div><img src="..\assets\redHeart.png"></div>
+    <div><img src="..\assets\redYellowLeaves.png"></div>
+    <div><img src="..\assets\redLeaves.png"></div>
+  </div>
+
+  <div class="top">
+    <ul>
+      <li>I</li>
+      <li style="color:red;">&#10084;</li>
+      <li>Y</li>
+      <li>O</li>
+      <li>U</li>
+    </ul>
+  </div>
+  <div class="bottom">
+    <ul>
+      <li>4</li>
+      <li>E</li>
+      <li>V</li>
+      <li>E</li>
+      <li>R</li>
+    </ul>
+  </div>
+
+    <span class="layer1" onclick="document.getElementById('yourAudioTag').play();"></span>
+    <span class="layer2"></span>
+
+    <img class="throwing__hearts" src="..\assets\throwing hearts.png">
+    <h1 class="throwing__hearts heartTime">21.07</h1>
+    <img class="throwing__hearts throwing__img-love" src="love21.png">
+
+    <div style="display: none;">
+      <audio id="yourAudioTag"
+        class="audio"
+        controls
+        style="width: 300px;"
+        src="Eurythmics - Sweet Dreams (Ibiza Deep Summer Remix 2015).mp3"
+        type="audio/mp3"
+      </audio>
+    </div>
+
+<script>
+
+// var input = document.getElementById('toggleSwitch');
+// var outputText = document.getElementById('status');
+// var leaves = document.getElementsByClassName('seven');
+// input.addEventListener('change', function(){  //sagt aus das ein Event hinzugefügt werden soll
+//   if(this.checked){
+//       outputText.innerHTML = "aktiv";
+//       leaves.classList.add("here");
+//       leaves.classList.remove("none");
+//       // document.getElementsByClassName('set','set2','set3','set4','set5').style.display = "none";
+//       // document.getElementById("background").style.backgroundColor = "red";
+//       // document.getElementById("background").style.borderRadius = "20%";
+//   } else {
+//       outputText.innerHTML = "inaktiv";
+//       leaves.classList.add("none");
+//       leaves.classList.remove("here");
+//   }
+// });
+// function myFunction(){}
+//  var element = document.getElementsByClassName("red2");
+//  element.classList.add(".red");
+// }
+
+//add all class one style
+// var myElements = document.querySelectorAll(".set");
+//
+// for (var i = 0; i < myElements.length; i++) {
+// 	myElements[i].style.display = none;
+// }
+
+
+// onclick="document.getElementById('yourAudioTag').play();myFunction();"
+
+/*$('audio').mediaelementplayer({
+	features: ['playpause','progress','current','tracks','fullscreen']
+});*/
+
+
+//change className
+// document.getElementById('your_element_s_id').className = 'cssClass';
+
+//change background
+// var myElement = document.querySelector("#superman");
+// myElement.style.backgroundColor = "#D93600";
+
+//add addStyle
+//onclick="w3.addStyle('#layer2','display','none')"
+
+//create style element
+//var sheet = document.createElement('style')
+//sheet.innerHTML = "img {display: none; background-color: blue;}";
+//document.body.appendChild(sheet);
+
+
+</script>
+
+
+
+</body>
+</html>

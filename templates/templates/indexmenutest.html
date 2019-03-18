@@ -1,0 +1,260 @@
+<!Doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/> <!--damit Sonderzeichen angezeigt werden-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!--so wirds am Smartphone angezeigt, findet man auch in den Dokumenten oder Google -->
+    <title>HTML Structure</title>
+    <style>
+      .header {
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 6;
+      }
+      @media (max-width: 1024px) {
+      .header {
+        width: 100%;
+        margin: 20px auto;
+      }}
+      .header__menu {
+        display: flex;
+        justify-content: center;
+        padding: 0 0 20px;
+        margin: 0;
+        z-index: 3;
+      }
+      /*.menu__bar::before{
+        content:"";
+        color:red;
+        width: 50px;
+        height:30px;
+        background-color: green;
+        border: 5px solid;
+
+      }*/
+      .menu__toggle{
+        width: 250px;
+        height: 100px;
+        position: relative;
+        background: lightgrey;
+        display: block;
+        margin-top:-5px;
+        margin-right: 10px;
+        border-radius: 10px;
+      }
+      input[type=checkbox] {
+        display:none;
+      }
+      .menu__bar {
+        width: 200px;
+        height: 10px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background-color: #666;
+        display: block;
+        margin: auto;
+        transition: background-color .25s ease-in-out;
+      }
+      @media (max-width: 768px) {
+      .menu__bar {
+        width: 80px;
+      }}
+      .menu__bar::after,
+      .menu__bar::before{
+        content:"";
+        position: absolute;
+        height: 100%;
+        left:0;
+        background-color: inherit;
+        transition: width .25s ease-in-out;
+      }
+      .menu__bar::after{
+        width: 40%;
+        top: 300%;
+      }
+      .menu__bar::before{
+        width: 60%;
+        bottom: 300%;
+      }
+      .menu__toggle:hover .menu__bar {
+        background-color: black;
+      }
+      .menu__toggle:hover .menu__bar::before,
+      .menu__toggle:hover .menu__bar::after {
+        width: 100%;
+      }
+      @media (min-width: 1025px) {
+      .menu__toggle {
+        display:none;
+      }}
+      @media (max-width: 1024px) {
+      .menu__toggle {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }}
+      @media (max-width: 768px) {
+      .menu__toggle {
+        width: 100px;
+        margin-top: 10px;
+        margin-right: 10px;
+      }}
+      @media (max-width: 440px) {
+      .menu__toggle {
+        position: relative;
+        margin: -10px auto -10px auto;
+      }}
+      @media (max-width: 1024px) {
+      .header__menu {
+        visibility: collapse;
+        margin:0;
+        padding:0;
+        height:0;
+        width:0;
+      }}
+      :checked + .menu__toggle {
+      }
+      .menu__toggler--nav:checked ~ .menu__toggle--nav .menu__bar{
+        background: transparent;
+        transition: blackground .25s ease-in-out;
+      }
+      .menu__toggler--nav:checked ~ .menu__toggle--nav .menu__bar::after{
+          background-color:black;
+          transform: rotate(20deg);
+          width: 100%;
+          top: 0;
+      }
+      @media (max-width: 768px) {
+      .menu__toggler--nav:checked ~ .menu__toggle--nav .menu__bar::after {
+        background-color:black;
+        transform: rotate(45deg);
+      }}
+      .menu__toggler--nav:checked ~ .menu__toggle--nav .menu__bar::before{
+        background-color:black;
+        transform: rotate(-20deg);
+        width: 100%;
+        top:0;
+      }
+      @media (max-width: 768px) {
+      .menu__toggler--nav:checked ~ .menu__toggle--nav .menu__bar::before {
+        background-color:black;
+        transform: rotate(-45deg);
+      }}
+      :checked + .menu__toggle > .menu__bar::before{ /*speaks always to teh last one*/
+      /*transform: rotate(45deg);*/
+      width:100%;
+      }
+      :checked + .menu__toggle > .menu__bar::after{
+      /*transform: rotate(135deg);*/
+      width: 100%;
+      }
+      :checked + .menu__bar{
+      }
+      @media (max-width: 1024px) {
+      .menu__toggler--nav:checked~.header__menu {
+          display: flex !important;
+        }
+      :checked ~ .header__menu {
+          visibility: visible;
+          height:100px;
+          width:100px;
+          display: flex !important;
+          justify-content: center;
+          padding: 0 0 20px;
+          margin: 0;
+          z-index: 3;
+      }}
+      :checked + .header__menu + .menu__link{
+      }
+      /*.header_menu > * /*>speaks instead to the child with * you speak to all*/
+      .menu__item {
+        list-style-type: none;
+        border: 2px solid black;
+        padding: 15px;
+        flex-direction: column;
+        text-align: center;
+        font-size: 30px;
+      }
+      @media (max-width: 1024px) {
+      .menu__item {
+        flex-grow: 1;
+      }}
+      .menu__link {
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+/**
+    Hide the checkbox itself. Checking and unchecking
+    it we will be done via the label element.
+*/
+
+input[type=checkbox]{
+    display: none;
+}
+ul{
+    position: absolute;
+    list-style: none;
+    text-align: left;
+    width: 100%;
+    z-index: 1;
+    margin:0;
+    padding:0;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+ul li{
+    padding: 15px;
+    background-color: #fff;
+    color: #4FB9A7;
+    margin-bottom: 1px;
+    cursor: pointer;
+}
+ul li:hover{
+    background-color: #4FB9A7;
+    color: #FFF;
+}
+ul li a{
+    color: inherit;
+    text-decoration: none;
+}
+/**
+    By using the Following-sibling selector (~),
+    we can target elements positioned after our checkbox in the DOM tree.
+
+    With the state pseudo selector (:checked),
+    we can make changes depending on the state of the checkbox.
+
+    Using this combination of selectors
+    allows to change the color of the label
+    and show the list of items
+    only when the checkbox is checked.
+*/
+input[type=checkbox]:checked ~ label {
+    background-color: #3D88BD;
+}
+input[type=checkbox]:checked ~ ul {
+    display: block;
+}
+    </style>
+</head>
+<body>
+  <div class="dropdown">
+    <input type="checkbox" name="toggler" id="checkbox_toggle">
+        <label for="checkbox_toggle" class="menu__toggle menu__toggle--nav"></label>
+        <ul>
+            <li> <a  href="#home">Home</a></li> <!--target="_blank" opens the link in a new tab-->
+            <li> <a  href="#player">Player</a></li>
+            <li> <a  href="#games">Games</a></li>
+            <li> <a  href="#skills">Skills</a></li> <!--<a href="#">Skills</a> the # is using as a placeholder-->
+            <li> <a  href="#forum">Forum</a></li>
+            <li> <a  href="#youTube">YouTube Channel</a></li>
+        </ul>
+    </nav>
+  </div>
+
+
+</body>
+</html>

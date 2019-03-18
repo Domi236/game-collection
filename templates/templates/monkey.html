@@ -1,0 +1,161 @@
+<!Doctype html>
+<html lang="de-DE">
+<head>
+    <meta charset="utf-8"/> <!--damit Sonderzeichen angezeigt werden-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!--so wirds am Smartphone angezeigt, findet man auch in den Dokumenten oder Google -->
+
+    <title>My Monkeys</title>
+    <style>
+
+      body{
+        background-color:grey;
+        height: 1500px;
+        padding-top: 0px;
+        margin-top: 0px;
+      }
+      #banner{
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
+        width:900px;
+        height: 100%;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding:0%;
+        background-color: lightgreen;
+        border-radius: 20px;
+      }
+      .monkeyimg{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width:800px;
+        height:500px;
+        border-radius: 10px;
+        border:solid 2px;
+        box-shadow: 5px 10px #888888;
+      }
+      .monkeys{
+        color: #FFFFFF;
+        background: #333333;
+        text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+        color: #FFFFFF;
+        background: #333333;
+        text-align:center;
+        font-family:"Times New Roman", Times, serif;
+        font-size:120px;
+        padding:15px;
+
+      }
+      .sentences{
+        width:780px;
+        height: 70px;
+        font-size:30px;
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align:center;
+        border:none;
+        background-color:lightgreen;
+      }
+        #sentences2{
+
+          font-size:40px;
+          margin-left: auto;
+          margin-right: auto;
+          text-align:center;
+          background-color:lightgreen;
+      }
+      .btn{
+        width:780px;
+        height: 70px;
+        display: block;
+        font-size: 50px;
+        font-family: cursive;
+        margin-left: auto;
+        margin-right: auto;
+        cursor: pointer;
+        padding-bottom:10px;
+        background-color:brown;
+      }
+      .btn:hover {
+        background-color: grey;
+      }
+      .btn:active {
+        background-color: lightgreen;
+      }
+      #btn2{
+        width:780px;
+        height: 70px;
+        display: block;
+        font-size: 50px;
+        font-family: cursive;
+        margin-top:5px;
+        margin-left: auto;
+        margin-right: auto;
+        cursor: pointer;
+        padding-bottom:10px;
+        background-color: grey;
+      }
+      #btn2:hover {
+        background-color: brown;
+      }
+      #btn2:active {
+        background-color: lightgreen;
+      }
+
+    </style>
+</head>
+<body>
+  <div id="banner">
+  <h1 class="monkeys">My Monkeys</h1>
+  <img class="monkeyimg" src="..\assets\affenIndex.jpg">
+<br>
+    <input type="text" placeholder="" class="sentences">
+      <button class="btn" onclick="timedText()">Next sentences</button>
+      <button id="btn2">click for the next one</button>
+      <p id="sentences2">Das ist ein text</p>
+  </div>
+
+
+
+  <script>
+  function timedText(){ //sorgt dafür das in bestimmten Zeitabständen ein Satz generiert wird
+      var monkeymo = document.getElementsByClassName("sentences");
+      setTimeout(function(){ monkeymo[0].value = "Das ist ein chilliger affe." }, 2000); //nach2s
+      setTimeout(function(){ monkeymo[0].value = "Das ist der Traum eines jeden affen." }, 4000); //nach4s
+      setTimeout(function(){ monkeymo[0].value = "Das ist wirklich ein sehr schöner affe." }, 6000);//nach6s
+  }
+
+
+
+    var array = ["Das ist ein sehr schöner affe.", "Das ist der Traum eines jeden affen.", " Das ist wirklich ein sehr schöner affe."];
+                 //erstellt einen array mit 3Strings
+    document.getElementById("btn2").onclick = function(){    //wenn der button on.click erstellt function
+       randomize();
+    }
+    function randomize() {
+        var size = array.length;
+        var randomtext = Math.floor(Math.random() * size);  //make random number and floor the number at length of the array
+        sentences2 = array[randomtext];
+
+        document.getElementById('sentences2').innerHTML = sentences2;
+
+    }
+
+
+
+
+
+    /*todo
+    auto: facts drehmoment, reifen, ps,..
+    js in classes, methoden
+    banner responsive (passt es an damit es auf alle ngeräten gut aussieht) (zb. galaxy fitness)*/
+
+
+
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+html {
+   height:100%;
+   width:100%;
+   font-size: 10px;
+ }
+
+
+.none {
+  display: none;
+}
+.here {
+  display: block;
+}
+.seven {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 999;
+  background-color: red;
+  width: 200px;
+  height: 200px;
+}
+
+
+</style>
+</head>
+<body>
+    <div id="background">
+      <div id="endProduct" class="endProduct">Der Switch ist <span id="status">inaktiv</span>.<div>
+        <label class="toggle">
+          <input id="toggleSwitch" type="checkbox">
+          <span class="roundbutton"></span>
+        </label>
+    </div>
+    <div class="seven">
+    </div>
+    <span class="layer1" id="layer3" onclick="document.getElementById('yourAudioTag').play();"></span>
+    <span class="layer2" onclick="document.getElementById('yourAudioTag').play();"></span>
+    <button class="btn" onclick="myFunction();" type="button">love</button>
+    <img id="leaves" class="throwing__hearts" src="..\assets\throwing hearts.png">
+    <img class="throwing__hearts throwing__clock" src="..\assets\leaveClock.jpg">
+
+
+  </section>
+<script>
+
+var input = document.getElementById('toggleSwitch');
+var outputText = document.getElementById('status');
+var leaves = document.getElementsByClassName('seven');
+input.addEventListener('change', function(){  //sagt aus das ein Event hinzugefügt werden soll
+  if(this.checked){
+      outputText.innerHTML = "aktiv";
+      leaves.classList.add(".here");
+      leaves.classList.remove(".none");
+      // document.getElementsByClassName('set','set2','set3','set4','set5').style.display = "none";
+      // document.getElementById("background").style.backgroundColor = "red";
+      // document.getElementById("background").style.borderRadius = "20%";
+  } else {
+      outputText.innerHTML = "inaktiv";
+      leaves.addStyle("display: none");
+      leaves.removeStyle("display: none");
+  }
+});
+
+
+</script>
+
+
+
+</body>
+</html>

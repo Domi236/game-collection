@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+ body {
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+  }
+  img {
+    width: 20%;
+    height: 20%;
+  }
+  section {
+    width:100%;
+    height: 100%;
+    background: radial-gradient(#333, #000);
+  }
+  .set {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  .set div {
+    position: absolute;
+    display: block;
+  }
+  .set div:nth-child(1) {
+    left: 20%;
+    animation: animate 15s linear infinite;
+    animation-delay: -7s;
+  }
+  .set div:nth-child(2) {
+    left: 50%;
+    animation: animate 20s linear infinite;
+    animation-delay: -5s;
+  }
+  .set div:nth-child(3) {
+    left: 20%;
+    animation: animate 25s linear infinite;
+    animation-delay: -5s;
+  }
+  .set div:nth-child(4) {
+    left: 0%;
+    animation: animate 15s linear infinite;
+    animation-delay: -5s;
+  }
+  .set div:nth-child(5) {
+    left: 85%;
+    animation: animate 18s linear infinite;
+    animation-delay: -10s;
+  }
+  .set div:nth-child(6) {
+    left: 40%;
+    animation: animate 12s linear infinite;
+  }
+  .set div:nth-child(7) {
+    left: 15%;
+    animation: animate 14s linear infinite;
+  }
+  .set div:nth-child(8) {
+    left: 60%;
+    animation: animate 15s linear infinite;
+  }
+ @keyframes animate {
+   0% {
+     opacity: 0;
+     top: -10%;
+     transform: translateX(20px) rotate(0deg);
+   }
+   10% {
+     opacity: 1;
+   }
+   20% {
+     transform: translateX(-20px) rotate(45deg);
+     top: -10%;
+   }
+   20% {
+     transform: translateX(-20px) rotate(45deg);
+   }
+   40% {
+     transform: translateX(-20px) rotate(90deg);
+   }
+   60% {
+     transform: translateX(20px) rotate(135deg);
+   }
+   80% {
+     transform: translateX(-20px) rotate(180deg);
+   }
+   100% {
+     top: 110%;
+     transform: translateX(-20px) rotate(225deg);
+   }
+ }
+ .set2 {
+   transform: scale(2) rotateY(180deg);
+   filter: blur(2px);
+ }
+ .set3 {
+   transform: scale(.8) rotateX(180deg);
+   filter: blur(4px);
+ }
+ .set4 {
+   transform: scale(.8) rotateY(180deg);
+ }
+ .set5 {
+   transform: scale(2) rotateX(180deg);
+ }
+
+</style>
+</head>
+<body>
+  <section>
+     <div class="set">
+       <div><img src="..\assets\orangeLeaves.png"></div>
+       <div><img src="..\assets\greenLeaves.png"></div>
+       <div><img src="..\assets\redYellowLeaves.png"></div>
+       <div><img src="..\assets\redLeaves.png"></div>
+       <div><img src="..\assets\orangeLeaves.png"></div>
+       <div><img src="..\assets\greenLeaves.png"></div>
+       <div><img src="..\assets\redYellowLeaves.png"></div>
+       <div><img src="..\assets\redLeaves.png"></div>
+     </div>
+     <div class="set set2">
+       <div><img src="..\assets\orangeLeaves.png"></div>
+       <div><img src="..\assets\greenLeaves.png"></div>
+       <div><img src="..\assets\redYellowLeaves.png"></div>
+       <div><img src="..\assets\redLeaves.png"></div>
+       <div><img src="..\assets\orangeLeaves.png"></div>
+       <div><img src="..\assets\greenLeaves.png"></div>
+       <div><img src="..\assets\redYellowLeaves.png"></div>
+       <div><img src="..\assets\redLeaves.png"></div>
+     </div>
+     <div class="set set3">
+       <div><img src="..\assets\orangeLeaves.png"></div>
+       <div><img src="..\assets\greenLeaves.png"></div>
+       <div><img src="..\assets\redYellowLeaves.png"></div>
+       <div><img src="..\assets\redLeaves.png"></div>
+       <div><img src="..\assets\orangeLeaves.png"></div>
+       <div><img src="..\assets\greenLeaves.png"></div>
+       <div><img src="..\assets\redYellowLeaves.png"></div>
+       <div><img src="..\assets\redLeaves.png"></div>
+     </div>
+     <div class="set set4">
+       <div><img src="..\assets\orangeLeaves.png"></div>
+       <div><img src="..\assets\greenLeaves.png"></div>
+       <div><img src="..\assets\redYellowLeaves.png"></div>
+       <div><img src="..\assets\redLeaves.png"></div>
+       <div><img src="..\assets\orangeLeaves.png"></div>
+       <div><img src="..\assets\greenLeaves.png"></div>
+       <div><img src="..\assets\redYellowLeaves.png"></div>
+       <div><img src="..\assets\redLeaves.png"></div>
+     </div>
+     <div class="set set5">
+       <div><img src="..\assets\orangeLeaves.png"></div>
+       <div><img src="..\assets\greenLeaves.png"></div>
+       <div><img src="..\assets\redYellowLeaves.png"></div>
+       <div><img src="..\assets\redLeaves.png"></div>
+       <div><img src="..\assets\orangeLeaves.png"></div>
+       <div><img src="..\assets\greenLeaves.png"></div>
+       <div><img src="..\assets\redYellowLeaves.png"></div>
+       <div><img src="..\assets\redLeaves.png"></div>
+     </div>
+  </section>
+      <img class="throwing__hearts throwing__clock" src="..\assets\leaveClock.jpg">
+  <!-- <div class="set">
+    <div><img src="..\assets\cigar.png"></div>
+    <div><img src="..\assets\greenLeaves.png"></div>
+    <div><img src="..\assets\redYellowLeaves.png"></div>
+    <div><img src="..\assets\spinHeart.gif"></div>
+    <div><img src="..\assets\leaveGreen.png"></div>
+    <div><img src="..\assets\redHeart.png"></div>
+    <div><img src="..\assets\bud.png"></div>
+    <div><img src="..\assets\om gold.png"></div>
+  </div>
+  <div class="set set2">
+    <div><img src="..\assets\cigar.png"></div>
+    <div><img src="..\assets\greenLeaves.png"></div>
+    <div><img src="..\assets\redYellowLeaves.png"></div>
+    <div><img src="..\assets\spinHeart.gif"></div>
+    <div><img src="..\assets\leaveGreen.png"></div>
+    <div><img src="..\assets\redHeart.png"></div>
+    <div><img src="..\assets\bud.png"></div>
+    <div><img src="..\assets\om gold.png"></div>
+  </div>
+  <div class="set set3">
+    <div><img src="..\assets\cigar.png"></div>
+    <div><img src="..\assets\greenLeaves.png"></div>
+    <div><img src="..\assets\redYellowLeaves.png"></div>
+    <div><img src="..\assets\spinHeart.gif"></div>
+    <div><img src="..\assets\leaveGreen.png"></div>
+    <div><img src="..\assets\redHeart.png"></div>
+    <div><img src="..\assets\bud.png"></div>
+    <div><img src="..\assets\om gold.png"></div>
+  </div>
+  <div class="set set4">
+    <div><img src="..\assets\cigar.png"></div>
+    <div><img src="..\assets\greenLeaves.png"></div>
+    <div><img src="..\assets\redYellowLeaves.png"></div>
+    <div><img src="..\assets\spinHeart.gif"></div>
+    <div><img src="..\assets\leaveGreen.png"></div>
+    <div><img src="..\assets\redHeart.png"></div>
+    <div><img src="..\assets\bud.png"></div>
+    <div><img src="..\assets\om gold.png"></div>
+  </div>
+  <div class="set set5">
+    <div><img src="..\assets\cigar.png"></div>
+    <div><img src="..\assets\greenLeaves.png"></div>
+    <div><img src="..\assets\redYellowLeaves.png"></div>
+    <div><img src="..\assets\spinHeart.gif"></div>
+    <div><img src="..\assets\leaveGreen.png"></div>
+    <div><img src="..\assets\redHeart.png"></div>
+    <div><img src="..\assets\bud.png"></div>
+    <div><img src="..\assets\om gold.png"></div>
+  </div> -->
+<script>
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
