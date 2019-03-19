@@ -1,0 +1,207 @@
+
+html body{
+    background-color: black;
+}
+.image__Array {
+  width: 280px;
+  height: 260px;
+  margin: 10px;
+  object-fit: cover;
+  border-radius: 3px;
+}
+#container__games--PC{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+/*search Box*/
+/*////////////////////////////////////*/
+.search-box {
+  position: absolute;
+  top: 3%;
+  right: 2%;
+  background: #2f3640;
+  height: 40px;
+  border-radius: 40px;
+  padding: 10px;
+}
+.search-box:hover > .search-txt {
+  width: 240px;
+  padding: 0 6px;
+}
+.search-box:hover > .search-btn {
+  background: white;
+}
+.search-btn {
+  color: #e84118;
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #2f3640;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+.search-txt {
+  border: none;
+  background: none;
+  outline: none; /*keine grenzline zu sehen*/
+  float: left;
+  padding: 0;
+  color: white;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 40px;
+  width: 0;
+}
+/*header menu bar */
+/*/////////////////////////////////*/
+ ul {
+  position: relative;
+  top: 5%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  margin: 30px 160px 0px 60px;
+}
+ul li.active .platform__list--link {
+  background: #262626;
+  color: #FFF;
+}
+ul li {
+    list-style: none;
+}
+ul li a {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    line-height: 60px;
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+    text-decoration: none;
+    color: #e84118;
+    margin: 0 50px;
+    transition: .5s;
+    padding: 0 0 10px 0;
+}
+ul li a span {
+    position: absolute;
+    transition: transform .5s;
+}
+/* TOP (1) AND BOTTOM (3) */
+ul li a span:nth-child(1),
+ul li a span:nth-child(3) {
+    width: 100%;
+    height: 2px;
+    background: #262626;
+}
+ul li a span:nth-child(1) {
+    top: 0;
+    left: 0;
+    transform-origin: right;
+}
+ul li a:hover span:nth-child(1) {
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .5s;
+}
+ul li a span:nth-child(3) {
+    bottom: 0;
+    left: 0;
+    transform-origin: left;
+}
+ul li a:hover span:nth-child(3) {
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .5s;
+}
+/* LEFT (2) AND RIGHT (4) */
+ul li a span:nth-child(2),
+ul li a span:nth-child(4) {
+    width: 2px;
+    height: 100%;
+    background: #262626;
+}
+ul li a span:nth-child(2) {
+    top: 0;
+    left: 0;
+    transform: scaleY(0);
+    transform-origin: bottom;
+}
+ul li a:hover span:nth-child(2) {
+    transform: scaleY(1);
+    transform-origin: top;
+    transition: transform .5s;
+}
+ul li a span:nth-child(4) {
+    top: 0;
+    right: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+ul li a:hover span:nth-child(4) {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform .5s;
+}
+/*toogle Switch*/
+/*////////////////////*/
+
+.endProduct {
+  font-size: 2rem;
+  font-family: sans-serif;
+  padding: 2rem 0 2rem 2rem;
+}
+.toggle {
+  margin: 0 0 0 2rem;
+  position: relative;
+  display: inline-block;
+  width: 6rem;
+  height: 3.4rem;
+}
+.toggle input {
+  display: none;
+}
+.roundbutton {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  background-color: #495A72;
+  display: block;
+  transition: all 0.3;
+  border-radius: 3.4rem;
+  cursor: pointer;
+}
+.roundbutton:before {
+  position: absolute;
+  content: "";
+  height: 2.4rem;
+  width: 2.5rem;
+  border-radius: 100%;
+  display: block;
+  left: 0.5rem;
+  bottom: 0.5rem;
+  background-color: white;
+  transition: all 0.3s;
+}
+input:checked + .roundbutton {
+  background-color: #ff6e48;
+}
+input:checked + .roundbutton:before {
+  transform: translate(2.6rem, 0)
+}
+.red{
+  background-color: red;
+  border-radius: 20%;
+}
+.blue{
+  background-color: blue;
+  border-radius: 20%;
+}

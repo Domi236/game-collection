@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/css/style.css" media="all">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <script src="assets/js/gameCollection.js"></script>
+  <!--<script src="assets/js/menuBar.js"></script-->
+</head>
+<style>
+
+
+</style>
+</head>
+<body onload="displayAllImages()">
+<section class="header">
+  <div id="background">
+    <div id="endProduct" class="endProduct">Der Switch ist <span id="status">inaktiv</span>.<div>
+      <label class="toggle">
+        <input id="toggleSwitch" type="checkbox">
+        <span class="roundbutton"></span>
+      </label>
+  </div>
+  <ul class="platform__list">
+    <li class="toggle-me">
+      <a class="platform__list--link" href="#">PC
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+    </li>
+    <li class="toggle-me">
+      <a class="platform__list--link" href="#">Xbox-One
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+    </li>
+    <li class="toggle-me">
+      <a class="platform__list--link" href="#">Xbox-360
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+    </li>
+    <li class="toggle-me">
+      <a class="platform__list--link" href="#">PS4
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+    </li>
+    <li class="toggle-me">
+      <a class="platform__list--link" href="#">Ps2
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+    </li>
+    <li class="toggle-me">
+      <a class="platform__list--link" href="#">Wii
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+    </li>
+  </ul>
+  <div class="search-box">
+    <input class="search-txt" name="" placeholder="Type to search" />
+    <a class="search-btn" href="#">
+       <i class="fas fa-search"></i>
+    </a>
+  </div>
+</section/>
+<section class="content">
+  <div class="content__wrapper">
+      <div id="container__games--PC"></div>
+  </div/>
+  <div class="content__wrapper">
+      <div id="container__games--XboxOne"></div>
+  </div/>
+  <div class="content__wrapper">
+      <div id="container__games--XBox360"></div>
+  </div/>
+  <div class="content__wrapper">
+      <div id="container__games--PS4"></div>
+  </div/>
+  <div class="content__wrapper">
+      <div id="container__games--Ps2"></div>
+  </div/>
+  <div class="content__wrapper">
+      <div id="container__games--Wii"></div>
+  </div/>
+</section>
+
+<script>
+var list = document.querySelectorAll('.toggle-me');
+
+list.forEach(function(el) {
+  el.onclick = function() {
+    list.forEach(function(el) {
+      el.classList.remove('active');
+    });
+    el.classList.add('active');
+  }
+});
+</script>
+</body>
+</html>

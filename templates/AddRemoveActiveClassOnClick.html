@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  position: relative;
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #262626;
+  font-weight: bold;
+}
+
+ul li.active a {
+  background: #262626;
+  color: #FFF;
+}
+</style>
+</head>
+<body>
+
+  <ul>
+    <li class="toggle-me"><a href="#">Home</a></li>
+    <li class="toggle-me"><a href="#">About</a></li>
+    <li class="toggle-me"><a href="#">Services</a></li>
+    <li class="toggle-me"><a href="#">Portfolio</a></li>
+    <li class="toggle-me"><a href="#">Contact</a></li>
+  </ul>
+<script>
+var list = document.querySelectorAll('.toggle-me');
+
+list.forEach(function(el) {
+  el.onclick = function() {
+    list.forEach(function(el) {
+      el.classList.remove('active');
+    });
+    el.classList.add('active');
+  }
+});
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
