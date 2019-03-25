@@ -1,0 +1,17 @@
+{
+    "gameDats": [
+      {
+        "name": "Borderlands 2",
+        "device": "PC",
+        "tags": [
+            "Singleplayer",
+            "Multiplayer 4 or more",
+            "Horror",
+            "Action",
+            "Party",
+            "online",
+            "offline"    
+        ]
+      }
+    ]
+}

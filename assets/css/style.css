@@ -9,6 +9,10 @@ html body{
   object-fit: cover;
   border-radius: 3px;
 }
+.image__Array:hover {
+  cursor: pointer;
+  
+}
 #container__games--PC{
   display:flex;
   flex-wrap: wrap;
@@ -150,7 +154,7 @@ ul li a:hover span:nth-child(4) {
 }
 /*toogle Switch*/
 /*////////////////////*/
-
+/* 
 .endProduct {
   font-size: 2rem;
   font-family: sans-serif;
@@ -204,4 +208,4 @@ input:checked + .roundbutton:before {
 .blue{
   background-color: blue;
   border-radius: 20%;
-}
+} */
