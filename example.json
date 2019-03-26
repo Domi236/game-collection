@@ -1,8 +1,0 @@
-{
-    "myObject":
-	{
-        "name":"obi wan kenobi",
-        "weapons": ["lightsaber","smoke grenade","knife","jedi things"],
-        "specialPowers":"the force"
-    }
-}

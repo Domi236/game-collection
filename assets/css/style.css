@@ -7,14 +7,14 @@ html body{
   height: 260px;
   margin: 10px;
   object-fit: cover;
-  border-radius: 3px;
+  border-radius: 15px;
 }
 .image__Array:hover {
   cursor: pointer;
   
 }
 #container__games--PC{
-  display:flex;
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
@@ -26,7 +26,6 @@ html body{
   right: 2%;
   background: #2f3640;
   height: 40px;
-  border-radius: 40px;
   padding: 10px;
 }
 .search-box:hover > .search-txt {
@@ -152,7 +151,7 @@ ul li a:hover span:nth-child(4) {
     transform-origin: bottom;
     transition: transform .5s;
 }
-/*toogle Switch*/
+/*toogle Switch for the night mode*/
 /*////////////////////*/
 /* 
 .endProduct {
@@ -209,3 +208,59 @@ input:checked + .roundbutton:before {
   background-color: blue;
   border-radius: 20%;
 } */
+
+/*Card Hover effect*/
+/*////////////////////*/
+.card {
+  width: 280px;
+  height: 260px;
+  margin: 10px;
+}
+.front,.back {
+  width: 280px;
+  height: 260px;
+  overflow: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  transition: transform .6s linear;
+  border-radius: 6px;
+}
+
+.front img {
+  transform: perspective(600px) rotateY(0deg);
+}
+.back {
+  background: #f1f1f1;
+  transform: perspective(600px) rotateY(180deg);
+}
+.back-content{
+  color: #2c3e50;
+  text-align: center;
+  width: 100%;
+  border-radius: 3px;
+}
+.sm {
+  margin: 20px 0;
+}
+.sm a {
+  display: inline-flex;
+  width: 40px; 
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  color: #2c3e50;
+  text-align: center;
+  font-size: 18px;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+.sm a:hover {
+  background: #2c3350;
+  color: white;
+}
+.card:hover > .front {
+  transform: perspective(600px) rotateY(-180deg);
+}
+.card:hover > .back {
+  transform: perspective(600px) rotateY(0deg);
+}
