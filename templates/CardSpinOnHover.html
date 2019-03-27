@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<style>
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "montserrat";
+}
+body {
+  background: #333;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card {
+  cursor: pointer;
+  width: 340px;
+  height: 480px;
+}
+.front,.back {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  transition: transform .6s linear;
+
+}
+.front img {
+  height: 100%;
+}
+.front img {
+  transform: perspective(600px) rotateY(0deg);
+}
+.back {
+  background: #f1f1f1;
+  transform: perspective(600px) rotateY(180deg);
+}
+.back-content{
+  color: #2c3e50;
+  text-align: center;
+  width: 100%;
+}
+.sm {
+  margin: 20px 0;
+}
+.sm a {
+  display: inline-flex;
+  width: 40px; 
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  color: #2c3e50;
+  text-align: center;
+  font-size: 18px;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+.sm a:hover {
+  background: #2c3350;
+  color: white;
+}
+.card:hover > .front {
+  transform: perspective(600px) rotateY(-180deg);
+}
+.card:hover > .back {
+  transform: perspective(600px) rotateY(0deg);
+}
+ 
+
+</style>
+
+
+</head>
+
+<body>
+  <div class="card middle">
+    <div class="front">
+      <img src="https://www.welt.de/img/icon/partnerschaft/mobile165708963/5592503467-ci102l-w1024/Meistgeklaute-Bilder-im-Internet.jpg" alt="">
+    </div>
+    <div class="back">
+      <div class="back-content middle">
+        <h2>DarkCode</h2>
+        <span>YouTube Channel</span>
+        <div class="sm">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

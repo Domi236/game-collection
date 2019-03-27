@@ -1,3 +1,69 @@
+
+var output = document.getElementsByClassName('back');
+var ajaxhttp = new XMLHttpRequest();  //generate a 
+var url = "assets/json/dats.json"; //it doesn't enable to use (assets/json/dats.json)//{}myjson http://myjson.com/ihhge 
+var x = "";
+  
+
+function displayAllImages() {
+  ajaxhttp.open("GET", url, true);  //get will be used to request dats//post will be used when the dats are more then 512Bytes //if the boolean is true it won'z be wainting for the request, but it is false it will(it is to be used for a Login field) 
+  ajaxhttp.setRequestHeader("content-type", "application/json"); //Assigns the header a label or value pair, which is sent with the request
+  ajaxhttp.onreadystatechange = function () {   //will be called by each change of the XHR-State
+    if (ajaxhttp.readyState == 4 && ajaxhttp.status == 200) { //the number gives the state about it, if it ranges 4 it is done//ready state gives a state about the progress //sends the number of output code for example 200 for OK
+        var myObj = JSON.parse(ajaxhttp.responseText); //change the data of the json file in a string with dats
+        for (i in myObj.searchcriteria) {
+          x += "<div class='card'><div class='front'><img class='image__Array ' src='" + myObj.searchcriteria[i].src + "'/></div><div class='back'><div class='back-content'><h2>" + 
+          myObj.searchcriteria[i].name + "</h2><p>" + myObj.searchcriteria[i].tags + "</p><a class='game__links' href='" + 
+          myObj.searchcriteria[i].url + "' target='_blank'><i class='fab fa-youtube'></i><a/><p class='tags'></p></div></div></div>";
+        }
+        document.getElementById('container__games--PC').innerHTML += x;
+    console.log(myObj);
+    //debugger;
+    }
+  } 
+  ajaxhttp.send(null); //sends the request, optional with a string or Dom-Object-Dats
+}
+
+
+/* ready for use with the JSON Object in js
+
+var myObj, i, j, x = "";
+myObj = {
+  "searchcriteria": [
+    {"name":"Agony", "src":"assets/images/Agony.jpg", "url": "https://youtu.be/0oPnKm4xpFM", "tags":
+    ["Singleplayer", " Horror", " offline", " PC"]},
+    
+    {"name":"Blood and Bacon", "src":"assets/images/Blood and Backen.jpg", "url": "https://youtu.be/b2mwW2YnXGA", "tags":
+    ["Singleplayer", " Multiplayer 4PL.", " Action", " Party", " online", " offline", " Ego Shooter", " PC"]},
+    
+    {"name":"Borderlands 2", "src":"assets/images/Borderlands2.png", "url": "https://youtu.be/kKVf5feSMEg", "tags":
+    [" Multiplayer 2PL.", " Action", " online", " offline", " Ego Shooter", " PC"] },
+    
+    {"name":"BroForce", "src":"assets/images/broforce-cover.jpg", "url": "https://youtu.be/8mOAQ7t9JjY", "tags":	
+    ["Multiplayer 4Pl.", " Action", " Party", " offline", " PC"]},
+    
+    {"name":"Unturned", "src":"assets/images/buy-unturned-permanent-gold-upgrade-cd-key-compare-prices.jpg", "url": "https://youtu.be/sjhig_ONjrI", "tags":				
+    ["Singleplayer", " MMO", " Crafting", " Action", " Ego Shooter", " Party", " PC"]},
+    
+    {"name":"Counter Strike",  "src":"assets/images/counterStrike.jpg", "url": "https://youtu.be/p5VD49suIUw", "tags":				
+    ["Singleplayer", " Action", " Ego Shooter", " online", " Hunger Games", " PC"]},
+    
+    {"name":"Dead By Daylight",  "src":"assets/images/deadByDaylight.jpg", "url": "https://youtu.be/JGhIXLO3ul8", "tags":				
+    ["Singleplayer", " Horror", " Party", " online", " PC"]}
+  ]
+}
+
+function displayAllImages() {
+  for (i in myObj.searchcriteria) {
+    x += "<div class='card'><div class='front'><img class='image__Array ' src='" + myObj.searchcriteria[i].src + "'/></div><div class='back'><div class='back-content'><h2>" + 
+    myObj.searchcriteria[i].name + "</h2><p>" + myObj.searchcriteria[i].tags + "</p><a class='game__links' href='" + 
+    myObj.searchcriteria[i].url + "' target='_blank'><i class='fab fa-youtube'></i><a/><p class='tags'></p></div></div></div>";
+  }
+  document.getElementById('container__games--PC').innerHTML += x;
+  
+} */
+
+
 // var randomimages = new Array();
 //       randomimages[0]="assets/images/Agony.jpg"
 //       randomimages[1]="assets/images/Blood and Backen.jpg"
@@ -123,68 +189,5 @@
 //   "games[6].tags[1]": "Horror",
 //   "games[6].tags[2]": "Party",
 //   "games[6].tags[3]": "online"
-// }
+// }*/
 
-var output = document.getElementsByClassName('back');
-var ajaxhttp = new XMLHttpRequest();  //generate a 
-var url = "https://api.myjson.com/bins/ihhge"; //it doesn't enable to use (assets/json/dats.json)//{}myjson http://myjson.com/ihhge 
-var x = "";
-  
-
-function displayAllImages() {
-  ajaxhttp.open("GET", url, true);  //get will be used to request dats//post will be used when the dats are more then 512Bytes //if the boolean is true it won'z be wainting for the request, but it is false it will(it is to be used for a Login field) 
-  ajaxhttp.setRequestHeader("content-type", "application/json"); //Assigns the header a label or value pair, which is sent with the request
-  ajaxhttp.onreadystatechange = function () {   //will be called by each change of the XHR-State
-    if (ajaxhttp.readyState == 4 && ajaxhttp.status == 200) { //the number gives the state about it, if it ranges 4 it is done//ready state gives a state about the progress //sends the number of output code for example 200 for OK
-        var myObj = JSON.parse(ajaxhttp.responseText); //change the data of the json file in a string with dats
-        for (i in myObj.searchcriteria) {
-          x += "<div class='card'><div class='front'><img class='image__Array ' src='" + myObj.searchcriteria[i].src + "'/></div><div class='back'><div class='back-content'><h2>" + 
-          myObj.searchcriteria[i].name + "</h2><p>" + myObj.searchcriteria[i].tags + "</p><a class='game__links' href='" + 
-          myObj.searchcriteria[i].url + "' target='_blank'><i class='fab fa-youtube'></i><a/><p class='tags'></p></div></div></div>";
-        }
-        document.getElementById('container__games--PC').innerHTML += x;
-    console.log(myObj);
-    //debugger;
-    }
-  } 
-  ajaxhttp.send(null); //sends the request, optional with a string or Dom-Object-Dats
-}
-
-
-/* ready for use with the JSON Object in js
-
-var myObj, i, j, x = "";
-myObj = {
-  "searchcriteria": [
-    {"name":"Agony", "src":"assets/images/Agony.jpg", "url": "https://youtu.be/0oPnKm4xpFM", "tags":
-    ["Singleplayer", " Horror", " offline", " PC"]},
-    
-    {"name":"Blood and Bacon", "src":"assets/images/Blood and Backen.jpg", "url": "https://youtu.be/b2mwW2YnXGA", "tags":
-    ["Singleplayer", " Multiplayer 4PL.", " Action", " Party", " online", " offline", " Ego Shooter", " PC"]},
-    
-    {"name":"Borderlands 2", "src":"assets/images/Borderlands2.png", "url": "https://youtu.be/kKVf5feSMEg", "tags":
-    [" Multiplayer 2PL.", " Action", " online", " offline", " Ego Shooter", " PC"] },
-    
-    {"name":"BroForce", "src":"assets/images/broforce-cover.jpg", "url": "https://youtu.be/8mOAQ7t9JjY", "tags":	
-    ["Multiplayer 4Pl.", " Action", " Party", " offline", " PC"]},
-    
-    {"name":"Unturned", "src":"assets/images/buy-unturned-permanent-gold-upgrade-cd-key-compare-prices.jpg", "url": "https://youtu.be/sjhig_ONjrI", "tags":				
-    ["Singleplayer", " MMO", " Crafting", " Action", " Ego Shooter", " Party", " PC"]},
-    
-    {"name":"Counter Strike",  "src":"assets/images/counterStrike.jpg", "url": "https://youtu.be/p5VD49suIUw", "tags":				
-    ["Singleplayer", " Action", " Ego Shooter", " online", " Hunger Games", " PC"]},
-    
-    {"name":"Dead By Daylight",  "src":"assets/images/deadByDaylight.jpg", "url": "https://youtu.be/JGhIXLO3ul8", "tags":				
-    ["Singleplayer", " Horror", " Party", " online", " PC"]}
-  ]
-}
-
-function displayAllImages() {
-  for (i in myObj.searchcriteria) {
-    x += "<div class='card'><div class='front'><img class='image__Array ' src='" + myObj.searchcriteria[i].src + "'/></div><div class='back'><div class='back-content'><h2>" + 
-    myObj.searchcriteria[i].name + "</h2><p>" + myObj.searchcriteria[i].tags + "</p><a class='game__links' href='" + 
-    myObj.searchcriteria[i].url + "' target='_blank'><i class='fab fa-youtube'></i><a/><p class='tags'></p></div></div></div>";
-  }
-  document.getElementById('container__games--PC').innerHTML += x;
-  
-} */
