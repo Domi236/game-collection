@@ -87,6 +87,42 @@
         " Horror",
         " Party",
         " online",
+        " Third Person",
+        " PC"
+      ]
+    },
+    {
+      "name": "Flatout Ultimate",
+      "src": "assets/images/Flatout ultimate.jpg",
+      "url": "https://www.youtube.com/watch?v=7WlHry98-OI&t=1s",
+      "tags": [
+        "Multiplayer 2Pl.",
+        " Rennspiel",
+        " offline",
+        " PC"
+      ]
+    },
+    {
+      "name": "The Binding of Isaac",
+      "src": "assets/images/Isaac.png",
+      "url": "https://www.youtube.com/watch?v=8PGCyTKO8TI",
+      "tags": [
+        "Multiplayer 2Pl.",
+        " Singleplayer",
+        " offline",
+        " Party",
+        " PC"
+      ]
+    },
+    {
+      "name": "League of Legends",
+      "src": "assets/images/Isaac.png",
+      "url": "https://www.youtube.com/watch?v=8PGCyTKO8TI",
+      "tags": [
+        "Singleplayer",
+        " Singleplayer",
+        " online",
+        " Party",
         " PC"
       ]
     }

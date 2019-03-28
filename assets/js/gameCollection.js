@@ -1,7 +1,7 @@
 
-var output = document.getElementsByClassName('back');
+
 var ajaxhttp = new XMLHttpRequest();  //generate a 
-var url = "assets/json/dats.json"; //it doesn't enable to use (assets/json/dats.json)//{}myjson http://myjson.com/ihhge 
+var url = "https://api.myjson.com/bins/1akjoi"; //it doesn't enable to use (assets/json/dats.json)//{}myjson http://myjson.com/ihhge 
 var x = "";
   
 
@@ -10,19 +10,22 @@ function displayAllImages() {
   ajaxhttp.setRequestHeader("content-type", "application/json"); //Assigns the header a label or value pair, which is sent with the request
   ajaxhttp.onreadystatechange = function () {   //will be called by each change of the XHR-State
     if (ajaxhttp.readyState == 4 && ajaxhttp.status == 200) { //the number gives the state about it, if it ranges 4 it is done//ready state gives a state about the progress //sends the number of output code for example 200 for OK
-        var myObj = JSON.parse(ajaxhttp.responseText); //change the data of the json file in a string with dats
+            //debugger;
+      var myObj = JSON.parse(ajaxhttp.responseText); //change the data of the json file in a string with dats
         for (i in myObj.searchcriteria) {
-          x += "<div class='card'><div class='front'><img class='image__Array ' src='" + myObj.searchcriteria[i].src + "'/></div><div class='back'><div class='back-content'><h2>" + 
+          x += "<div class='card" + myObj.searchcriteria[i].tags.slice(-1) + "'><div class='front'><img class='image__Array ' src='" + myObj.searchcriteria[i].src + "'/></div><div class='back'><div class='back-content'><h2>" + 
           myObj.searchcriteria[i].name + "</h2><p>" + myObj.searchcriteria[i].tags + "</p><a class='game__links' href='" + 
           myObj.searchcriteria[i].url + "' target='_blank'><i class='fab fa-youtube'></i><a/><p class='tags'></p></div></div></div>";
         }
         document.getElementById('container__games--PC').innerHTML += x;
     console.log(myObj);
-    //debugger;
+
     }
   } 
   ajaxhttp.send(null); //sends the request, optional with a string or Dom-Object-Dats
 }
+
+
 
 
 /* ready for use with the JSON Object in js

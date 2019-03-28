@@ -25,52 +25,60 @@
   </div> -->
   <ul class="platform__list">
     <li class="toggle-me">
-      <a class="platform__list--link" href="#">PC
+        <button class="btn" onclick="filterSelection('all')"> Show all
         <span></span>
         <span></span>
         <span></span>
         <span></span>
-      </a>
+      </button>
     </li>
     <li class="toggle-me">
-      <a class="platform__list--link" href="#">Xbox-One
+        <button class="btn" onclick="filterSelection('PC')"> PC
         <span></span>
         <span></span>
         <span></span>
         <span></span>
-      </a>
+      </button>
     </li>
     <li class="toggle-me">
-      <a class="platform__list--link" href="#">Xbox-360
+        <button class="btn" onclick="filterSelection('Xbox-One')"> Xbox-One
         <span></span>
         <span></span>
         <span></span>
         <span></span>
-      </a>
+      </button>
     </li>
     <li class="toggle-me">
-      <a class="platform__list--link" href="#">PS4
+        <button class="btn" onclick="filterSelection('Xbox-360')"> Xbox-360
         <span></span>
         <span></span>
         <span></span>
         <span></span>
-      </a>
+      </button>
     </li>
     <li class="toggle-me">
-      <a class="platform__list--link" href="#">Ps2
+        <button class="btn" onclick="filterSelection('PS4')"> PS4
         <span></span>
         <span></span>
         <span></span>
         <span></span>
-      </a>
+      </button>
     </li>
     <li class="toggle-me">
-      <a class="platform__list--link" href="#">Wii
+        <button class="btn" onclick="filterSelection('Ps2')"> Ps2
         <span></span>
         <span></span>
         <span></span>
         <span></span>
-      </a>
+      </button>
+    </li>
+    <li class="toggle-me">
+        <button class="btn" onclick="filterSelection('Wii')"> Wii
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </li>
   </ul>
   <div class="search-box">
@@ -79,6 +87,8 @@
        <i class="fas fa-search"></i>
     </a>
   </div>
+
+  
 </section/>
 <section class="content">
   <div class="content__wrapper">
@@ -101,17 +111,43 @@
   </div/>
 </section>
 
-<script>
-var list = document.querySelectorAll('.toggle-me');
 
-list.forEach(function(el) {
-  el.onclick = function() {
-    list.forEach(function(el) {
-      el.classList.remove('active');
-    });
-    el.classList.add('active');
+
+<script>
+
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("card");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
   }
-});
+}
+
+function AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
 </script>
 </body>
 </html>
