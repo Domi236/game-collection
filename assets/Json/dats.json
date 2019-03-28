@@ -48,6 +48,7 @@
         " Action",
         " Party",
         " offline",
+        "2D Game",
         " PC"
       ]
     },
@@ -111,6 +112,7 @@
         " Singleplayer",
         " offline",
         " Party",
+        " 2D Game",
         " PC"
       ]
     },
@@ -123,7 +125,9 @@
         " Singleplayer",
         " online",
         " Party",
+        " Third Person",
         " PC"
+        
       ]
     }
   ]

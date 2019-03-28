@@ -310,15 +310,13 @@ div:hover {
   line-height: 100px;
   text-align: center;
   margin: 2px;
-  display: none; /* Hidden by default */
+  display: none; 
 }
 
-/* The "show" class is added to the filtered elements */
 .show {
   display: block;
 }
 
-/* Style the buttons */
 .btn {
   border: none;
   outline: none;
@@ -327,10 +325,26 @@ div:hover {
   cursor: pointer;
 }
 
-
-
-/* Add a dark background to the active button */
 .btn.active {
   background-color: #666;
   color: white;
+}
+/* Search Box*/
+/*/////////////////////////*/
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -30px; /* Prevent double borders */
+  background-color: black;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  border-color: black;
+  color: #e84118;
+  display: block;
 }

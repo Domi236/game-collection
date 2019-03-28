@@ -82,12 +82,30 @@
     </li>
   </ul>
   <div class="search-box">
-    <input class="search-txt" name="" placeholder="Type to search" />
+    <input class="search-txt" type="text" id="myInput" onkeyup="search();" name="" placeholder="Search for tags.." />
     <a class="search-btn" href="#">
        <i class="fas fa-search"></i>
     </a>
   </div>
-
+  <ul id="myUL">
+      <li><a href="#">Singleplayer</a></li>
+      <li><a href="#">Multiplayer 2PL.</a></li>
+      <li><a href="#">Multiplayer 4PL.</a></li>
+      <li><a href="#">Ego Shooter</a></li>
+      <li><a href="#">Third Person</a></li>
+      <li><a href="#">2D Game</a></li>
+      <li><a href="#">Rollenspiel</a></li>
+      <li><a href="#">online</a></li>
+      <li><a href="#">offline</a></li>
+      <li><a href="#">Party</a></li>
+      <li><a href="#">Rennspiel</a></li>
+      <li><a href="#">Brain Games</a></li>
+      <li><a href="#">Action</a></li>
+      <li><a href="#">Horror</a></li>
+      <li><a href="#">Crafting</a></li>
+      <li><a href="#">MMO</a></li>
+    </ul>
+<!--need to write a functio nwhich write a list with all tags who stands in the json and all game names-->
   
 </section/>
 <section class="content">
@@ -146,6 +164,40 @@ function RemoveClass(element, name) {
   }
   element.className = arr1.join(" ");
 }
+
+function search() {
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
+      a = li[i].getElementsByTagName("a")[0];
+      txtValue = a.textContent || a.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+      } else {
+          li[i].style.display = "none";
+      }
+  }
+}
+// function search() {
+//     var input, filter, div, h2, a, i, txtValue;
+//     input = document.getElementById("myInput");
+//     filter = input.value.toUpperCase(); //the input value will be set to uppercase
+//     div = document.getElementsByClassName("back-content");
+//     h2 = div.getElementsByTagName("h2"); 
+//     for (i = 0; i < h2.length; i++) { 
+//         a = h2[i].getElementsByTagName("a")[0]; 
+//         txtValue = a.textContent || a.innerText; // textContent/innerText that text which is in the tag
+//         if (txtValue.toUpperCase().indexOf(filter) > -1) { //indexOf position where the text stands, 
+//             h2[i].style.display = "";
+//         } else {
+//             h2[i].style.display = "none";
+//         }
+//     }
+// }
+
 
 
 </script>
