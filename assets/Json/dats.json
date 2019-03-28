@@ -118,16 +118,156 @@
     },
     {
       "name": "League of Legends",
-      "src": "assets/images/Isaac.png",
-      "url": "https://www.youtube.com/watch?v=8PGCyTKO8TI",
+      "src": "assets/images/league of legends.jpg",
+      "url": "https://www.youtube.com/watch?v=zF5Ddo9JdpY",
       "tags": [
         "Singleplayer",
-        " Singleplayer",
+        " Multiplayer 5PL.",
         " online",
         " Party",
         " Third Person",
         " PC"
-        
+      ]
+    },
+    {
+      "name": "Lethal League",
+      "src": "assets/images/lethal league.jpg",
+      "url": "https://www.youtube.com/watch?v=j78X5LluM5U&t=13s",
+      "tags": [
+        " Multiplayer 4PL.",
+        " Party",
+        " offine",
+        " Third Person",
+        " PC"
+      ]
+    },
+    {
+      "name": "Mortal Komabt XL",
+      "src": "assets/images/Mortal komabt XL.jpg",
+      "url": "Mortal komabt XL trailer",
+      "tags": [
+        "Multiplayer 2Pl.",
+        " online",
+        " action",
+        " Party",
+        " 2D",
+        " offline",
+        " PC"
+      ]
+    },
+    {
+      "name": "Outlast",
+      "src": "assets/images/outlast.jpg",
+      "url": "https://www.youtube.com/watch?v=EOrTuPljfPU",
+      "tags": [
+        " Singleplayer",
+        " offline",
+        " Horror",
+        " Third Person",
+        " Ego Shooter",
+        " PC"
+      ]
+    },
+    {
+      "name": "Race the sun",
+      "src": "assets/images/raceTheSun.jpg",
+      "url": "https://www.youtube.com/watch?v=QmjAg0e_YYU",
+      "tags": [
+        " Singleplayer",
+        " Party",
+        " Ego Shooter",
+        " Rennspiel",
+        " PC"
+      ]
+    },
+    {
+      "name": "Rogue Legacy Cover",
+      "src": "assets/images/rogue-legacy-cover.jpg",
+      "url": "https://www.youtube.com/watch?v=9Rd_eyxoZqk",
+      "tags": [
+        " Singleplayer",
+        " Party",
+        " 2D Game",
+        " Arcade",
+        " offline",
+        " PC"
+      ]
+    },
+    {
+      "name": "Speed Runer",
+      "src": "assets/images/speed ruinner.jpg",
+      "url": "https://www.youtube.com/watch?v=QmjAg0e_YYU",
+      "tags": [
+        " Multiplayer 4PL.",
+        " offline",
+        " Party",
+        " 2D Game",
+        " Rennspiel",
+        " PC"
+      ]
+    },
+    {
+      "name": "Star Wars Battlefront 2",
+      "src": "assets/images/star war Battlefront2.jpg",
+      "url": "https://www.youtube.com/watch?v=Kae-JjbLsgA",
+      "tags": [
+        " Multiplayer 2PL.",
+        " offline",
+        " Party",
+        " Ego Shooter",
+        " PC"
+      ]
+    },
+    {
+      "name": "Stick Fight the Game",
+      "src": "assets/images/StickFightTheGame.png",
+      "url": "https://www.youtube.com/watch?v=YBlEslDQSEQ",
+      "tags": [
+        " Multiplayer 4PL.",
+        " offline",
+        " online",
+        " Party",
+        " 2D Game",
+        " PC"
+      ]
+    },
+    {
+      "name": "super Hexagon",
+      "src": "assets/images/super Hexagon.jpg",
+      "url": "https://www.youtube.com/watch?v=2sz0mI_6tLQ",
+      "tags": [
+        " Singleplayer",
+        " offline",
+        " Party",
+        " 2D Game",
+        " PC"
+      ]
+    },
+    {
+      "name": "Terraria",
+      "src": "assets/images/terraria.jpg",
+      "url": "https://www.youtube.com/watch?v=w7uOhFTrrq0&t=71s",
+      "tags": [
+        " Multiplayer 8PL.",
+        " offline",
+        " Crafting",
+        " Abenteuer",
+        " online",
+        " Party",
+        " 2D Game",
+        " PC"
+      ]
+    },
+    {
+      "name": "super Hexagon",
+      "src": "assets/images/super Hexagon.jpg",
+      "url": "https://www.youtube.com/watch?v=2sz0mI_6tLQ",
+      "tags": [
+        " Singleplayer",
+        " offline",
+        " Party",
+        " 2D Game",
+        " PC"
       ]
     }
   ]
