@@ -6,15 +6,15 @@
   <link rel="stylesheet" href="assets/css/style.css" media="all">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <script src="assets/js/gameCollection.js"></script>
+  <script src="assets/js/sublineMenuBar.js"></script>
   <!--<script src="assets/js/menuBar.js"></script-->
 </head>
 <style>
 
-
 </style>
 </head>
 
-<body onload="displayAllImages()">
+<body id="html" onload="displayAllImages()">
 <section class="header">
   <!-- <div id="background">
     <div id="endProduct" class="endProduct">Der Switch ist <span id="status">inaktiv</span>.<div>
@@ -88,24 +88,42 @@
     </a>
   </div>
   <ul id="myUL">
-      <li><a href="#">Singleplayer</a></li>
-      <li><a href="#">Multiplayer 2PL.</a></li>
-      <li><a href="#">Multiplayer 4PL.</a></li>
-      <li><a href="#">Ego Shooter</a></li>
-      <li><a href="#">Third Person</a></li>
-      <li><a href="#">2D Game</a></li>
-      <li><a href="#">Rollenspiel</a></li>
-      <li><a href="#">online</a></li>
-      <li><a href="#">offline</a></li>
-      <li><a href="#">Party</a></li>
-      <li><a href="#">Rennspiel</a></li>
-      <li><a href="#">Brain Games</a></li>
-      <li><a href="#">Action</a></li>
-      <li><a href="#">Horror</a></li>
-      <li><a href="#">Crafting</a></li>
-      <li><a href="#">MMO</a></li>
+      <li><a id="singleplayer" href="#">Singleplayer</a></li>
+      <li><a id="multiplayer2" href="#">Multiplayer 2PL.</a></li>
+      <li><a id="multiplayer4" href="#">Multiplayer 4PL.</a></li>
+      <li><a id="egoShooter" href="#">Ego Shooter</a></li>
+      <li><a id="thirdPerson" href="#">Third Person</a></li>
+      <li><a id="twoDGame" href="#">2D Game</a></li>
+      <li><a id="rollenspiel" href="#">Rollenspiel</a></li>
+      <li><a id="online" href="#">online</a></li>
+      <li><a id="offline" href="#">offline</a></li>
+      <li><a id="party" href="#">Party</a></li>
+      <li><a id="rennspiel" href="#">Rennspiel</a></li>
+      <li><a id="brainGames" href="#">Brain Games</a></li>
+      <li><a id="action" href="#">Action</a></li>
+      <li><a id="horror" href="#">Horror</a></li>
+      <li><a id="crafting" href="#">Crafting</a></li>
+      <li><a id="mmo" href="#">MMO</a></li>
     </ul>
-<!--need to write a functio nwhich write a list with all tags who stands in the json and all game names-->
+
+<input type="checkbox" id="singleplayerCheck" class="checkbox">
+<input type="checkbox" id="multiplayer2Check" class="checkbox">
+<input type="checkbox" id="multiplayer4Check" class="checkbox">
+<input type="checkbox" id="egoShooterCheck" class="checkbox">
+<input type="checkbox" id="thirdPersonCheck" class="checkbox">
+<input type="checkbox" id="twoDGameCheck" class="checkbox">
+<input type="checkbox" id="rollenspielCheck" class="checkbox">
+<input type="checkbox" id="onlineCheck" class="checkbox">
+<input type="checkbox" id="offlineCheck" class="checkbox">
+<input type="checkbox" id="partyCheck" class="checkbox">
+<input type="checkbox" id="rennspielCheck" class="checkbox">
+<input type="checkbox" id="brainGamesCheck" class="checkbox">
+<input type="checkbox" id="actionCheck" class="checkbox">
+<input type="checkbox" id="horrorCheck" class="checkbox">
+<input type="checkbox" id="craftingCheck" class="checkbox">
+<input type="checkbox" id="mmoCheck" class="checkbox">
+
+<!--need to write a function which write a list with all tags who stands in the json and all game names-->
   
 </section/>
 <section class="content">
@@ -128,7 +146,6 @@
       <div id="container__games--Wii"></div>
   </div/>
 </section>
-
 
 
 <script>
@@ -166,20 +183,64 @@ function RemoveClass(element, name) {
 }
 
 function search() {
-  var input, filter, ul, li, a, i, txtValue;
+  var input, filter, ul, li, a, i, txtValue, checkbox;
+  checkbox = document.getElementById("check");
   input = document.getElementById("myInput");
   filter = input.value.toUpperCase();
   ul = document.getElementById("myUL");
   li = ul.getElementsByTagName("li");
   for (i = 0; i < li.length; i++) {
-      a = li[i].getElementsByTagName("a")[0];
-      txtValue = a.textContent || a.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-          li[i].style.display = "";
-      } else {
-          li[i].style.display = "none";
-      }
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+      checkbox.checked = true;
+    } else {
+      li[i].style.display = "none";
+    }
   }
+  // if (checkbox.checked = true) {
+  //   document.getElementById("html").style.background = "lightblue";
+  // }
+}
+
+//submenubar checkboxes//
+//we need this function 16teen times
+document.getElementById("singleplayer").addEventListener("click", singleplayer);
+
+function singleplayer() {
+document.getElementById("singleplayerCheck").checked = true;
+}
+document.getElementById("singleplayer").addEventListener("click", singleplayer);
+
+function singleplayer() {
+document.getElementById("singleplayerCheck").checked = true;
+}
+document.getElementById("singleplayer").addEventListener("click", singleplayer);
+
+function singleplayer() {
+document.getElementById("singleplayerCheck").checked = true;
+}
+document.getElementById("singleplayer").addEventListener("click", singleplayer);
+
+function singleplayer() {
+document.getElementById("singleplayerCheck").checked = true;
+}
+document.getElementById("singleplayer").addEventListener("click", singleplayer);
+
+function singleplayer() {
+document.getElementById("singleplayerCheck").checked = true;
+}
+document.getElementById("singleplayer").addEventListener("click", singleplayer);
+
+function singleplayer() {
+document.getElementById("singleplayerCheck").checked = true;
+}
+
+document.getElementById("singleplayer").addEventListener("click", singleplayer);
+
+function singleplayer() {
+document.getElementById("singleplayerCheck").checked = true;
 }
 // function search() {
 //     var input, filter, div, h2, a, i, txtValue;

@@ -348,3 +348,6 @@ div:hover {
   color: #e84118;
   display: block;
 }
+/* input[type="checkbox"] {
+  display: none;
+} */
