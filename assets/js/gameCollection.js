@@ -1,7 +1,7 @@
 
 
 var ajaxhttp = new XMLHttpRequest();  //generate a 
-var url = "https://api.myjson.com/bins/1d4r4i"; //it doesn't enable to use (assets/json/dats.json)//{}myjson http://myjson.com/ihhge 
+var url = "https://api.myjson.com/bins/fo0as"; //it doesn't enable to use (assets/json/dats.json)//{}myjson http://myjson.com/ihhge 
 var x = "";
 var myObj = "";
 
