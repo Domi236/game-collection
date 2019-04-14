@@ -1,7 +1,10 @@
 
 html body{
-  background-color: black;
-  font-style: oblique;
+  background-image: url("https://media.istockphoto.com/photos/abstract-smoke-on-black-background-picture-id964045046?k=6&m=964045046&s=612x612&w=0&h=JmkDB5gz8CJjB9RSiOrmvEVNvMxd8JXW_L7H5GRMBe0=");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: #2a2d32;
+  font-family: 'Righteous', cursive;
   font-size: 20px;
 }
 .image__Array {
@@ -232,28 +235,34 @@ input:checked + .roundbutton:before {
   transform: perspective(600px) rotateY(0deg);
 }
 .back {
-  background: #f1f1f1;   /*background-image: url("assets/images/background.jpg"); why this not func*/
+  
   transform: perspective(600px) rotateY(180deg);
-  margin-top: -260px;
+  /* margin-top: -260px; */
+  background-image: url("https://media.istockphoto.com/photos/texture-dark-concrete-floor-picture-id621925576?k=6&m=621925576&s=612x612&w=0&h=H4rph08J2vSJz_crupTLvHf5OKW0olvoRJzaAK37Yhg=");
 }
 .back-content{
-  color: #2c3e50; /*color-grey: orangered;*/
+  color: #e84118;
+  /*color-grey: orangered;*/
   text-align: center;
 } 
+h2 {
+  width: 95%;
+  margin: 8px 0;
+}
 .back-content h2 ~ p{
-  width: 40%;
+  width: 45%;
   margin: 0 auto;
 } 
+
 .game__links {
   display: inline-flex;
-  margin-top: 20px;
-  width: 70px; 
-  height: 70px;
+  width: 50px; 
+  height: 50px;
   justify-content: center;
   align-items: center;
   color: red;
   text-align: center;
-  font-size: 35px;
+  font-size: 25px;
   transition: 0.4s;
   border-radius: 50%;
   text-decoration: none;
@@ -349,6 +358,6 @@ div:hover {
   color: #e84118;
   display: block;
 }
-/* input[type="checkbox"] {
+input[type="checkbox"] {
   display: none;
-} */
+}
