@@ -14,7 +14,10 @@ function displayAllImages() {
             //debugger;
       myObj = JSON.parse(ajaxhttp.responseText); //change the data of the json file in a string with dats
         for (i in myObj.searchcriteria) {
-          x += "<div class='card" + myObj.searchcriteria[i].tags.slice(-1) + myObj.searchcriteria[i].tags.slice(-2) + myObj.searchcriteria[i].tags.slice(-3) + myObj.searchcriteria[i].tags.slice(-4) + myObj.searchcriteria[i].tags.slice(-5) + myObj.searchcriteria[i].tags.slice(-6) + myObj.searchcriteria[i].tags.slice(-7) + myObj.searchcriteria[i].tags.slice(-8) + myObj.searchcriteria[i].tags.slice(-9) + myObj.searchcriteria[i].tags.slice(-10) + "'><div class='front'><img class='image__Array ' src='" + myObj.searchcriteria[i].src + "'/></div><div class='back'><div class='back-content'><h2>" + 
+          x += "<div class='card" + myObj.searchcriteria[i].tags.slice(-1) + myObj.searchcriteria[i].tags.slice(-2) + myObj.searchcriteria[i].tags.slice(-3) +
+          myObj.searchcriteria[i].tags.slice(-4) + myObj.searchcriteria[i].tags.slice(-5) + myObj.searchcriteria[i].tags.slice(-6) + myObj.searchcriteria[i].tags.slice(-7) + 
+          myObj.searchcriteria[i].tags.slice(-8) + myObj.searchcriteria[i].tags.slice(-9) + myObj.searchcriteria[i].tags.slice(-10) + 
+          "'><div class='front'><img class='image__Array ' src='" + myObj.searchcriteria[i].src + "'/></div><div class='back'><div class='back-content'><h2>" + 
           myObj.searchcriteria[i].name + "</h2><p class='tags'>" + myObj.searchcriteria[i].tags + "</p><a class='game__links' href='" + 
           myObj.searchcriteria[i].url + "' target='_blank'><i class='fab fa-youtube'></i><a/></div></div></div>";
         }

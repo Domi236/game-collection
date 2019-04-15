@@ -16,7 +16,7 @@ html body{
 .image__Array:hover {
   cursor: pointer;
 }
-#container__games--PC{
+#container__games{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -311,6 +311,26 @@ ul li .subMenuBtn {
 /* input[type="checkbox"] {
   display: none;
 } */
+
+.refresh {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  right: 0.6%;
+  top: 0.8%;
+  opacity: 0;
+  z-index: 100;
+}
+.refresh-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  right: 0.6%;
+  top: 0.8%;
+}
 
 
 

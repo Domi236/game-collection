@@ -90,6 +90,7 @@
   </div>
 
   <ul id="myUL">
+    <li class="click-me"><button class="subMenuBtn" onclick="filterSelection('all')"> Singleplayer</button></li>
     <li class="click-me"><button class="subMenuBtn" onclick="filterSelection('Singleplayer')"> Singleplayer</button></li>
     <li class="click-me"><button class="subMenuBtn" onclick="filterSelection('Multiplayer 2PL.')"> Multiplayer 2PL.</button></li>
     <li class="click-me"><button class="subMenuBtn" onclick="filterSelection('Multiplayer 4PL.')"> Multiplayer 4PL.</button></li>
@@ -107,7 +108,14 @@
     <li class="click-me"><button class="subMenuBtn" onclick="filterSelection('Crafting')"> Crafting</button></li>
     <li class="click-me"><button class="subMenuBtn" onclick="filterSelection('MMO')"> MMO</button></li>
   </ul>
-  
+
+  <form>
+      <img src="assets/images/refreshDark.png" class="refresh-image">
+      <button class="refresh" TYPE="button" onClick="history.go(0)" value="Refresh"></button>
+  </form>
+<!--   
+  <button onclick="sortList()">Sort</button> -->
+
 </section/>
 <section class="content">
   <div class="content__wrapper">
@@ -155,27 +163,28 @@ function RemoveClass(element, name) {
 }
 
 
-//searchbox
-function search() {
-  var input, filter, ul, li, a, i, txtValue, checkbox;
+//searchbox                                                    
+function search() {                                             
+  var input, filter, ul, li, a, i, txtValue, checkbox, li2, li3, cards;
   checkbox = document.getElementById("check");
   input = document.getElementById("myInput");
   filter = input.value.toUpperCase();
+  cards = document.getElementsByClassName("card");
   ul = document.getElementById("container__games");
-  li = ul.getElementsByTagName("div");
+  li = ul.getElementsByClassName("back-content");
+  // Loop through all list items, and hide those who don't match the search query
   for (i = 0; i < li.length; i++) {
     a = li[i].getElementsByTagName("h2")[0];
     txtValue = a.textContent || a.innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+    if (input == "") {
+      cards[i].style.display = "block";
+    }
+    else if (txtValue.toUpperCase().indexOf(filter) > -1) {
       li[i].style.display = "";
-      // checkbox.checked = true;
     } else {
-      li[i].style.display = "none";
+      cards[i].style.display = "none";
     }
   }
-  // if (checkbox.checked = true) {
-  //   document.getElementById("html").style.background = "lightblue";
-  // }
 }
 
 // active headerMenu
@@ -203,6 +212,40 @@ subList.forEach(function(subEl) {
 });
 
 
+//sort cards
+// function sortList() {
+//   var list, i, switching, b, shouldSwitch;
+  
+//   list = document.getElementById("container__games");
+//   switching = true;
+//   /* Make a loop that will continue until
+//   no switching has been done: */
+//   while (switching) {
+//     // start by saying: no switching is done:
+//     switching = false;
+//     b = list.getElementsByTagName("div");
+//     // Loop through all list-items:
+//     for (i = 0; i < (b.length - 1); i++) {
+//       // start by saying there should be no switching:
+//       shouldSwitch = false;
+//       /* check if the next item should
+//       switch place with the current item: */
+//       if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()) {
+//         /* if next item is alphabetically
+//         lower than current item, mark as a switch
+//         and break the loop: */
+//         shouldSwitch = true;
+//         break;
+//       }
+//     }
+//     if (shouldSwitch) {
+//       /* If a switch has been marked, make the switch
+//       and mark the switch as done: */
+//       b[i].parentNode.insertBefore(b[i + 1], b[i]);
+//       switching = true;
+//     }
+//   }
+// }
 
 </script>
 </body>
