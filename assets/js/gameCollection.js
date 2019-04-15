@@ -29,3 +29,9 @@ function displayAllImages() {
   ajaxhttp.send(null); //sends the request, optional with a string or Dom-Object-Dats
 }
 
+//todos: make a sort btn
+//make a nightmode Btn
+//place all games in it with their content
+//bring all on Bem status
+//delete or change bad css
+//change the css in scss
