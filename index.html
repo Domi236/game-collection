@@ -111,7 +111,7 @@
 </section/>
 <section class="content">
   <div class="content__wrapper">
-      <div id="container__games--PC"></div>
+      <div id="container__games"></div>
   </div/>
 
 </section>
@@ -161,14 +161,14 @@ function search() {
   checkbox = document.getElementById("check");
   input = document.getElementById("myInput");
   filter = input.value.toUpperCase();
-  ul = document.getElementById("myUL");
-  li = ul.getElementsByTagName("li");
+  ul = document.getElementById("container__games");
+  li = ul.getElementsByTagName("div");
   for (i = 0; i < li.length; i++) {
-    a = li[i].getElementsByTagName("a")[0];
+    a = li[i].getElementsByTagName("h2")[0];
     txtValue = a.textContent || a.innerText;
     if (txtValue.toUpperCase().indexOf(filter) > -1) {
       li[i].style.display = "";
-      checkbox.checked = true;
+      // checkbox.checked = true;
     } else {
       li[i].style.display = "none";
     }
@@ -178,7 +178,7 @@ function search() {
   // }
 }
 
-// active headerMenu and subMenu
+// active headerMenu
 var list = document.querySelectorAll('.toggle-me');
 
 list.forEach(function(el) {
@@ -190,6 +190,17 @@ list.forEach(function(el) {
   }
 });
 
+// active subMenu
+var subList = document.querySelectorAll('.click-me');
+
+subList.forEach(function(subEl) {
+  subEl.onclick = function() {
+    subList.forEach(function(subEl) {
+      subEl.classList.remove('subActive');
+    });
+    subEl.classList.add('subActive');
+  }
+});
 
 
 

@@ -18,7 +18,7 @@ function displayAllImages() {
           myObj.searchcriteria[i].name + "</h2><p class='tags'>" + myObj.searchcriteria[i].tags + "</p><a class='game__links' href='" + 
           myObj.searchcriteria[i].url + "' target='_blank'><i class='fab fa-youtube'></i><a/></div></div></div>";
         }
-        document.getElementById('container__games--PC').innerHTML += x;
+        document.getElementById('container__games').innerHTML += x;
     console.log(myObj);
 
     }

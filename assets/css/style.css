@@ -50,6 +50,7 @@ html body{
   justify-content: center;
   align-items: center;
   transition: 0.4s;
+  text-decoration: none;
 }
 .search-txt {
   border: none;
@@ -67,14 +68,17 @@ html body{
 /*/////////////////////////////////*/
  ul {
   position: relative;
-  top: 5%;
+  /* top: 5%; */
   margin: 0;
   padding: 0;
   display: flex;
   margin: 30px 60px 5px 0;
 }
-ul li.active .btn {
+ul li.active button {
   background: #262626;
+  color: #FFF;
+}
+ul li.subActive button {
   color: #FFF;
 }
 ul li {
@@ -277,10 +281,11 @@ button {
   cursor: pointer;
 }
 
-button .active {
-  background-color: #666;
+.active {
+  background-color: #666 ;
   color: white;
 }
+
 /* Search Box*/
 /*/////////////////////////*/
 #myUL {
@@ -294,13 +299,14 @@ button .active {
 ul li .subMenuBtn {
   border: 1px solid #ddd;
   /* background-color: black; */
-  text-decoration: none;
+  /* text-decoration: none; */
   font-size: 16px;
   border-color: black;
   color: #e84118;
   display: block;
   margin: 0;
-  padding: 5px;
+
+  padding: 0 10px;
 }
 /* input[type="checkbox"] {
   display: none;
