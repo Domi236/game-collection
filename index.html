@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
   <script src="assets/js/gameCollection.js"></script>
-  <script src="assets/js/sublineMenuBar.js"></script>
+  <!-- <script src="assets/js/sublineMenuBar.js"></script> -->
   <!--<script src="assets/js/menuBar.js"></script-->
 </head>
 <style>
@@ -88,80 +88,50 @@
        <i class="fas fa-search"></i>
     </a>
   </div>
+
   <ul id="myUL">
-      <li><a id="singleplayer" href="#">Singleplayer</a></li>
-      <li><a id="multiplayer2" href="#">Multiplayer 2PL.</a></li>
-      <li><a id="multiplayer4" href="#">Multiplayer 4PL.</a></li>
-      <li><a id="egoShooter" href="#">Ego Shooter</a></li>
-      <li><a id="thirdPerson" href="#">Third Person</a></li>
-      <li><a id="twoDGame" href="#">2D Game</a></li>
-      <li><a id="rollenspiel" href="#">Rollenspiel</a></li>
-      <li><a id="online" href="#">online</a></li>
-      <li><a id="offline" href="#">offline</a></li>
-      <li><a id="party" href="#">Party</a></li>
-      <li><a id="rennspiel" href="#">Rennspiel</a></li>
-      <li><a id="brainGames" href="#">Brain Games</a></li>
-      <li><a id="action" href="#">Action</a></li>
-      <li><a id="horror" href="#">Horror</a></li>
-      <li><a id="crafting" href="#">Crafting</a></li>
-      <li><a id="mmo" href="#">MMO</a></li>
-    </ul>
-
-<input type="checkbox" id="singleplayerCheck" class="checkbox">
-<input type="checkbox" id="multiplayer2Check" class="checkbox">
-<input type="checkbox" id="multiplayer4Check" class="checkbox">
-<input type="checkbox" id="egoShooterCheck" class="checkbox">
-<input type="checkbox" id="thirdPersonCheck" class="checkbox">
-<input type="checkbox" id="twoDGameCheck" class="checkbox">
-<input type="checkbox" id="rollenspielCheck" class="checkbox">
-<input type="checkbox" id="onlineCheck" class="checkbox">
-<input type="checkbox" id="offlineCheck" class="checkbox">
-<input type="checkbox" id="partyCheck" class="checkbox">
-<input type="checkbox" id="rennspielCheck" class="checkbox">
-<input type="checkbox" id="brainGamesCheck" class="checkbox">
-<input type="checkbox" id="actionCheck" class="checkbox">
-<input type="checkbox" id="horrorCheck" class="checkbox">
-<input type="checkbox" id="craftingCheck" class="checkbox">
-<input type="checkbox" id="mmoCheck" class="checkbox">
-
-<!--need to write a function which write a list with all tags who stands in the json and all game names-->
+    <li class="click-me"><button class="subMenuBtn" onclick="filterSelection('Singleplayer')"> Singleplayer</button></li>
+    <li class="click-me"><button class="subMenuBtn" onclick="filterSelection('Multiplayer 2PL.')"> Multiplayer 2PL.</button></li>
+    <li class="click-me"><button class="subMenuBtn" onclick="filterSelection('Multiplayer 4PL.')"> Multiplayer 4PL.</button></li>
+    <li class="click-me"><button class="subMenuBtn" onclick="filterSelection('Ego Shooter')"> Ego Shooter</button></li>
+    <li class="click-me"><button class="subMenuBtn" onclick="filterSelection('Third Person')"> Third Person</button></li>
+    <li class="click-me"><button class="subMenuBtn" onclick="filterSelection('2D Game')"> 2D Game</button></li>
+    <li class="click-me"><button class="subMenuBtn" onclick="filterSelection('Rollenspiel')"> Rollenspiel</button></li>
+    <li class="click-me"><button class="subMenuBtn" onclick="filterSelection('online')"> online</button></li>
+    <li class="click-me"><button class="subMenuBtn" onclick="filterSelection('offline')"> offline</button></li>
+    <li class="click-me"><button class="subMenuBtn" onclick="filterSelection('Party')"> Party</button></li>
+    <li class="click-me"><button class="subMenuBtn" onclick="filterSelection('Rennspiel')"> Rennspiel</button></li>
+    <li class="click-me"><button class="subMenuBtn" onclick="filterSelection('Hunger Games')"> Hunger Games</button></li>
+    <li class="click-me"><button class="subMenuBtn" onclick="filterSelection('Action')"> Action</button></li>
+    <li class="click-me"><button class="subMenuBtn" onclick="filterSelection('Horror')"> Horror</button></li>
+    <li class="click-me"><button class="subMenuBtn" onclick="filterSelection('Crafting')"> Crafting</button></li>
+    <li class="click-me"><button class="subMenuBtn" onclick="filterSelection('MMO')"> MMO</button></li>
+  </ul>
   
 </section/>
 <section class="content">
   <div class="content__wrapper">
       <div id="container__games--PC"></div>
   </div/>
-  <div class="content__wrapper">
-      <div id="container__games--XboxOne"></div>
-  </div/>
-  <div class="content__wrapper">
-      <div id="container__games--XBox360"></div>
-  </div/>
-  <div class="content__wrapper">
-      <div id="container__games--PS4"></div>
-  </div/>
-  <div class="content__wrapper">
-      <div id="container__games--Ps2"></div>
-  </div/>
-  <div class="content__wrapper">
-      <div id="container__games--Wii"></div>
-  </div/>
+
 </section>
 
 
 <script>
-
-filterSelection("all")
+///menu card change
+//filterSelection("all")
 function filterSelection(c) {
   var x, i;
   x = document.getElementsByClassName("card");
   if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
   for (i = 0; i < x.length; i++) {
     RemoveClass(x[i], "show");
     if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
   }
 }
 
+// Show filtered elements
 function AddClass(element, name) {
   var i, arr1, arr2;
   arr1 = element.className.split(" ");
@@ -171,6 +141,7 @@ function AddClass(element, name) {
   }
 }
 
+// Hide elements that are not selected
 function RemoveClass(element, name) {
   var i, arr1, arr2;
   arr1 = element.className.split(" ");
@@ -183,6 +154,8 @@ function RemoveClass(element, name) {
   element.className = arr1.join(" ");
 }
 
+
+//searchbox
 function search() {
   var input, filter, ul, li, a, i, txtValue, checkbox;
   checkbox = document.getElementById("check");
@@ -205,60 +178,18 @@ function search() {
   // }
 }
 
-//submenubar checkboxes//
-//we need this function 16teen times
-document.getElementById("singleplayer").addEventListener("click", singleplayer);
+// active headerMenu and subMenu
+var list = document.querySelectorAll('.toggle-me');
 
-function singleplayer() {
-document.getElementById("singleplayerCheck").checked = true;
-}
-document.getElementById("singleplayer").addEventListener("click", singleplayer);
+list.forEach(function(el) {
+  el.onclick = function() {
+    list.forEach(function(el) {
+      el.classList.remove('active');
+    });
+    el.classList.add('active');
+  }
+});
 
-function singleplayer() {
-document.getElementById("singleplayerCheck").checked = true;
-}
-document.getElementById("singleplayer").addEventListener("click", singleplayer);
-
-function singleplayer() {
-document.getElementById("singleplayerCheck").checked = true;
-}
-document.getElementById("singleplayer").addEventListener("click", singleplayer);
-
-function singleplayer() {
-document.getElementById("singleplayerCheck").checked = true;
-}
-document.getElementById("singleplayer").addEventListener("click", singleplayer);
-
-function singleplayer() {
-document.getElementById("singleplayerCheck").checked = true;
-}
-document.getElementById("singleplayer").addEventListener("click", singleplayer);
-
-function singleplayer() {
-document.getElementById("singleplayerCheck").checked = true;
-}
-
-document.getElementById("singleplayer").addEventListener("click", singleplayer);
-
-function singleplayer() {
-document.getElementById("singleplayerCheck").checked = true;
-}
-// function search() {
-//     var input, filter, div, h2, a, i, txtValue;
-//     input = document.getElementById("myInput");
-//     filter = input.value.toUpperCase(); //the input value will be set to uppercase
-//     div = document.getElementsByClassName("back-content");
-//     h2 = div.getElementsByTagName("h2"); 
-//     for (i = 0; i < h2.length; i++) { 
-//         a = h2[i].getElementsByTagName("a")[0]; 
-//         txtValue = a.textContent || a.innerText; // textContent/innerText that text which is in the tag
-//         if (txtValue.toUpperCase().indexOf(filter) > -1) { //indexOf position where the text stands, 
-//             h2[i].style.display = "";
-//         } else {
-//             h2[i].style.display = "none";
-//         }
-//     }
-// }
 
 
 

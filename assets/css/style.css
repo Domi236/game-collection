@@ -19,7 +19,7 @@ html body{
 #container__games--PC{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 /*search Box*/
 /*////////////////////////////////////*/
@@ -71,7 +71,7 @@ html body{
   margin: 0;
   padding: 0;
   display: flex;
-  margin: 30px 160px 40px 80px;
+  margin: 30px 60px 5px 0;
 }
 ul li.active .btn {
   background: #262626;
@@ -93,7 +93,7 @@ ul li button {
     color: #e84118;
     margin: 0 30px;
     transition: .5s;
-    padding: 0 !important;
+    /* padding: 0 !important; */
 }
 ul li button span {
     position: absolute;
@@ -155,6 +155,159 @@ ul li button:hover span:nth-child(4) {
     transform-origin: bottom;
     transition: transform .5s;
 }
+
+/*Card Hover effect*/
+/*////////////////////*/
+.card {
+  width: 300px;
+  height: 260px;
+  margin: 10px 0;
+  display: none;
+}
+
+.front,.back {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  backface-visibility: hidden;
+  transition: transform .6s linear;
+  border-radius: 15px;
+  
+}
+.front img {
+  transform: perspective(600px) rotateY(0deg);
+}
+.back {
+  
+  transform: perspective(600px) rotateY(180deg);
+  /* margin-top: -260px; */
+  background-image: url("https://media.istockphoto.com/photos/texture-dark-concrete-floor-picture-id621925576?k=6&m=621925576&s=612x612&w=0&h=H4rph08J2vSJz_crupTLvHf5OKW0olvoRJzaAK37Yhg=");
+}
+.back-content{
+  color: #e84118;
+  /*color-grey: orangered;*/
+  text-align: center;
+} 
+h2 {
+  width: 95%;
+  margin: 8px 0;
+}
+.back-content h2 ~ p{
+  width: 45%;
+  margin: 0 auto;
+} 
+
+.game__links {
+  display: inline-flex;
+  width: 50px; 
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  text-align: center;
+  font-size: 25px;
+  transition: 0.4s;
+  border-radius: 50%;
+  text-decoration: none;
+}
+.game__links:active {
+  background: #2c3350;
+  color: #fff;
+}
+.card:active > .front {
+  transform: perspective(600px) rotateY(-180deg);
+  animation: moveBigger 2s;
+  animation-fill-mode: forwards;
+  pointer-events: unset;
+  
+}
+@keyframes moveBigger {
+  from {
+    height:100%;
+  }
+
+  to {
+    height: 107.5%;
+  }
+}
+.card:active > .back {
+  transform: perspective(600px) rotateY(0deg);
+  animation: slideDown 2s;
+  animation-fill-mode: forwards;
+  
+}
+@keyframes slideDown {
+  from {
+    margin-top: -270px;
+  }
+
+  to {
+    margin-top: 0px;
+  }
+}
+div:active {
+  z-index: 10000;
+}
+/*filterable Div Elements
+///* //////////////////////////////**/
+
+.container {
+  overflow: hidden;
+}
+
+.filterDiv {
+  float: left;
+  background-color: #2196F3;
+  color: #ffffff;
+  width: 100px;
+  line-height: 100px;
+  text-align: center;
+  margin: 2px;
+  display: none; 
+}
+
+.show {
+  display: block;
+}
+
+button {
+  border: none;
+  outline: none;
+  background-color: black;
+  cursor: pointer;
+}
+
+button .active {
+  background-color: #666;
+  color: white;
+}
+/* Search Box*/
+/*/////////////////////////*/
+#myUL {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li .subMenuBtn {
+  border: 1px solid #ddd;
+  /* background-color: black; */
+  text-decoration: none;
+  font-size: 16px;
+  border-color: black;
+  color: #e84118;
+  display: block;
+  margin: 0;
+  padding: 5px;
+}
+/* input[type="checkbox"] {
+  display: none;
+} */
+
+
+
 /*toogle Switch for the night mode*/
 /*////////////////////*/
 /* 
@@ -212,152 +365,3 @@ input:checked + .roundbutton:before {
   background-color: blue;
   border-radius: 20%;
 } */
-
-/*Card Hover effect*/
-/*////////////////////*/
-.card {
-  width: 300px;
-  height: 260px;
-  margin: 10px 0;
-  display: none;
-}
-
-.front,.back {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  backface-visibility: hidden;
-  transition: transform .6s linear;
-  border-radius: 15px;
-  
-}
-.front img {
-  transform: perspective(600px) rotateY(0deg);
-}
-.back {
-  
-  transform: perspective(600px) rotateY(180deg);
-  /* margin-top: -260px; */
-  background-image: url("https://media.istockphoto.com/photos/texture-dark-concrete-floor-picture-id621925576?k=6&m=621925576&s=612x612&w=0&h=H4rph08J2vSJz_crupTLvHf5OKW0olvoRJzaAK37Yhg=");
-}
-.back-content{
-  color: #e84118;
-  /*color-grey: orangered;*/
-  text-align: center;
-} 
-h2 {
-  width: 95%;
-  margin: 8px 0;
-}
-.back-content h2 ~ p{
-  width: 45%;
-  margin: 0 auto;
-} 
-
-.game__links {
-  display: inline-flex;
-  width: 50px; 
-  height: 50px;
-  justify-content: center;
-  align-items: center;
-  color: red;
-  text-align: center;
-  font-size: 25px;
-  transition: 0.4s;
-  border-radius: 50%;
-  text-decoration: none;
-}
-.game__links:hover {
-  background: #2c3350;
-  color: #fff;
-}
-.card:hover > .front {
-  transform: perspective(600px) rotateY(-180deg);
-  animation: moveBigger 2s;
-  animation-fill-mode: forwards;
-  pointer-events: unset;
-  
-}
-@keyframes moveBigger {
-  from {
-    height:100%;
-  }
-
-  to {
-    height: 107.5%;
-  }
-}
-.card:hover > .back {
-  transform: perspective(600px) rotateY(0deg);
-  animation: slideDown 2s;
-  animation-fill-mode: forwards;
-  
-}
-@keyframes slideDown {
-  from {
-    margin-top: -270px;
-  }
-
-  to {
-    margin-top: 0px;
-  }
-}
-div:hover {
-  z-index: 10000;
-}
-/*filterable Div Elements
-///* //////////////////////////////**/
-
-.container {
-  overflow: hidden;
-}
-
-.filterDiv {
-  float: left;
-  background-color: #2196F3;
-  color: #ffffff;
-  width: 100px;
-  line-height: 100px;
-  text-align: center;
-  margin: 2px;
-  display: none; 
-}
-
-.show {
-  display: block;
-}
-
-.btn {
-  border: none;
-  outline: none;
-  padding: 12px 16px;
-  background-color: black;
-  cursor: pointer;
-}
-
-.btn.active {
-  background-color: #666;
-  color: white;
-}
-/* Search Box*/
-/*/////////////////////////*/
-#myUL {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-#myUL li a {
-  border: 1px solid #ddd;
-  margin-top: -30px; /* Prevent double borders */
-  background-color: black;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px;
-  border-color: black;
-  color: #e84118;
-  display: block;
-}
-input[type="checkbox"] {
-  display: none;
-}
