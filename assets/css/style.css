@@ -286,7 +286,7 @@ button {
   color: white;
 }
 
-/* Search Box*/
+/* Filter menuBar*/
 /*/////////////////////////*/
 #myUL {
   display: flex;
@@ -312,6 +312,7 @@ ul li .subMenuBtn {
   display: none;
 } */
 
+/* refresh btn */
 .refresh {
   width: 30px;
   height: 30px;
@@ -330,8 +331,20 @@ ul li .subMenuBtn {
   position: absolute;
   right: 0.6%;
   top: 0.8%;
+  animation-name: spin;
+  animation-duration: 500ms;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
 }
 
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(360deg);
+  }
+}
 
 
 /*toogle Switch for the night mode*/

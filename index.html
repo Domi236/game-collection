@@ -15,7 +15,7 @@
 </style>
 </head>
 
-<body id="html" onload="displayAllImages()">
+<body id="html" onload="displayAllImages()" >
 <section class="header">
   <!-- <div id="background">
     <div id="endProduct" class="endProduct">Der Switch ist <span id="status">inaktiv</span>.<div>
@@ -165,8 +165,7 @@ function RemoveClass(element, name) {
 
 //searchbox                                               
 function search() {                                             
-  var input, filter, ul, li, h2, p, i, txtValueNames, txtValueTags, checkbox, cards;
-  checkbox = document.getElementById("check");
+  var input, filter, ul, li, h2, p, i, txtValueNames, txtValueTags, cards;
   input = document.getElementById("myInput");
   filter = input.value.toUpperCase();
   cards = document.getElementsByClassName("card");
@@ -185,6 +184,7 @@ function search() {
     }
   }
 }
+
 // active headerMenu
 var list = document.querySelectorAll('.toggle-me');
 
