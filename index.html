@@ -165,23 +165,23 @@ function RemoveClass(element, name) {
 
 //searchbox                                               
 function search() {                                             
-  var input, filter, ul, li, h2, p, i, txtValueNames, txtValueTags, cards;
+  var input, filter, container, divs, h2, p, i, txtValueNames, txtValueTags, cards;
   input = document.getElementById("myInput");
   filter = input.value.toUpperCase();
   cards = document.getElementsByClassName("card");
-  ul = document.getElementById("container__games");
-  li = ul.getElementsByClassName("back-content");
+  container = document.getElementById("container__games");
+  divs = container.getElementsByClassName("back-content");
   // Loop through all list items, and hide those who don't match the search query
-  for (i = 0; i < li.length; i++) {
-    h2 = li[i].getElementsByTagName("h2")[0];
-    p = li[i].getElementsByTagName("p")[0];
-    txtValueNames = h2.textContent || h2.innerText;
-    txtValueTags = p.textContent || p.innerText;
-    if (txtValueNames.toUpperCase().indexOf(filter) > -1 | txtValueTags.toUpperCase().indexOf(filter) > -1) {
-      cards[i].style.display = "";
-    } else {
-      cards[i].style.display = "none";
-    }
+  for (i = 0; i < divs.length; i++) {
+    h2 = divs[i].getElementsByTagName("h2")[0];
+    p = divs[i].getElementsByTagName("p")[0];
+    txtValueNames = h2.textContent;
+    txtValueTags = p.textContent; //gibt den text vom p tag wieder
+    if (txtValueNames.toUpperCase().indexOf(filter) > -1 || txtValueTags.toUpperCase().indexOf(filter) > -1) {
+      cards[i].style.display = ""; //indexOf(gibt die stelle von den inhalt in der klammer zurück) wenn der inhalt aber nicht
+    } else {                       //vorhanden ist zeigt indexOf die stelle 1 an    Unturned.indexOf("U") = 0  
+      cards[i].style.display = "none";                                              //Unturned.indexOf("x") = -1  
+    }                                                                               //Unturned.indexOf("u") = 3 
   }
 }
 
