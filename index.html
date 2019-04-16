@@ -163,9 +163,9 @@ function RemoveClass(element, name) {
 }
 
 
-//searchbox                                                    
+//searchbox                                               
 function search() {                                             
-  var input, filter, ul, li, a, i, txtValue, checkbox, li2, li3, cards;
+  var input, filter, ul, li, h2, p, i, txtValueNames, txtValueTags, checkbox, cards;
   checkbox = document.getElementById("check");
   input = document.getElementById("myInput");
   filter = input.value.toUpperCase();
@@ -174,19 +174,17 @@ function search() {
   li = ul.getElementsByClassName("back-content");
   // Loop through all list items, and hide those who don't match the search query
   for (i = 0; i < li.length; i++) {
-    a = li[i].getElementsByTagName("h2")[0];
-    txtValue = a.textContent || a.innerText;
-    if (input == "") {
-      cards[i].style.display = "block";
-    }
-    else if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      li[i].style.display = "";
+    h2 = li[i].getElementsByTagName("h2")[0];
+    p = li[i].getElementsByTagName("p")[0];
+    txtValueNames = h2.textContent || h2.innerText;
+    txtValueTags = p.textContent || p.innerText;
+    if (txtValueNames.toUpperCase().indexOf(filter) > -1 | txtValueTags.toUpperCase().indexOf(filter) > -1) {
+      cards[i].style.display = "";
     } else {
       cards[i].style.display = "none";
     }
   }
 }
-
 // active headerMenu
 var list = document.querySelectorAll('.toggle-me');
 

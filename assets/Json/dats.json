@@ -156,26 +156,12 @@
       ]
     },
     {
-      "name": "Outlast",
-      "src": "assets/images/outlast.jpg",
-      "url": "https://www.youtube.com/watch?v=EOrTuPljfPU",
-      "tags": [
-        " Singleplayer",
-        " offline",
-        " Horror",
-        " Third Person",
-        " Ego Shooter",
-        " PC"
-      ]
-    },
-    {
       "name": "Race the sun",
       "src": "assets/images/raceTheSun.jpg",
       "url": "https://www.youtube.com/watch?v=QmjAg0e_YYU",
       "tags": [
         " Singleplayer",
         " Party",
-        " Ego Shooter",
         " Rennspiel",
         " PC"
       ]
@@ -631,8 +617,12 @@
       "name": "Outlast",
       "src": "assets/images/outlast.jpg",
       
-      "url": "#",
+      "url": "https://www.youtube.com/watch?v=EOrTuPljfPU",
       "tags": [
+        " Singleplayer",
+        " offline",
+        " Horror",
+        " Ego Shooter",
         " PC"
       ]
     },
@@ -645,7 +635,6 @@
         " Singleplayer",
         " offline",
         " Horror",
-        " Third Person",
         " Ego Shooter",
         " PC"
       ]
