@@ -269,3 +269,81 @@ function displayAllImages() {
       <li><a id="crafting" href="#">Crafting</a></li>
       <li><a id="mmo" href="#">MMO</a></li>
     </ul> -->
+
+
+
+
+    +
+
+
+
+
+
+    
+
+
+/*toogle Switch for the night mode*/
+/*////////////////////*/
+/* 
+.endProduct {
+  font-size: 2rem;
+  font-family: sans-serif;
+  padding: 2rem 0 2rem 2rem;
+}
+.toggle {
+  margin: 0 0 0 2rem;
+  position: relative;
+  display: inline-block;
+  width: 6rem;
+  height: 3.4rem;
+}
+.toggle input {
+  display: none;
+}
+.roundbutton {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  background-color: #495A72;
+  display: block;
+  transition: all 0.3;
+  border-radius: 3.4rem;
+  cursor: pointer;
+}
+.roundbutton:before {
+  position: absolute;
+  content: "";
+  height: 2.4rem;
+  width: 2.5rem;
+  border-radius: 100%;
+  display: block;
+  left: 0.5rem;
+  bottom: 0.5rem;
+  background-color: white;
+  transition: all 0.3s;
+}
+input:checked + .roundbutton {
+  background-color: #ff6e48;
+}
+input:checked + .roundbutton:before {
+  transform: translate(2.6rem, 0)
+}
+.red{
+  background-color: red;
+  border-radius: 20%;
+}
+.blue{
+  background-color: blue;
+  border-radius: 20%;
+} */
+
+<!-- <div id="background">
+    <div id="endProduct" class="endProduct">Der Switch ist <span id="status">inaktiv</span>.<div>
+      <label class="toggle">
+        <input id="toggleSwitch" type="checkbox">
+        <span class="roundbutton"></span>
+      </label>
+  </div> -->
