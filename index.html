@@ -78,7 +78,7 @@
       </button>
     </li>
   </ul>
-  
+
   <div class="content__header-search-box">
     <input class="content__header-search-txt" type="text" id="content__header-search-input" onkeyup="search();" name="" placeholder="Search for tags.." />
     <a class="content__header-search-btn" href="#">
@@ -110,8 +110,9 @@
     <img src="assets/images/sideImages/refreshDark.png" class="content__header-refresh-image">
     <button class="content__header-refresh-btn" type="button" onClick="history.go(0)" value="refresh"></button>
   </div>
-<!--   
-  <button onclick="sortList()">Sort</button> -->
+
+  <!-- <button onclick="sortList()">Sort</button> -->
+  <!-- <button class="content__container-games-btn" >show more</button> -->
 </section/>
 
 <section class="content">
@@ -124,38 +125,23 @@
 <script>
 ///menu card change
 function filterSelection(el) {
-  var x, i;
-  x = document.getElementsByClassName("content__container-games-card");
-  if (el == "all") el = "";
+  var gameCards, i;
+  gameCards = document.getElementsByClassName("content__container-games-card");
+  if (el == "all") {
+    el = "";
+  }
   // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-  for (i = 0; i < x.length; i++) {
-    RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(el) > -1) AddClass(x[i], "show");
-  }
-}
-
-// Show filtered elements
-function AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-  }
-}
-
-// Hide elements that are not selected
-function RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+  for (i = 0; i < gameCards.length; i++) {
+    gameCards[i].classList.remove("show");
+    if (gameCards[i].className.indexOf(el) > -1) { //if card on the position 0 the className be there then add the class show
+      gameCards[i].classList.add("show");
     }
+    // if (i >= 30){                          //if more then 30 el remove class show
+    //   removeClass(x[i], "show");
+    // }
   }
-  element.className = arr1.join(" ");
 }
+
 
 //searchbox                                               
 function search() {                                             
@@ -170,7 +156,7 @@ function search() {
     h2 = divs[i].getElementsByTagName("h2")[0];
     p = divs[i].getElementsByTagName("p")[0];
     txtValueNames = h2.textContent;
-    txtValueTags = p.textContent; //gibt den text vom p tag wieder
+    txtValueTags = p.textContent; //return the text from the p tag
     if (txtValueNames.toUpperCase().indexOf(filter) > -1 || txtValueTags.toUpperCase().indexOf(filter) > -1) {
       cards[i].style.display = ""; //indexOf(gibt die stelle von den inhalt in der klammer zurück) wenn der inhalt aber nicht
     } else {                       //vorhanden ist zeigt indexOf die stelle 1 an    Unturned.indexOf("U") = 0  
@@ -182,12 +168,12 @@ function search() {
 // active headerMenu
 var list = document.querySelectorAll('.content__header-menu-toggle');
 
-list.forEach(function(el) {
-  el.onclick = function() {
-    list.forEach(function(el) {
+list.forEach(function(el) { //in the list for each function with this element
+  el.onclick = function() { //which will be clicked make this function
+    list.forEach(function(el) { //all elements in this list remove class (content__header-menu--active)
       el.classList.remove('content__header-menu--active');
     });
-    el.classList.add('content__header-menu--active');
+    el.classList.add('content__header-menu--active'); //and add that element what would be clicked
   }
 });
 

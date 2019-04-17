@@ -111,10 +111,15 @@
     z-index: 1000;
   }
 
-  /*filter Games
-///* //////////////////////////////**/
-
-.show {
+  /*filter Games*/
+  .show {
     display: block;
+  }
+
+  .content__container-games-btn {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
   }
   

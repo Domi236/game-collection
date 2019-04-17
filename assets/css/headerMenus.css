@@ -9,8 +9,10 @@
     width: 100%;
     height: 15%;
     background: #040404;
-    padding: 0;
+    padding: 1px 0 0 0;
     margin: 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
   }
   .content__header-menu {
     position: relative;
@@ -47,6 +49,10 @@
     color: #e84118;
     margin: 0 30px;
     transition: .5s;
+  }
+  .content__header-sub-menu-btn {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
   }
 
   .content__header-menu-btn .content__header-menu-border {
