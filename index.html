@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="assets/css/default.css" media="all">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
-  <script src="assets/js/gameCollection.js"></script>
+  <script src="assets/js/gameLoader.js"></script>
   <!-- <script src="assets/js/sublineMenuBar.js"></script> -->
   <!--<script src="assets/js/menuBar.js"></script-->
 </head>
@@ -78,6 +78,7 @@
       </button>
     </li>
   </ul>
+  
   <div class="content__header-search-box">
     <input class="content__header-search-txt" type="text" id="content__header-search-input" onkeyup="search();" name="" placeholder="Search for tags.." />
     <a class="content__header-search-btn" href="#">
@@ -105,10 +106,10 @@
     <li class="content__header-sub-menu-toggle"><button class="content__header-sub-menu-btn" onclick="filterSelection('MMO')"> MMO</button></li>
   </ul>
 
-  <form>
-      <img src="assets/images/refreshDark.png" class="content__header-refresh-image">
-      <button class="content__header-refresh-btn" type="button" onClick="history.go(0)" value="refresh"></button>
-  </form>
+  <div class="content__header-refresh-container">
+    <img src="assets/images/sideImages/refreshDark.png" class="content__header-refresh-image">
+    <button class="content__header-refresh-btn" type="button" onClick="history.go(0)" value="refresh"></button>
+  </div>
 <!--   
   <button onclick="sortList()">Sort</button> -->
 </section/>
@@ -117,21 +118,19 @@
   <div class="content__wrapper">
       <div id="content__container-games"></div>
   </div/>
-
 </section>
 
 
 <script>
 ///menu card change
-//filterSelection("all")
-function filterSelection(c) {
+function filterSelection(el) {
   var x, i;
   x = document.getElementsByClassName("content__container-games-card");
-  if (c == "all") c = "";
+  if (el == "all") el = "";
   // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
   for (i = 0; i < x.length; i++) {
     RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
+    if (x[i].className.indexOf(el) > -1) AddClass(x[i], "show");
   }
 }
 
@@ -157,7 +156,6 @@ function RemoveClass(element, name) {
   }
   element.className = arr1.join(" ");
 }
-
 
 //searchbox                                               
 function search() {                                             

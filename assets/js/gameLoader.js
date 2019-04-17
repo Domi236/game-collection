@@ -31,7 +31,10 @@ function displayAllImages() {
 
 //todos: make a sort btn
 //make a nightmode Btn
-//place all games in it with their content
+//place all games in Json with their content
 //bring all on Bem status
 //delete or change bad css
 //change the css in scss
+//look git-hub
+
+

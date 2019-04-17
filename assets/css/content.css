@@ -108,7 +108,7 @@
   }
 
   .content__container-games-card:active {
-    z-index: 10000;
+    z-index: 1000;
   }
 
   /*filter Games

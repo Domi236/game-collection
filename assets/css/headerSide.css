@@ -1,7 +1,7 @@
   /*search Box*/
   .content__header-search-box {
     position: absolute;
-    top: 3%;
+    top: 0;
     right: 2%;
     background: #2f3640;
     height: 40px;
@@ -52,8 +52,8 @@
     border-radius: 50%;
     cursor: pointer;
     position: absolute;
-    right: 0.6%;
-    top: 0.8%;
+    right: 0.2%;
+    top: 0;
     opacity: 0;
     z-index: 100;
   }
@@ -63,8 +63,8 @@
     height: 30px;
     border-radius: 50%;
     position: absolute;
-    right: 0.6%;
-    top: 0.8%;
+    right: 0.2%;
+    top: 0;
     animation-name: spin;
     animation-duration: 500ms;
     animation-iteration-count: 1;
@@ -73,9 +73,9 @@
   
   @keyframes spin {
     from {
-        transform:rotate(0deg);
+      transform:rotate(0deg);
     }
     to {
-        transform:rotate(360deg);
+      transform:rotate(360deg);
     }
   }
