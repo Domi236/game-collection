@@ -21,89 +21,74 @@
 <body class="content" onload="displayAllImages()" >
 <section class="content__header">
   <ul class="content__header-menu">
-    <li class="content__header-menu-toggle">
-        <button class="content__header-menu-btn" onclick="filterSelection('all')"> Show all
+    <li class="content__header-menu-toggle" data-filter="all"> Show all
         <span class="content__header-menu-border"></span>
         <span class="content__header-menu-border"></span>
         <span class="content__header-menu-border"></span>
         <span class="content__header-menu-border"></span>
-      </button>
     </li>
-    <li class="content__header-menu-toggle">
-        <button class="content__header-menu-btn" onclick="filterSelection('PC')"> PC
+    <li class="content__header-menu-toggle" data-filter="PC"> PC
         <span class="content__header-menu-border"></span>
         <span class="content__header-menu-border"></span>
         <span class="content__header-menu-border"></span>
         <span class="content__header-menu-border"></span>
-      </button>
     </li>
-    <li class="content__header-menu-toggle">
-        <button class="content__header-menu-btn" onclick="filterSelection('Xbox-One')"> Xbox-One
+    <li class="content__header-menu-toggle" data-filter="Xbox-One"> Xbox-One
         <span class="content__header-menu-border"></span>
         <span class="content__header-menu-border"></span>
         <span class="content__header-menu-border"></span>
         <span class="content__header-menu-border"></span>
-      </button>
     </li>
-    <li class="content__header-menu-toggle">
-        <button class="content__header-menu-btn" onclick="filterSelection('Xbox-360')"> Xbox-360
+    <li class="content__header-menu-toggle" data-filter="Xbox-360"> Xbox-360
         <span class="content__header-menu-border"></span>
         <span class="content__header-menu-border"></span>
         <span class="content__header-menu-border"></span>
         <span class="content__header-menu-border"></span>
-      </button>
     </li>
-    <li class="content__header-menu-toggle">
-        <button class="content__header-menu-btn" onclick="filterSelection('PS4')"> PS4
+    <li class="content__header-menu-toggle" data-filter="PS4"> PS4
         <span class="content__header-menu-border"></span>
         <span class="content__header-menu-border"></span>
         <span class="content__header-menu-border"></span>
         <span class="content__header-menu-border"></span>
-      </button>
     </li>
-    <li class="content__header-menu-toggle">
-        <button class="content__header-menu-btn" onclick="filterSelection('PS2')"> PS2
+    <li class="content__header-menu-toggle" data-filter="PS2"> PS2
         <span class="content__header-menu-border"></span>
         <span class="content__header-menu-border"></span>
         <span class="content__header-menu-border"></span>
         <span class="content__header-menu-border"></span>
-      </button>
     </li>
-    <li class="content__header-menu-toggle">
-        <button class="content__header-menu-btn" onclick="filterSelection('Wii')"> Wii
+    <li class="content__header-menu-toggle" data-filter="Wii"> Wii
         <span class="content__header-menu-border"></span>
         <span class="content__header-menu-border"></span>
         <span class="content__header-menu-border"></span>
         <span class="content__header-menu-border"></span>
-      </button>
     </li>
   </ul>
 
   <div class="content__header-search-box">
     <input class="content__header-search-txt" type="text" id="content__header-search-input" onkeyup="search();" name="" placeholder="Search for tags.." />
     <a class="content__header-search-btn" href="#">
-       <i class="fas fa-search"></i>
+      <i class="fas fa-search"></i>
     </a>
   </div>
 
   <ul class="content__header-sub-menu">
-    <li class="content__header-sub-menu-toggle"><button class="content__header-sub-menu-btn" onclick="filterSelection('all')"> Show all</button></li>
-    <li class="content__header-sub-menu-toggle"><button class="content__header-sub-menu-btn" onclick="filterSelection('Singleplayer')"> Singleplayer</button></li>
-    <li class="content__header-sub-menu-toggle"><button class="content__header-sub-menu-btn" onclick="filterSelection('Multiplayer 2PL.')"> Multiplayer 2PL.</button></li>
-    <li class="content__header-sub-menu-toggle"><button class="content__header-sub-menu-btn" onclick="filterSelection('Multiplayer 4PL.')"> Multiplayer 4PL.</button></li>
-    <li class="content__header-sub-menu-toggle"><button class="content__header-sub-menu-btn" onclick="filterSelection('Ego Shooter')"> Ego Shooter</button></li>
-    <li class="content__header-sub-menu-toggle"><button class="content__header-sub-menu-btn" onclick="filterSelection('Third Person')"> Third Person</button></li>
-    <li class="content__header-sub-menu-toggle"><button class="content__header-sub-menu-btn" onclick="filterSelection('2D Game')"> 2D Game</button></li>
-    <li class="content__header-sub-menu-toggle"><button class="content__header-sub-menu-btn" onclick="filterSelection('Rollenspiel')"> Rollenspiel</button></li>
-    <li class="content__header-sub-menu-toggle"><button class="content__header-sub-menu-btn" onclick="filterSelection('online')"> online</button></li>
-    <li class="content__header-sub-menu-toggle"><button class="content__header-sub-menu-btn" onclick="filterSelection('offline')"> offline</button></li>
-    <li class="content__header-sub-menu-toggle"><button class="content__header-sub-menu-btn" onclick="filterSelection('Party')"> Party</button></li>
-    <li class="content__header-sub-menu-toggle"><button class="content__header-sub-menu-btn" onclick="filterSelection('Rennspiel')"> Rennspiel</button></li>
-    <li class="content__header-sub-menu-toggle"><button class="content__header-sub-menu-btn" onclick="filterSelection('Hunger Games')"> Hunger Games</button></li>
-    <li class="content__header-sub-menu-toggle"><button class="content__header-sub-menu-btn" onclick="filterSelection('Action')"> Action</button></li>
-    <li class="content__header-sub-menu-toggle"><button class="content__header-sub-menu-btn" onclick="filterSelection('Horror')"> Horror</button></li>
-    <li class="content__header-sub-menu-toggle"><button class="content__header-sub-menu-btn" onclick="filterSelection('Crafting')"> Crafting</button></li>
-    <li class="content__header-sub-menu-toggle"><button class="content__header-sub-menu-btn" onclick="filterSelection('MMO')"> MMO</button></li>
+    <li class="content__header-sub-menu-toggle content__header-menu-toggle" data-filter="Singleplayer"> Singleplayer</li>
+    <li class="content__header-sub-menu-toggle content__header-menu-toggle" data-filter="Multiplayer 2PL."> Multiplayer 2PL.</li>
+    <li class="content__header-sub-menu-toggle content__header-menu-toggle" data-filter="Multiplayer 4PL."> Multiplayer 4PL.</li>
+    <li class="content__header-sub-menu-toggle content__header-menu-toggle" data-filter="Ego Shooter"> Ego Shooter</li>
+    <li class="content__header-sub-menu-toggle content__header-menu-toggle" data-filter="Third Person"> Third Person</li>
+    <li class="content__header-sub-menu-toggle content__header-menu-toggle" data-filter="2D Game"> 2D Game</li>
+    <li class="content__header-sub-menu-toggle content__header-menu-toggle" data-filter="Rollenspiel"> Rollenspiel</li>
+    <li class="content__header-sub-menu-toggle content__header-menu-toggle" data-filter="online"> online</li>
+    <li class="content__header-sub-menu-toggle content__header-menu-toggle" data-filter="offline"> offline</li>
+    <li class="content__header-sub-menu-toggle content__header-menu-toggle" data-filter="Party"> Party</li>
+    <li class="content__header-sub-menu-toggle content__header-menu-toggle" data-filter="Rennspiel"> Rennspiel</li>
+    <li class="content__header-sub-menu-toggle content__header-menu-toggle" data-filter="Hunger Games"> Hunger Games</li>
+    <li class="content__header-sub-menu-toggle content__header-menu-toggle" data-filter="Action"> Action</li>
+    <li class="content__header-sub-menu-toggle content__header-menu-toggle" data-filter="Horror"> Horror</li>
+    <li class="content__header-sub-menu-toggle content__header-menu-toggle" data-filter="Crafting"> Crafting</li>
+    <li class="content__header-sub-menu-toggle content__header-menu-toggle" data-filter="MMO"> MMO</li>
   </ul>
 
   <div class="content__header-refresh-container">
@@ -123,25 +108,27 @@
 
 
 <script>
-///menu card change
-function filterSelection(el) {
-  var gameCards, i;
-  gameCards = document.getElementsByClassName("content__container-games-card");
-  if (el == "all") {
-    el = "";
-  }
-  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-  for (i = 0; i < gameCards.length; i++) {
-    gameCards[i].classList.remove("show");
-    if (gameCards[i].className.indexOf(el) > -1) { //if card on the position 0 the className be there then add the class show
-      gameCards[i].classList.add("show");
+var menuBtn = document.querySelectorAll('.content__header-menu-toggle'); 
+menuBtn.forEach(function(item) {               //[...z] change a nodelist into an array (need to look)
+  item.addEventListener('click', function(e){ //e = event
+    var filter = e.target.dataset.filter; // the event from the element which is choosen with the data-filter 
+
+    var gameCards = document.getElementsByClassName("content__container-games-card");
+    if (filter == "all") {
+      filter = "";
     }
+    // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+    for (var i = 0; i < gameCards.length; i++) {
+      gameCards[i].classList.remove("show");
+      if (gameCards[i].className.indexOf(filter) > -1) { //if card on the position 0 the className be there then add the class show
+        gameCards[i].classList.add("show");
+      }
     // if (i >= 30){                          //if more then 30 el remove class show
     //   removeClass(x[i], "show");
     // }
-  }
-}
-
+    }
+  });
+});
 
 //searchbox                                               
 function search() {                                             
@@ -165,65 +152,15 @@ function search() {
   }
 }
 
-// active headerMenu
-var list = document.querySelectorAll('.content__header-menu-toggle');
-
-list.forEach(function(el) { //in the list for each function with this element
-  el.onclick = function() { //which will be clicked make this function
-    list.forEach(function(el) { //all elements in this list remove class (content__header-menu--active)
-      el.classList.remove('content__header-menu--active');
+var menu = document.querySelectorAll('.content__header-menu-toggle'); 
+menu.forEach(function(menuItem) {               //[...z] change a nodelist into an array (need to look)
+  menuItem.addEventListener('click', function(event){ //e = event
+    menu.forEach(function(menuItem) {   
+      menuItem.classList.remove('content__header-menu--active');
     });
-    el.classList.add('content__header-menu--active'); //and add that element what would be clicked
-  }
+    var target = event.target.classList.add('content__header-menu--active');
+  });
 });
-
-// active subMenu
-var subList = document.querySelectorAll('.content__header-sub-menu-toggle');
-
-subList.forEach(function(subEl) {
-  subEl.onclick = function() {
-    subList.forEach(function(subEl) {
-      subEl.classList.remove('content__header-sub-menu--active');
-    });
-    subEl.classList.add('content__header-sub-menu--active');
-  }
-});
-
-
-//sort cards
-// function sortList() {
-//   var list, i, switching, b, shouldSwitch;
-  
-//   list = document.getElementById("container__games");
-//   switching = true;
-//   /* Make a loop that will continue until
-//   no switching has been done: */
-//   while (switching) {
-//     // start by saying: no switching is done:
-//     switching = false;
-//     b = list.getElementsByTagName("div");
-//     // Loop through all list-items:
-//     for (i = 0; i < (b.length - 1); i++) {
-//       // start by saying there should be no switching:
-//       shouldSwitch = false;
-//       /* check if the next item should
-//       switch place with the current item: */
-//       if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()) {
-//         /* if next item is alphabetically
-//         lower than current item, mark as a switch
-//         and break the loop: */
-//         shouldSwitch = true;
-//         break;
-//       }
-//     }
-//     if (shouldSwitch) {
-//       /* If a switch has been marked, make the switch
-//       and mark the switch as done: */
-//       b[i].parentNode.insertBefore(b[i + 1], b[i]);
-//       switching = true;
-//     }
-//   }
-// }
 
 </script>
 </body>
