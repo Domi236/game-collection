@@ -87,5 +87,7 @@
     position: absolute;
     top: 5px;
     left: 10px;
+    z-index: 100;
+    cursor: pointer;
   }
 

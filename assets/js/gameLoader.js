@@ -36,5 +36,6 @@ function displayAllImages() {
 //delete or change bad css
 //change the css in scss
 //look git-hub
+//refactor js functions
 
 

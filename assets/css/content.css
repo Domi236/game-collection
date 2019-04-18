@@ -114,3 +114,20 @@
   .show {
     display: block;
   }
+  
+  /*add or remove games*/
+  #content__game {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 25%;
+    height: 21%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    /* border-top-left-radius: 50%;
+    transform: rotate(180deg); */
+    z-index: 1000;
+    /* pointer-events: none; */
+    display: none;
+    
+  }
