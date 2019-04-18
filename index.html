@@ -14,13 +14,12 @@
   <!--<script src="assets/js/menuBar.js"></script-->
 </head>
 <style>
-
 </style>
 </head>
 
 <body class="content" onload="displayAllImages()" >
 <section class="content__header">
-  <ul class="content__header-menu">
+  <ul id="content__header-menu" class="content__header-menu">
     <li class="content__header-menu-toggle" data-filter="all"> Show all
         <span class="content__header-menu-border"></span>
         <span class="content__header-menu-border"></span>
@@ -65,12 +64,19 @@
     </li>
   </ul>
 
-  <div class="content__header-search-box">
+  <div id="content__header-search-box" class="content__header-search-box">
     <input class="content__header-search-txt" type="text" id="content__header-search-input" onkeyup="search();" name="" placeholder="Search for tags.." />
     <a class="content__header-search-btn" href="#">
       <i class="fas fa-search"></i>
     </a>
   </div>
+  
+  <div class="content__header-refresh-container">
+    <img src="assets/images/sideImages/refreshDark.png" class="content__header-refresh-image">
+    <button class="content__header-refresh-btn" type="button" onClick="history.go(0)" value="refresh"></button>
+  </div>
+
+  <img src="assets/images/sideImages/logo.png" id="content__header-logo">
 
   <ul class="content__header-sub-menu">
     <li class="content__header-sub-menu-toggle content__header-menu-toggle" data-filter="Singleplayer"> Singleplayer</li>
@@ -91,11 +97,6 @@
     <li class="content__header-sub-menu-toggle content__header-menu-toggle" data-filter="MMO"> MMO</li>
   </ul>
 
-  <div class="content__header-refresh-container">
-    <img src="assets/images/sideImages/refreshDark.png" class="content__header-refresh-image">
-    <button class="content__header-refresh-btn" type="button" onClick="history.go(0)" value="refresh"></button>
-  </div>
-
   <!-- <button onclick="sortList()">Sort</button> -->
   <!-- <button class="content__container-games-btn" >show more</button> -->
 </section/>
@@ -105,7 +106,6 @@
       <div id="content__container-games"></div>
   </div/>
 </section>
-
 
 <script>
 var menuBtn = document.querySelectorAll('.content__header-menu-toggle'); 
@@ -154,12 +154,24 @@ function search() {
 
 var menu = document.querySelectorAll('.content__header-menu-toggle'); 
 menu.forEach(function(menuItem) {               //[...z] change a nodelist into an array (need to look)
-  menuItem.addEventListener('click', function(event){ //e = event
-    menu.forEach(function(menuItem) {   
+  menuItem.addEventListener('click', function(event){ 
+    menu.forEach(function(menuItem) {   //loop throw the menus and remove this class
       menuItem.classList.remove('content__header-menu--active');
     });
-    var target = event.target.classList.add('content__header-menu--active');
+    var target = event.target.classList.add('content__header-menu--active'); //and add this class on which the user click
   });
+});
+
+var searchBar = document.getElementById("content__header-search-box");
+var headerMenu = document.getElementById("content__header-menu");
+var logo = document.getElementById("content__header-logo");
+searchBar.addEventListener('mouseover', function() {
+  logo.style.opacity = "0";
+  headerMenu.style.margin = "30px 0 0 2%";
+});
+searchBar.addEventListener('mouseout', function() {
+  logo.style.opacity = "1";
+  headerMenu.style.margin = "30px 0 0 11%";
 });
 
 </script>

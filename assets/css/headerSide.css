@@ -79,3 +79,13 @@
       transform:rotate(360deg);
     }
   }
+
+  /* header Logo*/
+
+  #content__header-logo {
+    width: 10%;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+  }
+
