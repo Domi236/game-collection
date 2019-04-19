@@ -19,6 +19,8 @@
 
 <body class="content" onload="displayAllImages()" >
 <section class="content__header">
+
+  <!-- main menu -->
   <ul id="content__header-menu" class="content__header-menu">
     <li class="content__header-menu-toggle" data-filter="all"> Show all
         <span class="content__header-menu-border"></span>
@@ -64,24 +66,26 @@
     </li>
   </ul>
 
+  <!-- search box -->
   <div id="content__header-search-box" class="content__header-search-box">
     <input class="content__header-search-txt" type="text" id="content__header-search-input" onkeyup="search();" name="" placeholder="Search for tags.." />
     <a class="content__header-search-btn" href="#">
       <i class="fas fa-search"></i>
     </a>
   </div>
-  
+
+  <!-- refresh button -->
   <div class="content__header-refresh-container">
     <img src="assets/images/sideImages/refreshDark.png" class="content__header-refresh-image">
     <button class="content__header-refresh-btn" type="button" onClick="history.go(0)" value="refresh"></button>
   </div>
 
+  <!-- logo -->
   <img src="assets/images/sideImages/logo.png" id="content__header-logo">
 
+  <!-- submenu -->
   <ul id="content__header-sub-menu" class="content__header-sub-menu"></ul>
 
-  <!-- <button onclick="sortList()">Sort</button> -->
-  <!-- <button class="content__container-games-btn" >show more</button> -->
 </section/>
 
 <section class="content"> 
@@ -136,6 +140,8 @@ logo.addEventListener('click', function() {
 });
 
 //TODOS:
+// <button onclick="sortList()">Sort</button>
+//  <button class="content__container-games-btn" >show more</button>
 // make a dropdown list, where you can choose the tags or with checkboxes or buttons
 // make an image taker, where you can choose your image
 // and where you can add the link
