@@ -78,24 +78,7 @@
 
   <img src="assets/images/sideImages/logo.png" id="content__header-logo">
 
-  <ul class="content__header-sub-menu">
-    <li class="content__header-sub-menu-toggle content__header-menu-toggle" data-filter="Singleplayer"> Singleplayer</li>
-    <li class="content__header-sub-menu-toggle content__header-menu-toggle" data-filter="Multiplayer 2PL."> Multiplayer 2PL.</li>
-    <li class="content__header-sub-menu-toggle content__header-menu-toggle" data-filter="Multiplayer 4PL."> Multiplayer 4PL.</li>
-    <li class="content__header-sub-menu-toggle content__header-menu-toggle" data-filter="Ego Shooter"> Ego Shooter</li>
-    <li class="content__header-sub-menu-toggle content__header-menu-toggle" data-filter="Third Person"> Third Person</li>
-    <li class="content__header-sub-menu-toggle content__header-menu-toggle" data-filter="2D Game"> 2D Game</li>
-    <li class="content__header-sub-menu-toggle content__header-menu-toggle" data-filter="Rollenspiel"> Rollenspiel</li>
-    <li class="content__header-sub-menu-toggle content__header-menu-toggle" data-filter="online"> online</li>
-    <li class="content__header-sub-menu-toggle content__header-menu-toggle" data-filter="offline"> offline</li>
-    <li class="content__header-sub-menu-toggle content__header-menu-toggle" data-filter="Party"> Party</li>
-    <li class="content__header-sub-menu-toggle content__header-menu-toggle" data-filter="Rennspiel"> Rennspiel</li>
-    <li class="content__header-sub-menu-toggle content__header-menu-toggle" data-filter="Hunger Games"> Hunger Games</li>
-    <li class="content__header-sub-menu-toggle content__header-menu-toggle" data-filter="Action"> Action</li>
-    <li class="content__header-sub-menu-toggle content__header-menu-toggle" data-filter="Horror"> Horror</li>
-    <li class="content__header-sub-menu-toggle content__header-menu-toggle" data-filter="Crafting"> Crafting</li>
-    <li class="content__header-sub-menu-toggle content__header-menu-toggle" data-filter="MMO"> MMO</li>
-  </ul>
+  <ul id="content__header-sub-menu" class="content__header-sub-menu"></ul>
 
   <!-- <button onclick="sortList()">Sort</button> -->
   <!-- <button class="content__container-games-btn" >show more</button> -->
@@ -110,28 +93,7 @@
 
 <script>
 
-  /*filter elements*/
-var menuBtn = document.querySelectorAll('.content__header-menu-toggle'); 
-menuBtn.forEach(function(item) {               //[...z] change a nodelist into an array (need to look)
-  item.addEventListener('click', function(e){ //e = event
-    var filter = e.target.dataset.filter; // the event from the element which is choosen with the data-filter 
 
-    var gameCards = document.getElementsByClassName("content__container-games-card");
-    if (filter == "all") {
-      filter = "";
-    }
-    // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-    for (var i = 0; i < gameCards.length; i++) {
-      gameCards[i].classList.remove("show");
-      if (gameCards[i].className.indexOf(filter) > -1) { //if card on the position 0 the className be there then add the class show
-        gameCards[i].classList.add("show");
-      }
-    // if (i >= 30){                          //if more then 30 el remove class show
-    //   removeClass(x[i], "show");
-    // }
-    }
-  });
-});
 
 //searchbox                                               
 function search() {                                             
@@ -154,17 +116,6 @@ function search() {
     }                                                                               //Unturned.indexOf("u") = 3 
   }
 }
-
-/*active target on click*/
-var menu = document.querySelectorAll('.content__header-menu-toggle'); 
-menu.forEach(function(menuItem) {               //[...z] change a nodelist into an array (need to look)
-  menuItem.addEventListener('click', function(event){ 
-    menu.forEach(function(menuItem) {   //loop throw the menus and remove this class
-      menuItem.classList.remove('content__header-menu--active');
-    });
-    var target = event.target.classList.add('content__header-menu--active'); //and add this class on which the user click
-  });
-});
 
 /*searchBar hover effects*/
 var searchBar = document.getElementById("content__header-search-box");

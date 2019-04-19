@@ -1,7 +1,7 @@
 
 
 var ajaxhttp = new XMLHttpRequest();  //generate a 
-var url = "https://api.myjson.com/bins/9m2mc"; //it doesn't enable to use (assets/json/dats.json)//{}myjson http://myjson.com/ihhge 
+var url = "https://api.myjson.com/bins/tq7g4"; //it doesn't enable to use (assets/json/dats.json)//{}myjson http://myjson.com/ihhge 
 var x = "";
 var myObj = "";
 
@@ -13,17 +13,76 @@ function displayAllImages() {
     if (ajaxhttp.readyState == 4 && ajaxhttp.status == 200) { //the number gives the state about it, if it ranges 4 it is done//ready state gives a state about the progress //sends the number of output code for example 200 for OK
             //debugger;
       myObj = JSON.parse(ajaxhttp.responseText); //change the data of the json file in a string with dats
-        for (i in myObj.searchcriteria) {
-          x += "<div class='content__container-games-card" + myObj.searchcriteria[i].tags.slice(-1) + myObj.searchcriteria[i].tags.slice(-2) + myObj.searchcriteria[i].tags.slice(-3) +
-          myObj.searchcriteria[i].tags.slice(-4) + myObj.searchcriteria[i].tags.slice(-5) + myObj.searchcriteria[i].tags.slice(-6) + myObj.searchcriteria[i].tags.slice(-7) + 
-          myObj.searchcriteria[i].tags.slice(-8) + myObj.searchcriteria[i].tags.slice(-9) + myObj.searchcriteria[i].tags.slice(-10) + 
-          "'><div class='content__container-games-card-front'><img class='content__container-games-card-images ' src='" + myObj.searchcriteria[i].src + "'/></div><div class='content__container-games-card-back'><div class='content__container-games-card-back-content'><h2 class='content__container-games-card-back-headline'>" + 
-          myObj.searchcriteria[i].name + "</h2><p class='content__container-games-card-back-text'>" + myObj.searchcriteria[i].tags + "</p><a class='content__container-games-card-back-links' href='" + 
-          myObj.searchcriteria[i].url + "' target='_blank'><i class='fab fa-youtube'></i><a/></div></div></div>";
-        }
-        document.getElementById('content__container-games').innerHTML += x;
-    console.log(myObj);
 
+      // generateGames();
+      // generateMenu();
+      // generateSubMenu();
+      
+
+      for (i in myObj.searchcriteria) { //`{}`
+        x += "<div class='content__container-games-card " + myObj.searchcriteria[i].tags.join(' ') + ' ' + myObj.searchcriteria[i].console +
+        "'><div class='content__container-games-card-front'><img class='content__container-games-card-images ' src='" + myObj.searchcriteria[i].src + "'/></div><div class='content__container-games-card-back'><div class='content__container-games-card-back-content'><h2 class='content__container-games-card-back-headline'>" + 
+        myObj.searchcriteria[i].name + "</h2><p class='content__container-games-card-back-text'>" + myObj.searchcriteria[i].tags.join(', ') + ", " + myObj.searchcriteria[i].console + "</p><a class='content__container-games-card-back-links' href='" + 
+        myObj.searchcriteria[i].url + "' target='_blank'><i class='fab fa-youtube'></i><a/></div></div></div>";
+      }
+      document.getElementById('content__container-games').innerHTML += x;
+
+      var tagArray = [];
+      var tagList = "";
+      
+      for (i in myObj.searchcriteria) {
+        for (j in myObj.searchcriteria[i].tags) {
+          if (tagArray.indexOf(myObj.searchcriteria[i].tags[j]) == -1) {
+            tagArray.push(myObj.searchcriteria[i].tags[j]);
+          }
+        }
+      } 
+      tagArray.sort();
+      
+      for (i in tagArray) {
+        tagList += "<li class='content__header-sub-menu-toggle content__header-menu-toggle' data-filter='" + tagArray[i] + "'>" + tagArray[i] + "</li>";
+      }
+      document.getElementById('content__header-sub-menu').innerHTML = tagList;
+
+
+      /*filter elements*/
+      var menuBtn = document.querySelectorAll('.content__header-menu-toggle'); 
+      console.log(menuBtn);
+      menuBtn.forEach(function(item) {               //[...z] change a nodelist into an array (need to look)
+        item.addEventListener('click', function(e){ //e = event
+          var filter = e.target.dataset.filter; // the event from the element which is choosen with the data-filter 
+
+          var gameCards = document.getElementsByClassName("content__container-games-card");
+          if (filter == "all") {
+            filter = "";
+          }
+          // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+          for (var i = 0; i < gameCards.length; i++) {
+            gameCards[i].classList.remove("show");
+
+            console.log(gameCards[i].className);
+            console.log(filter);
+            if (gameCards[i].className.indexOf(filter) > -1) { //if card on the position 0 the className be there then add the class show
+              gameCards[i].classList.add("show");
+            }
+          // if (i >= 30){                          //if more then 30 el remove class show
+          //   removeClass(x[i], "show");
+          // }
+          }
+        });
+      });
+
+
+      /*active target on click*/
+      var menu = document.querySelectorAll('.content__header-menu-toggle'); 
+      menu.forEach(function(menuItem) {               //[...z] change a nodelist into an array (need to look)
+        menuItem.addEventListener('click', function(event){ 
+          menu.forEach(function(menuItem) {   //loop throw the menus and remove this class
+            menuItem.classList.remove('content__header-menu--active');
+          });
+          var target = event.target.classList.add('content__header-menu--active'); //and add this class on which the user click
+        });
+      });
     }
   } 
   ajaxhttp.send(null); //sends the request, optional with a string or Dom-Object-Dats
@@ -39,3 +98,21 @@ function displayAllImages() {
 //refactor js functions
 
 
+
+
+
+// // console.log(myObj.searchcriteria[0].tags);
+// var tagArray = [];
+// // tagMenu = document.getElementById('content__header-tag-menu');
+// for (i in myObj.searchcriteria) {
+//   if (tagArray.indexOf(myObj.searchcriteria[0].tags[i]) == -1) {
+//     tagArray.push(myObj.searchcriteria[0].tags[i]);
+//     // continue;
+//   }
+//   if (tagArray.indexOf(myObj.searchcriteria[1].tags[i]) == -1) {
+//     tagArray.push(myObj.searchcriteria[1].tags);
+//     // continue;
+//   }
+//   //  console.log(myObj.searchcriteria[0].tags[i]);
+//    console.log(tagArray);
+// }
