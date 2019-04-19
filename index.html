@@ -101,18 +101,17 @@
 
 //searchbox                                               
 function search() {                                             
-  var input, filter, container, divs, h2, p, i, txtValueNames, txtValueTags, cards;
-  input = document.getElementById("content__header-search-input");
-  filter = input.value.toUpperCase();
-  cards = document.getElementsByClassName("content__container-games-card");
-  container = document.getElementById("content__container-games");
-  divs = container.getElementsByClassName("content__container-games-card-back-content");
+  var input = document.getElementById("content__header-search-input");
+  var filter = input.value.toUpperCase();
+  var cards = document.getElementsByClassName("content__container-games-card");
+  var container = document.getElementById("content__container-games");
+  var divs = container.getElementsByClassName("content__container-games-card-back-content");
   // Loop through all list items, and hide those who don't match the search query
   for (i = 0; i < divs.length; i++) {
-    h2 = divs[i].getElementsByTagName("h2")[0];
-    p = divs[i].getElementsByTagName("p")[0];
-    txtValueNames = h2.textContent;
-    txtValueTags = p.textContent; //return the text from the p tag
+    var h2 = divs[i].getElementsByTagName("h2")[0];
+    var p = divs[i].getElementsByTagName("p")[0];
+    var txtValueNames = h2.textContent;
+    var txtValueTags = p.textContent; //return the text from the p tag
     if (txtValueNames.toUpperCase().indexOf(filter) > -1 || txtValueTags.toUpperCase().indexOf(filter) > -1) {
       cards[i].style.display = ""; //indexOf(gibt die stelle von den inhalt in der klammer zurück) wenn der inhalt aber nicht
     } else {                       //vorhanden ist zeigt indexOf die stelle 1 an    Unturned.indexOf("U") = 0  
@@ -133,6 +132,8 @@ searchBar.addEventListener('mouseout', function() {
   logo.style.opacity = "1";
   headerMenu.style.margin = "30px 0 0 11%";
 });
+
+
 /*logo click effect (game adder or remover)*/
 var game = document.getElementById('content__game');
 logo.addEventListener('click', function() {

@@ -28,7 +28,7 @@ function generateGames() {
   for (i in myObj.searchcriteria) { 
     x += "<div class='content__container-games-card " + myObj.searchcriteria[i].tags.join(' ') + ' ' + myObj.searchcriteria[i].console +
     "'><div class='content__container-games-card-front'><img class='content__container-games-card-images ' src='" + myObj.searchcriteria[i].src + "'/></div><div class='content__container-games-card-back'><div class='content__container-games-card-back-content'><h2 class='content__container-games-card-back-headline'>" + 
-    myObj.searchcriteria[i].name + "</h2><p class='content__container-games-card-back-text'>" + myObj.searchcriteria[i].tags.join(', ') + ", " + myObj.searchcriteria[i].console + "</p><a class='content__container-games-card-back-links' href='" + 
+    myObj.searchcriteria[i].name + "</h2><p class='content__container-games-card-back-text'>" + myObj.searchcriteria[i].tags.sort().join(', ') + ", " + myObj.searchcriteria[i].console + "</p><a class='content__container-games-card-back-links' href='" + 
     myObj.searchcriteria[i].url + "' target='_blank'><i class='fab fa-youtube'></i><a/></div></div></div>";
   }
   document.getElementById('content__container-games').innerHTML += x;
