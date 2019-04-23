@@ -1,118 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="assets/css/css.min/headerMenus.min.css" media="all">
-  <link rel="stylesheet" href="assets/css/css.min/headerSide.min.css" media="all">
-  <link rel="stylesheet" href="assets/css/css.min/content.min.css" media="all">
-  <link rel="stylesheet" href="assets/css/css.min/default.min.css" media="all">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
-  <script src="assets/js/js.min/gameLoader.min.js"></script>
-  <!-- <script src="assets/js/sublineMenuBar.js"></script> -->
-  <!--<script src="assets/js/menuBar.js"></script-->
-</head>
-<style>
-</style>
-</head>
-
-<body class="content" onload="displayAllImages()" >
-<section class="content__header">o
-
-  <!-- main menu -->
-  <ul id="content__header-menu" class="content__header-menu"></ul>
-
-  <!-- search box -->
-  <div id="content__header-search-box" class="content__header-search-box">
-    <input class="content__header-search-txt" type="text" id="content__header-search-input" onkeyup="search();" name="" placeholder="Search for tags.." />
-    <a class="content__header-search-btn" href="#">
-      <i class="fas fa-search"></i>
-    </a>
-  </div>
-
-  <!-- refresh button -->
-  <div class="content__header-refresh-container">
-    <img src="assets/images/sideImages/refreshDark.png" class="content__header-refresh-image">
-    <button class="content__header-refresh-btn" type="button" onClick="history.go(0)" value="refresh"></button>
-  </div>
-
-  <!-- logo -->
-  <img src="assets/images/sideImages/logo.png" id="content__header-logo">
-
-  <!-- submenu -->
-  <ul id="content__header-sub-menu" class="content__header-sub-menu"></ul>
-
-</section/>
-
-<section class="content"> 
-
-  <div class="content__wrapper">
-    <div id="content__container-games"></div>
-  </div/>
-</section>
-
-<script>
-
-
-
-//searchbox                                               
-function search() {                                             
-  var input = document.getElementById("content__header-search-input");
-  var filter = input.value.toUpperCase();
-  var cards = document.getElementsByClassName("content__container-games-card");
-  var container = document.getElementById("content__container-games");
-  var divs = container.getElementsByClassName("content__container-games-card-back-content");
-  // Loop through all list items, and hide those who don't match the search query
-  for (i = 0; i < divs.length; i++) {
-    var h2 = divs[i].getElementsByTagName("h2")[0];
-    var p = divs[i].getElementsByTagName("p")[0];
-    var txtValueNames = h2.textContent;
-    var txtValueTags = p.textContent; //return the text from the p tag
-    if (txtValueNames.toUpperCase().indexOf(filter) > -1 || txtValueTags.toUpperCase().indexOf(filter) > -1) {
-      cards[i].style.display = ""; //indexOf(gibt die stelle von den inhalt in der klammer zurück) wenn der inhalt aber nicht
-    } else {                       //vorhanden ist zeigt indexOf die stelle 1 an    Unturned.indexOf("U") = 0  
-      cards[i].style.display = "none";                                              //Unturned.indexOf("x") = -1  
-    }                                                                               //Unturned.indexOf("u") = 3 
-  }
-}
-
-/*searchBar hover effects*/
-var searchBar = document.getElementById("content__header-search-box");
-var headerMenu = document.getElementById("content__header-menu");
-var logo = document.getElementById("content__header-logo");
-searchBar.addEventListener('mouseover', function() {
-  logo.style.opacity = "0";
-  headerMenu.style.margin = "5px 0 0 2%";
-});
-searchBar.addEventListener('mouseout', function() {
-  logo.style.opacity = "1";
-  headerMenu.style.margin = "5px 0 0 11%";
-});
-
-
-/*logo click effect (game adder or remover)*/
-// var game = document.getElementById('content__game');
-// logo.addEventListener('click', function() {
-//   game.classList.add('show');
-// });
-
-//TODOS:
-// <button onclick="sortList()">Sort</button>
-//  <button class="content__container-games-btn" >show more</button>
-// make a dropdown list, where you can choose the tags or with checkboxes or buttons
-// make an image taker, where you can choose your image
-// and where you can add the link
-  // <div id="content__game">
-  //   <ul>
-  //     <li></li>
-  //   </ul>              
-  //   <input class="content__header-search-txt" type="text" id="content__header-search-input" onkeyup="search();" name="" placeholder="Write the game name.." />
-  //   <h2></h2>
-  //   <p></p>
-  // </div>
-
-
-</script>
-</body>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GAME COLLECTION</title>
+  </head>
+  <body>
+    <h1>IMPORTANT</h1>
+    <p>
+      Move to dist folder after building it.<br />
+      Project uses gulp to build, for more details look at Readme.  
+    </p>
+  </body>
 </html>
