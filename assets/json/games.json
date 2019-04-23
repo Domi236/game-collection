@@ -749,6 +749,33 @@
       ]
     },
     {
+      "name": "Halo",
+      "src": "assets/images/haloMasterchiefCollection.jpg",
+      
+      "url": "#",
+      "console": "XBOX-ONE",
+      "tags": [ 
+      ]
+    },
+    {
+      "name": "Dirt 3",
+      "src": "assets/images/dirt3.jpg",
+      
+      "url": "#",
+      "console": "XBOX-360",
+      "tags": [ 
+      ]
+    },
+    {
+      "name": "The Witcher 3 Wild Hunt",
+      "src": "assets/images/theWitcher3.jpg",
+      
+      "url": "#",
+      "console": "PS4",
+      "tags": [ 
+      ]
+    },
+    {
       "name": "Super mario bros.wii",
       "src": "assets/images/superMario.jpg",
       "url": "https://www.youtube.com/watch?v=pipMu0HXiU0",

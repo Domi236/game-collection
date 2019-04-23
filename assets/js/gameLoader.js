@@ -1,7 +1,7 @@
 
 
 var ajaxhttp = new XMLHttpRequest();   
-var url = "https://api.myjson.com/bins/tq7g4"; //it doesn't enable to use (assets/json/games.json)//{}myjson http://myjson.com/ihhge 
+var url = "https://api.myjson.com/bins/bsui0"; //it doesn't enable to use (assets/json/games.json)//{}myjson http://myjson.com/ihhge 
 var x = "";
 var myObj = "";
 
@@ -15,7 +15,7 @@ function displayAllImages() {
       myObj = JSON.parse(ajaxhttp.responseText); //change the data of the json file in a string with dats
 
       generateGames();
-      // generateMenu();
+      generateMenu();
       generateSubMenu();
       filterElements();
       activeTarget();
@@ -34,24 +34,22 @@ function generateGames() {
   document.getElementById('content__container-games').innerHTML += x;
 }
 
-/* generate the main Menu (but it isn't able to use)*/ 
-// function generateMenu() {
-//   var consoleArray = [];
-//   var consoleList = "";
+/* generate the main Menu (but it isn't able to use (i need to loop only one time not 2 times, then it will func))*/ 
+function generateMenu() {
+  var consoleArray = [];
+  var consoleList = "";
 
-//   for (i in myObj.searchcriteria) {
-//     for (j in myObj.searchcriteria[i].console) {
-//       if (consoleArray.indexOf(myObj.searchcriteria[i].console[j]) == -1) {
-//         consoleArray.push(myObj.searchcriteria[i].console[j]);
-//       }
-//     }
-//   } 
+  for (i in myObj.searchcriteria) {
+    if (consoleArray.indexOf(myObj.searchcriteria[i].console) == -1) {
+      consoleArray.push(myObj.searchcriteria[i].console);
+    }
+  }
 
-//   for (i in consoleArray) {
-//     consoleList += "<li id='content__header-menu' class='content__header-menu-toggle' data-filter='" + consoleArray[i] + "'>" + consoleArray[i] + "</li><span class='content__header-menu-border'></span><span class='content__header-menu-border'></span><span class='content__header-menu-border'></span><span class='content__header-menu-border'></span>";
-//   }
-//   document.getElementById('content__header-menu').innerHTML = "<li class='content__header-menu-toggle' data-filter='all'> Show all<span class='content__header-menu-border'></span><span class='content__header-menu-border'></span><span class='content__header-menu-border'></span><span class='content__header-menu-border'></span></li>" + consoleList;
-// }
+  for (i in consoleArray) {
+    consoleList += "<li class='content__header-menu-toggle' data-filter='" + consoleArray[i] + "'>" + consoleArray[i] + "<span class='content__header-menu-border'></span><span class='content__header-menu-border'></span><span class='content__header-menu-border'></span><span class='content__header-menu-border'></span></li>";
+  }
+  document.getElementById('content__header-menu').innerHTML = "<li class='content__header-menu-toggle' data-filter='all'> Show all<span class='content__header-menu-border'></span><span class='content__header-menu-border'></span><span class='content__header-menu-border'></span><span class='content__header-menu-border'></span></li>" + consoleList;
+}
 
 
 function generateSubMenu() {
