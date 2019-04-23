@@ -110,12 +110,12 @@ function activeTarget() {
      
 
 //todos: make a sort btn
-//make a nightmode Btn
 //place all games in Json with their content
-//bring all on Bem status
 //delete or change bad css
 //change the css in scss
 //look git-hub
-//refactor js functions
 
+//hover to onclick ändern bei den Karten
+// loop throw the json and give all cards the eventlistener(onclick) instead of hover/active 
+// if another card is clicked the card which is clicked return back
 

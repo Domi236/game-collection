@@ -70,12 +70,12 @@
     text-decoration: none;
   }
 
-  .content__container-games-card-back-links:active {
+  .content__container-games-card-back-links:hover {
     background: #2c3350;
     color: #fff;
   }
 
-  .content__container-games-card:active > .content__container-games-card-front {
+  .content__container-games-card:hover > .content__container-games-card-front {
     transform: perspective(600px) rotateY(-180deg);
     animation: moveBigger 2s;
     animation-fill-mode: forwards;
@@ -91,7 +91,7 @@
     }
   }
 
-  .content__container-games-card:active > .content__container-games-card-back {
+  .content__container-games-card:hover > .content__container-games-card-back {
     transform: perspective(600px) rotateY(0deg);
     animation: slideDown 2s;
     animation-fill-mode: forwards;
@@ -106,7 +106,7 @@
     }
   }
 
-  .content__container-games-card:active {
+  .content__container-games-card:hover {
     z-index: 1000;
   }
 
