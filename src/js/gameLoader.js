@@ -119,5 +119,5 @@ function activeTarget() {
 //hover to onclick ändern bei den Karten
 // loop throw the json and give all cards the eventlistener(onclick) instead of hover/active 
 // if another card is clicked the card which is clicked return back
-
+// if media querie not anymore in range the mouse effects should be gone
 //refactor js functions

@@ -3,11 +3,27 @@
     position: absolute;
     top: 31px;
     right: 2%;
-    background: #2f3640;
+    background: $color-search-background;
     height: 40px;
     padding: 10px;
     border-radius: 40px;
     z-index: 1000;
+    @media (max-width: 1650px) {
+      right: 0;
+    }
+    @media (max-width: 1430px) {
+      display: none;
+    }
+    @media (max-width: 1000px) {
+      display: block;
+      top: 60px;
+    }
+    @media (max-width: 600px) {
+      top: 120px;
+    }
+    @media (max-width: 440px) {
+      display: none;
+    }
   }
 
   .content__header-search-box:hover > .content__header-search-txt {
@@ -16,15 +32,15 @@
   }
 
   .content__header-search-box:hover > .content__header-search-btn {
-    background: white;
+    background: $color-secondary;
   }
 
   .content__header-search-btn {
-    color: #e84118;
+    color: $color-primary;
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: #2f3640;
+    background: $color-search-background;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,7 +54,7 @@
     outline: none; /*keine grenzline zu sehen*/
     float: left;
     padding: 0;
-    color: white;
+    color: $color-secondary;
     font-size: 16px;
     transition: 0.4s;
     line-height: 40px;
@@ -56,6 +72,9 @@
     top: 10px;
     opacity: 0;
     z-index: 100;
+    @media (max-width: 1650px) {
+      display: none;
+    }
   }
 
   .content__header-refresh-image {
@@ -69,6 +88,9 @@
     animation-duration: 500ms;
     animation-iteration-count: 1;
     animation-timing-function: linear;
+    @media (max-width: 1650px) {
+      display: none;
+    }
   }
   
   @keyframes spin {
@@ -81,13 +103,31 @@
   }
 
   /* header Logo*/
-
   #content__header-logo {
-    width: 10%;
+    width: 190px;
     position: absolute;
     top: 5px;
     left: 10px;
     z-index: 100;
     cursor: pointer;
+    @media (max-width: 1650px) {
+      left: 2px;
+    }
+    @media (max-width: 1430px) {
+      display: none;
+    }
+    @media (max-width: 1000px) {
+      display: block;
+      top: 50px;
+      left: 35%;
+    }
+    @media (max-width: 872px) {
+      display: block;
+      top: -10px;
+      left: 73%;
+    }
+    @media (max-width: 800px) {
+      display: none;
+    }
   }
 

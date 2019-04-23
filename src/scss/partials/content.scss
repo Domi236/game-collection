@@ -42,7 +42,7 @@
   }
 
   .content__container-games-card-back-content{
-    color: #e84118;
+    color: $color-secondary;
     text-align: center;
   } 
 
@@ -62,7 +62,7 @@
     height: 50px;
     justify-content: center;
     align-items: center;
-    color: red;
+    color: $color-youtube;
     text-align: center;
     font-size: 25px;
     transition: 0.4s;
@@ -72,7 +72,7 @@
 
   .content__container-games-card-back-links:hover {
     background: #2c3350;
-    color: #fff;
+    color: $color-secondary;
   }
 
   .content__container-games-card:hover > .content__container-games-card-front {
@@ -116,18 +116,18 @@
   }
   
   /*add or remove games*/
-  #content__game {
-    position: absolute;
-    top: 50px;
-    left: 0;
-    width: 25%;
-    height: 21%;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    /* border-top-left-radius: 50%;
-    transform: rotate(180deg); */
-    z-index: 1000;
-    /* pointer-events: none; */
-    display: none;
+  // #content__game {
+  //   position: absolute;
+  //   top: 50px;
+  //   left: 0;
+  //   width: 25%;
+  //   height: 21%;
+  //   background-repeat: no-repeat;
+  //   background-size: 100%;
+  //   /* border-top-left-radius: 50%;
+  //   transform: rotate(180deg); */
+  //   z-index: 1000;
+  //   /* pointer-events: none; */
+  //   display: none;
     
-  }
+  // }
