@@ -63,12 +63,17 @@
           var txtValueNames = h2.textContent;
           var txtValueTags = p.textContent; //return the text from the p tag
           if (txtValueNames.toUpperCase().indexOf(filter) > -1 || txtValueTags.toUpperCase().indexOf(filter) > -1) {
-            cards[i].style.display = ""; //indexOf(gibt die stelle von den inhalt in der klammer zurück) wenn der inhalt aber nicht
-          } else {                       //vorhanden ist zeigt indexOf die stelle 1 an    Unturned.indexOf("U") = 0
-            cards[i].style.display = "none";                                              //Unturned.indexOf("x") = -1
-          }                                                                               //Unturned.indexOf("u") = 3
+            cards[i].style.display = ""; 
+          } else {                       
+            cards[i].style.display = "none";                                              
+          }                                                                               
         }
       }
+      //indexOf(gibt die stelle von den inhalt in der klammer zurück) wenn der inhalt aber nicht
+      //vorhanden ist zeigt indexOf die stelle 1 an    
+      //Unturned.indexOf("U") = 0
+      //Unturned.indexOf("x") = -1
+      //Unturned.indexOf("u") = 3
 
       /*searchBar hover effects*/
 
@@ -82,22 +87,27 @@
 
       function myFunction(media) {
         if (media.matches) {
-          searchBar.addEventListener('mouseover', function() {
-            logo.style.opacity = "0";
-            headerMenu.style.margin = "30px 0 0 2%";
-          });
-          searchBar.addEventListener('mouseout', function() {
-            logo.style.opacity = "1";
-            headerMenu.style.margin = "30px 0 0 11%";
-          });
+          searchBar.addEventListener('mouseover', mouseover);
+          searchBar.addEventListener('mouseout', mouseout);
         }
       }
 
+      function mouseover() {
+        logo.style.opacity = "0";
+        headerMenu.style.margin = "30px 0 0 2%";
+      }
+      
+      function mouseout() {
+        logo.style.opacity = "1";
+        headerMenu.style.margin = "30px 0 0 11%";
+      }
+
       /*logo click effect (game adder or remover)*/
-      var game = document.getElementById('content__game');
-      logo.addEventListener('click', function() {
-        game.classList.add('show');
-      });
+      // var game = document.getElementById('content__game');
+      // logo.addEventListener('click', function() {
+      //   game.classList.add('show');
+      // });
+      
 
     </script>
 

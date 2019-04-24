@@ -1,7 +1,7 @@
 
 
 var ajaxhttp = new XMLHttpRequest();
-var url = "https://api.myjson.com/bins/bsui0"; //it doesn't enable to use (assets/json/games.json)//{}myjson http://myjson.com/ihhge
+var url = "https://api.myjson.com/bins/10083k"; //it doesn't enable to use (assets/json/games.json)//{}myjson http://myjson.com/ihhge
 var x = "";
 var myObj = "";
 
@@ -26,13 +26,14 @@ function displayAllImages() {
 
 function generateGames() {
   for (var i in myObj.searchcriteria) {
-    x += "<div class='content__container-games-card " + myObj.searchcriteria[i].tags.join(' ') + ' ' + myObj.searchcriteria[i].console +
-    "'><div class='content__container-games-card-front'><img class='content__container-games-card-images ' src='" + myObj.searchcriteria[i].src + "'/></div><div class='content__container-games-card-back'><div class='content__container-games-card-back-content'><h2 class='content__container-games-card-back-headline'>" +
+    x += "<div class='content__container-games-card'><div class='content__container-games-card-front'><img class='content__container-games-card-images ' src='" + myObj.searchcriteria[i].src + "'/></div><div class='content__container-games-card-back'><div class='content__container-games-card-back-content'><h2 class='content__container-games-card-back-headline'>" +
     myObj.searchcriteria[i].name + "</h2><p class='content__container-games-card-back-text'>" + myObj.searchcriteria[i].tags.sort().join(', ') + ", " + myObj.searchcriteria[i].console + "</p><a class='content__container-games-card-back-links' href='" +
     myObj.searchcriteria[i].url + "' target='_blank'><i class='fab fa-youtube'></i><a/></div></div></div>";
   }
   document.getElementById('content__container-games').innerHTML += x;
 }
+// " + myObj.searchcriteria[i].tags.join(' ') + ' ' + myObj.searchcriteria[i].console +
+// "'
 
 /* generate the main Menu (but it isn't able to use (i need to loop only one time not 2 times, then it will func))*/
 function generateMenu() {
@@ -74,7 +75,7 @@ function generateSubMenu() {
 
 function filterElements() {
   var menuBtn = document.querySelectorAll('.content__header-menu-toggle');
-  console.log(menuBtn);
+  // console.log(menuBtn);
   menuBtn.forEach(function(item) {               //[...z] change a nodelist into an array (need to look)
     item.addEventListener('click', function(e){ //e = event
       var filter = e.target.dataset.filter; // the event from the element which is choosen with the data-filter
@@ -83,12 +84,17 @@ function filterElements() {
       if (filter == "all") {
         filter = "";
       }
-      // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-      for (var i = 0; i < gameCards.length; i++) {
+        
+      for (var i in myObj.searchcriteria) {
         gameCards[i].classList.remove("show");
-
-        if (gameCards[i].className.indexOf(filter) > -1) { //if card on the position 0 the className be there then add the class show
+        if (myObj.searchcriteria[i].console.indexOf(filter) > -1) {
           gameCards[i].classList.add("show");
+        }
+
+        for (var j in myObj.searchcriteria[i].tags) {
+          if (myObj.searchcriteria[i].tags[j].indexOf(filter) > -1) {
+            gameCards[j].classList.add("show");
+          }
         }
       }
     });
@@ -102,7 +108,7 @@ function activeTarget() {
       menu.forEach(function(menuItem) {   //loop throw the menus and remove this class
         menuItem.classList.remove('content__header-menu--active');
       });
-      target = event.target.classList.add('content__header-menu--active'); //and add this class on which the user click
+      var target = event.target.classList.add('content__header-menu--active'); //and add this class on which the user click
     });
   });
 }
@@ -111,13 +117,21 @@ function activeTarget() {
 
 //todos: make a sort btn
 //place all games in Json with their content
-//delete or change bad css
-//change the css in scss
 //look git-hub
-
 
 //hover to onclick ändern bei den Karten
 // loop throw the json and give all cards the eventlistener(onclick) instead of hover/active 
 // if another card is clicked the card which is clicked return back
-// if media querie not anymore in range the mouse effects should be gone
-//refactor js functions
+// you need on the title a title img
+// all you should change the filter, the filter should loop throw the json file not throw the classes
+
+
+/*this code will be used to loop thro the card classes to filter it*/
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  // for (var i = 0; i < gameCards.length; i++) {
+  //   gameCards[i].classList.remove("show");
+
+  //   if (gameCards[i].className.indexOf(filter) > -1) { //if card on the position 0 the className be there then add the class show
+  //     gameCards[i].classList.add("show");
+  //   }
+  // }
