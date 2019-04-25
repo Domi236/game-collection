@@ -32,6 +32,9 @@
       flex-wrap: wrap;
     }
   }
+  // .content__header-menu:nth-child(1) .content__header-menu--active {
+    
+
 
   .content__header-menu-toggle {
     position: relative;
@@ -61,7 +64,7 @@
   /*header menu active*/
   .content__header-menu--active {
     background: $color-background-header-active; /*background-color: #666 ;*/
-    color: #dcdcdc ; 
+    color: $color-secondary; 
   }
   
   /*header subMenu*/

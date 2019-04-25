@@ -14,7 +14,6 @@ function displayAllImages() {
             //debugger;
       myObj = JSON.parse(ajaxhttp.responseText); //change the data of the json file in a string with dats
 
-      generateGames();
       generateMenu();
       generateSubMenu();
       filterElements();
@@ -24,18 +23,6 @@ function displayAllImages() {
   ajaxhttp.send(null); //sends the request, optional with a string or Dom-Object-Dats
 }
 
-function generateGames() {
-  for (var i in myObj.searchcriteria) {
-    x += "<div class='content__container-games-card'><div class='content__container-games-card-front'><img class='content__container-games-card-images ' src='" + myObj.searchcriteria[i].src + "'/></div><div class='content__container-games-card-back'><div class='content__container-games-card-back-content'><h2 class='content__container-games-card-back-headline'>" +
-    myObj.searchcriteria[i].name + "</h2><p class='content__container-games-card-back-text'>" + myObj.searchcriteria[i].tags.sort().join(', ') + ", " + myObj.searchcriteria[i].console + "</p><a class='content__container-games-card-back-links' href='" +
-    myObj.searchcriteria[i].url + "' target='_blank'><i class='fab fa-youtube'></i><a/></div></div></div>";
-  }
-  document.getElementById('content__container-games').innerHTML += x;
-}
-// " + myObj.searchcriteria[i].tags.join(' ') + ' ' + myObj.searchcriteria[i].console +
-// "'
-
-/* generate the main Menu (but it isn't able to use (i need to loop only one time not 2 times, then it will func))*/
 function generateMenu() {
   var consoleArray = [];
   var consoleList = "";
@@ -75,30 +62,45 @@ function generateSubMenu() {
 
 function filterElements() {
   var menuBtn = document.querySelectorAll('.content__header-menu-toggle');
-  // console.log(menuBtn);
+
   menuBtn.forEach(function(item) {               //[...z] change a nodelist into an array (need to look)
     item.addEventListener('click', function(e){ //e = event
       var filter = e.target.dataset.filter; // the event from the element which is choosen with the data-filter
 
-      var gameCards = document.getElementsByClassName("content__container-games-card");
-      if (filter == "all") {
-        filter = "";
-      }
-        
-      for (var i in myObj.searchcriteria) {
-        gameCards[i].classList.remove("show");
-        if (myObj.searchcriteria[i].console.indexOf(filter) > -1) {
-          gameCards[i].classList.add("show");
-        }
+      var gameCards = document.getElementById("content__container-games");
+      var filteredGameCards = '';
+      gameCards.innerHTML = '';
 
-        for (var j in myObj.searchcriteria[i].tags) {
-          if (myObj.searchcriteria[i].tags[j].indexOf(filter) > -1) {
-            gameCards[j].classList.add("show");
-          }
+      if (filter === "all") {
+        for (var i in myObj.searchcriteria) {
+          filteredGameCards += generateGameCard(myObj.searchcriteria[i]);
         }
+        gameCards.innerHTML = filteredGameCards;
+
+      } else {
+        myObj.searchcriteria.forEach(function(item) {
+          if (item.console === filter) {
+            filteredGameCards += generateGameCard(item);
+          }
+
+          var tags = item.tags;
+          tags.forEach(function(tag) {
+            if (tag === filter) {
+              filteredGameCards += generateGameCard(item);
+            }
+          });
+        });
+        gameCards.innerHTML = filteredGameCards;
       }
     });
   });
+} 
+
+function generateGameCard(item) {
+  var element = "<div class='content__container-games-card'><div class='content__container-games-card-front'><img class='content__container-games-card-images ' src='" + item.src + "'/></div><div class='content__container-games-card-back'><div class='content__container-games-card-back-content'><h2 class='content__container-games-card-back-headline'>" +
+  item.name + "</h2><p class='content__container-games-card-back-text'>" + item.tags.concat().sort().join(', ') + ", " + item.console + "</p><a class='content__container-games-card-back-links' href='" +
+  item.url + "' target='_blank'><i class='fab fa-youtube'></i><a/></div></div></div>";
+  return element;
 }
 
 function activeTarget() {
@@ -125,13 +127,14 @@ function activeTarget() {
 // you need on the title a title img
 // all you should change the filter, the filter should loop throw the json file not throw the classes
 
-
-/*this code will be used to loop thro the card classes to filter it*/
-  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-  // for (var i = 0; i < gameCards.length; i++) {
-  //   gameCards[i].classList.remove("show");
-
-  //   if (gameCards[i].className.indexOf(filter) > -1) { //if card on the position 0 the className be there then add the class show
-  //     gameCards[i].classList.add("show");
-  //   }
-  // }
+// function activeCard() {
+//   var activeCard = document.querySelectorAll('.content__container-games-card');
+//   activeCard.forEach(function(activeCardItem) {             
+//     activeCardItem.addEventListener('click', function(ev){
+//       activeCard.forEach(function(activeCardItem) {   
+//         activeCardItem.classList.remove('content__container-games-card--active');
+//       });
+//       var target = ev.target.classList.add('content__container-games-card--active');
+//     });
+//   });
+// }
