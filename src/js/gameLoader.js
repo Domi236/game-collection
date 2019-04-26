@@ -1,5 +1,3 @@
-
-
 var ajaxhttp = new XMLHttpRequest();
 var url = "https://api.myjson.com/bins/10083k"; //it doesn't enable to use (assets/json/games.json)//{}myjson http://myjson.com/ihhge
 var x = "";
@@ -16,6 +14,7 @@ function displayAllImages() {
 
       generateMenu();
       generateSubMenu();
+      showAll();
       filterElements();
       activeTarget();
     }
@@ -36,7 +35,7 @@ function generateMenu() {
   for (var i in consoleArray) {
     consoleList += "<li class='content__header-menu-toggle' data-filter='" + consoleArray[i] + "'>" + consoleArray[i] + "<span class='content__header-menu-border'></span><span class='content__header-menu-border'></span><span class='content__header-menu-border'></span><span class='content__header-menu-border'></span></li>";
   }
-  document.getElementById('content__header-menu').innerHTML = "<li class='content__header-menu-toggle' data-filter='all'> Show all<span class='content__header-menu-border'></span><span class='content__header-menu-border'></span><span class='content__header-menu-border'></span><span class='content__header-menu-border'></span></li>" + consoleList;
+  document.getElementById('content__header-menu').innerHTML = "<li class='content__header-menu-toggle content__header-menu--active' data-filter='all'> Show all<span class='content__header-menu-border'></span><span class='content__header-menu-border'></span><span class='content__header-menu-border'></span><span class='content__header-menu-border'></span></li>" + consoleList;
 }
 
 
@@ -59,6 +58,14 @@ function generateSubMenu() {
   document.getElementById('content__header-sub-menu').innerHTML = tagList;
 }
 
+function showAll() {
+  var allGameCards = document.getElementById("content__container-games");
+  var filteredGameCards = '';
+  for (var i in myObj.searchcriteria) {
+    filteredGameCards += generateGameCard(myObj.searchcriteria[i]);
+  }
+  allGameCards.innerHTML = filteredGameCards;
+}
 
 function filterElements() {
   var menuBtn = document.querySelectorAll('.content__header-menu-toggle');
@@ -110,7 +117,7 @@ function activeTarget() {
       menu.forEach(function(menuItem) {   //loop throw the menus and remove this class
         menuItem.classList.remove('content__header-menu--active');
       });
-      var target = event.target.classList.add('content__header-menu--active'); //and add this class on which the user click
+      event.target.classList.add('content__header-menu--active'); //and add this class on which the user click
     });
   });
 }
