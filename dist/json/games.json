@@ -1,0 +1,870 @@
+{
+  "searchcriteria": [
+    {
+      "name": "Agony",
+      "src": "assets/images/Agony.jpg",
+      "url": "https://youtu.be/0oPnKm4xpFM",
+      "console": "PC",
+      "tags": [
+        "Singleplayer",
+        "Horror",
+        "offline"
+      ]
+    },
+    {
+      "name": "Blood and Bacon",
+      "src": "assets/images/Blood and Backen.jpg",
+      "url": "https://youtu.be/b2mwW2YnXGA",
+      "console": "PC",
+      "tags": [
+        "Singleplayer",
+        "Multiplayer",
+        "Action",
+        "Party",
+        "online",
+        "offline",
+        "Ego Shooter"
+      ]
+    },
+    {
+      "name": "Borderlands 2",
+      "src": "assets/images/Borderlands2.png",
+      "url": "https://youtu.be/kKVf5feSMEg",
+      "console": "PC",
+      "tags": [
+        "Multiplayer",
+        "Action",
+        "online",
+        "offline",
+        "Ego Shooter"
+      ]
+    },
+    {
+      "name": "BroForce",
+      "src": "assets/images/broforce-cover.jpg",
+      "url": "https://youtu.be/8mOAQ7t9JjY",
+      "console": "PC",
+      "tags": [
+        "Multiplayer",
+        "Action",
+        "Party",
+        "offline",
+        "2D Game"
+      ]
+    },
+    {
+      "name": "Unturned",
+      "src": "assets/images/buy-unturned-permanent-gold-upgrade-cd-key-compare-prices.jpg",
+      "url": "https://youtu.be/sjhig_ONjrI",
+      "console": "PC",
+      "tags": [
+        "Singleplayer",
+        "MMO",
+        "Crafting",
+        "Action",
+        "Ego Shooter",
+        "Party"
+      ]
+    },
+    {
+      "name": "Counter Strike",
+      "src": "assets/images/counterStrike.jpg",
+      "url": "https://youtu.be/p5VD49suIUw",
+      "console": "PC",
+      "tags": [
+        "Singleplayer",
+        "Multiplayer",
+        "Action",
+        "Ego Shooter",
+        "online",
+        "Hunger Games"
+      ]
+    },
+    {
+      "name": "Dead By Daylight",
+      "src": "assets/images/deadByDaylight.jpg",
+      "url": "https://youtu.be/JGhIXLO3ul8",
+      "console": "PC",
+      "tags": [
+        "Singleplayer",
+        "Horror",
+        "Party",
+        "online",
+        "Third Person"
+      ]
+    },
+    {
+      "name": "Flatout Ultimate",
+      "src": "assets/images/Flatout ultimate.jpg",
+      "url": "https://www.youtube.com/watch?v=7WlHry98-OI&t=1s",
+      "console": "PC",
+      "tags": [
+        "Multiplayer",
+        "Rennspiel",
+        "offline"
+      ]
+    },
+    {
+      "name": "The Binding of Isaac",
+      "src": "assets/images/Isaac.png",
+      "url": "https://www.youtube.com/watch?v=8PGCyTKO8TI",
+      "console": "PC",
+      "tags": [
+        "Multiplayer",
+        "Singleplayer",
+        "offline",
+        "Party",
+        "2D Game"
+      ]
+    },
+    {
+      "name": "League of Legends",
+      "src": "assets/images/league of legends.jpg",
+      "url": "https://www.youtube.com/watch?v=zF5Ddo9JdpY",
+      "console": "PC",
+      "tags": [
+        "Singleplayer",
+        "Multiplayer",
+        "online",
+        "Party",
+        "Third Person"
+      ]
+    },
+    {
+      "name": "Lethal League",
+      "src": "assets/images/lethal league.jpg",
+      "url": "https://www.youtube.com/watch?v=j78X5LluM5U&t=13s",
+      "console": "PC",
+      "tags": [
+        "Multiplayer",
+        "Party",
+        "offline",
+        "Third Person"
+      ]
+    },
+    {
+      "name": "Mortal Komabt XL",
+      "src": "assets/images/Mortal komabt XL.jpg",
+      "url": "Mortal komabt XL trailer",
+      "console": "PC",
+      "tags": [
+        "Multiplayer",
+        "online",
+        "Action",
+        "Party",
+        "2D Game",
+        "offline"
+      ]
+    },
+    {
+      "name": "Race the sun",
+      "src": "assets/images/raceTheSun.jpg",
+      "url": "https://www.youtube.com/watch?v=QmjAg0e_YYU",
+      "console": "PC",
+      "tags": [
+        "Singleplayer",
+        "Party",
+        "Rennspiel"
+      ]
+    },
+    {
+      "name": "Rogue Legacy Cover",
+      "src": "assets/images/rogue-legacy-cover.jpg",
+      "url": "https://www.youtube.com/watch?v=9Rd_eyxoZqk",
+      "console": "PC",
+      "tags": [
+        "Singleplayer",
+        "Party",
+        "2D Game",
+        "Arcade",
+        "offline"
+      ]
+    },
+    {
+      "name": "Speed Runer",
+      "src": "assets/images/speed ruinner.jpg",
+      "url": "https://www.youtube.com/watch?v=QmjAg0e_YYU",
+      "console": "PC",
+      "tags": [
+        "Multiplayer",
+        "offline",
+        "Party",
+        "2D Game",
+        "Rennspiel"
+      ]
+    },
+    {
+      "name": "Star Wars Battlefront 2",
+      "src": "assets/images/star war Battlefront2.jpg",
+      "url": "https://www.youtube.com/watch?v=Kae-JjbLsgA",
+      "console": "PC",
+      "tags": [
+        "Multiplayer",
+        "offline",
+        "Party",
+        "Ego Shooter"
+      ]
+    },
+    {
+      "name": "Stick Fight the Game",
+      "src": "assets/images/StickFightTheGame.png",
+      "url": "https://www.youtube.com/watch?v=YBlEslDQSEQ",
+      "console": "PC",
+      "tags": [
+        "Multiplayer",
+        "offline",
+        "online",
+        "Party",
+        "2D Game"
+      ]
+    },
+    {
+      "name": "super Hexagon",
+      "src": "assets/images/super Hexagon.jpg",
+      "url": "https://www.youtube.com/watch?v=2sz0mI_6tLQ",
+      "console": "PC",
+      "tags": [
+        "Singleplayer",
+        "offline",
+        "Party",
+        "2D Game"
+      ]
+    },
+    {
+      "name": "Terraria",
+      "src": "assets/images/terraria.jpg",
+      "url": "https://www.youtube.com/watch?v=w7uOhFTrrq0&t=71s",
+      "console": "PC",
+      "tags": [
+        "Multiplayer",
+        "offline",
+        "Crafting",
+        "Abenteuer",
+        "online",
+        "Party",
+        "2D Game"
+      ]
+    },
+    {
+      "name": "Distance",
+      "src": "assets/images/Distance.png",
+      
+      "url": "#",
+      "console": "PS2",
+      "tags": [
+        
+      ]
+    },
+    {
+      "name": "Five Nights at Freddy's",
+      "src": "assets/images/five-nights-at-freddys.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "Postal 2",
+      "src": "assets/images/postal2.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "Risk of Rain 2",
+      "src": "assets/images/risk of rain 2.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "Rocket League",
+      "src": "assets/images/Rocket League.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "Sid Meier's Civilization V",
+      "src": "assets/images/Sid Meiers Civilization V.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "Player Unknown's Battlegrounds",
+      "src": "assets/images/Player Unknowns Battlegrounds.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "Don't Starve Together",
+      "src": "assets/images/Dont Starve Together.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "Five Nights at Freddy's 2",
+      "src": "assets/images/Five Nights at Freddys 2.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "Warframe",
+      "src": "assets/images/Warframe.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "Worms Armageddon",
+      "src": "assets/images/worms armageddon.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "7 Days to Die",
+      "src": "assets/images/7 Days to Die.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "Aliens Colonial Marines",
+      "src": "assets/images/Aliens Colonial Marines.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "Aliens isolation",
+      "src": "assets/images/Aliens isolation.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "Amnesia The dark Descent",
+      "src": "assets/images/Amnesia The dark Descent.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "ARK",
+      "src": "assets/images/ARK.jpg",
+      
+      "url": "Arma 2",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "Arma 3",
+      "src": "assets/images/Arma 3.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "BEEP",
+      "src": "assets/images/BEEP.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "Camera Obscura",
+      "src": "assets/images/Camera Obscura.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "Case Animatronics",
+      "src": "assets/images/CASE-Animatronics.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "Chivalry Medieval warfare",
+      "src": "assets/images/Chivalry Medieval warfare.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "Dark Quest",
+      "src": "assets/images/Dark Quest.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "Deadfall Adventures",
+      "src": "assets/images/Deadfall Adventures.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "Dino D-day",
+      "src": "assets/images/Dino D-day.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "Dying Light",
+      "src": "assets/images/Dying Light.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "The Elder Scrolls V: Skyrim",
+      "src": "assets/images/Elder-Scrolls-V-Skyrim.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "The Evil Within",
+      "src": "assets/images/The Evil Within.jpg",
+      
+      "url": "Arma 2",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "Evolve Stage 2",
+      "src": "assets/images/evolve.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "Friday the 13th: the Game",
+      "src": "assets/images/Friday-the-13th-The-Game.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ] 
+    },
+    {
+      "name": "The guild goldedition",
+      "src": "assets/images/The guild goldedition.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "The Guild 2 (all DLC)",
+      "src": "assets/images/The Guild 2.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "Halo Spartan Assault",
+      "src": "assets/images/Halo Spartan Assault.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "Halo spartan Strike",
+      "src": "assets/images/Halo spartan Strike.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "Homefront",
+      "src": "assets/images/Homefront.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "Insurgency",
+      "src": "assets/images/Insurgency.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "Layers of Fear",
+      "src": "assets/images/Layers of Fear.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "Left 4 Dead",
+      "src": "assets/images/Left 4 Dead.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "Left 4 Dead 2",
+      "src": "assets/images/Left 4 Dead 2.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "Lucius",
+      "src": "assets/images/Lucius.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "Neverending Nightmares",
+      "src": "assets/images/Neverending Nightmares.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "Out There Somewhere",
+      "src": "assets/images/Out There Somewhere.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "Outlast",
+      "src": "assets/images/outlast.jpg",
+      
+      "url": "https://www.youtube.com/watch?v=EOrTuPljfPU",
+      "console": "PC",
+      "tags": [
+        "Singleplayer",
+        "offline",
+        "Horror",
+        "Ego Shooter"
+      ]
+    },
+    {
+      "name": "Outlast 2",
+      "src": "assets/images/outlast2.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+        "Singleplayer",
+        "offline",
+        "Horror",
+        "Ego Shooter"
+      ]
+    },
+    {
+      "name": "Polarity",
+      "src": "assets/images/Polarity.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "Primal Carnage",
+      "src": "assets/images/Primal Carnage.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "Resident Evil 7",
+      "src": "assets/images/Resident Evil 7.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "Resident Evil Revelations 2",
+      "src": "assets/images/Resident Evil Revelations 2.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "Sleeping Dogs",
+      "src": "assets/images/Sleeping Dogs.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "South Park: Stick of Thruth",
+      "src": "assets/images/South Park Stick of Thruth.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "Soma",
+      "src": "assets/images/SOMA.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "Warhammer 40k down of War 2 (all DLC)",
+      "src": "assets/images/Warhammer 40k down of War 2.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "Warhammer 40k: Space Marine",
+      "src": "assets/images/Warhammer 40k Space Marine.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "The Witcher 2",
+      "src": "assets/images/The Witcher 2.jpg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "Distance",
+      "src": "assets/images/Distance.png",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [
+      ]
+    },
+    {
+      "name": "Blood Knights",
+      "src": "assets/images/Blood Knights.jpeg",
+      
+      "url": "#",
+      "console": "PC",
+      "tags": [ 
+      ]
+    },
+    {
+      "name": "Halo",
+      "src": "assets/images/haloMasterchiefCollection.jpg",
+      
+      "url": "#",
+      "console": "XBOX-ONE",
+      "tags": [ 
+      ]
+    },
+    {
+      "name": "Dirt 3",
+      "src": "assets/images/dirt3.jpg",
+      
+      "url": "#",
+      "console": "XBOX-360",
+      "tags": [ 
+      ]
+    },
+    {
+      "name": "The Witcher 3 Wild Hunt",
+      "src": "assets/images/theWitcher3.jpg",
+      
+      "url": "#",
+      "console": "PS4",
+      "tags": [ 
+      ]
+    },
+    {
+      "name": "Super mario bros.wii",
+      "src": "assets/images/superMario.jpg",
+      "url": "https://www.youtube.com/watch?v=pipMu0HXiU0",
+      "console": "Wii",
+      "tags": [
+        
+      ]
+    },
+    {
+      "name": "Mario Kart",
+      "src": "assets/images/marioKart.jpg",
+      "url": "https://www.youtube.com/watch?v=MKHLzFGA8o8",
+      "console": "Wii",
+      "tags": [
+        
+      ]
+    },
+    {
+      "name": "Mario Party",
+      "src": "assets/images/marioParty.jpg",
+      "url": "https://www.youtube.com/watch?v=KN7E4wDdO7c",
+      "console": "Wii",
+      "tags": [
+        
+      ]
+    },
+    {
+      "name": "Monster Jam",
+      "src": "assets/images/monsterJam.png",
+      "url": "https://www.youtube.com/watch?v=38G3SK0XkGw",
+      "console": "Wii",
+      "tags": [
+        
+      ]
+    },
+    {
+      "name": "Pokepark",
+      "src": "assets/images/pokePark.jpg",
+      "url": "https://www.youtube.com/watch?v=aVDRGrikLnw",
+      "console": "Wii",
+      "tags": [
+        
+      ]
+    },
+    {
+      "name": "Winter Sports 2012",
+      "src": "assets/images/winter__sports.jpg",
+      "url": "https://www.youtube.com/watch?v=fSB6zzgRG0g",
+      "console": "Wii",
+      "tags": [
+        
+      ]
+    },
+    {
+      "name": "Burnout Revenge",
+      "src": "assets/images/burnoutRevenge.jpg",
+      "url": "https://www.youtube.com/watch?v=9H-aqCWuCnQ",
+      "console": "PS2",
+      "tags": [
+        
+      ]
+    },
+    {
+      "name": "Burnout Takedown 3",
+      "src": "assets/images/Burnout3Takedown.jpg",
+      "url": "https://www.youtube.com/watch?v=y6xT4CtWKIU",
+      "console": "PS2",
+      "tags": [
+        
+      ]
+    },
+    {
+      "name": "Vampire Night",
+      "src": "assets/images/Vampire_Night.jpg",
+      "url": "https://www.youtube.com/watch?v=xdSnKw67VO0",
+      "console": "PS2",
+      "tags": [
+        
+      ]
+    },
+    {
+      "name": "Need for Speed Underground 2",
+      "src": "assets/images/need-for-speed-underground-2.jpg",
+      "url": "https://www.youtube.com/watch?v=Xl38fecVFzU",
+      "console": "PS2",
+      "tags": [
+        
+      ]
+    }
+  ]
+}
